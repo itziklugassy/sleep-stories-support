@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>תנאי שימוש | סיפורי שינה מרגיעים</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0f1029;
+    --surface: rgba(253,246,227,0.04);
+    --border: rgba(253,246,227,0.10);
+    --text: #fdf6e3;
+    --muted: rgba(253,246,227,0.68);
+    --accent: #ffe8a8;
+    --accent-soft: rgba(255,232,168,0.10);
+    --accent-border: rgba(255,232,168,0.35);
+    --link: #ffe8a8;
+    --danger-soft: rgba(255,138,128,0.10);
+    --danger-border: rgba(255,138,128,0.45);
+    --info-soft: rgba(147,170,255,0.09);
+    --info-border: rgba(147,170,255,0.30);
+  }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Arial Hebrew", Arial, sans-serif;
+    font-size: 16px; line-height: 1.85; direction: rtl; text-align: right;
+  }
+  a { color: var(--link); text-underline-offset: 3px; word-break: break-word; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  strong { color: var(--accent); font-weight: 700; }
+
+  header {
+    background: linear-gradient(170deg, #1d2156 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--border); padding: 44px 20px 36px; text-align: center;
+  }
+  header .moon { font-size: 44px; line-height: 1; display: block; margin-bottom: 12px; }
+  header h1 { font-size: 30px; font-weight: 800; margin-bottom: 4px; }
+  header .app { color: var(--accent); font-size: 17px; font-weight: 600; }
+  header .meta {
+    display: inline-block; margin-top: 14px; padding: 5px 16px;
+    border: 1px solid var(--accent-border); border-radius: 20px;
+    background: var(--accent-soft); font-size: 14px; color: var(--text);
+  }
+  header .doclinks { margin-top: 12px; font-size: 14px; color: var(--muted); }
+
+  main { max-width: 800px; margin: 0 auto; padding: 24px 18px 60px; }
+
+  .box { border-radius: 14px; padding: 18px 20px; margin: 18px 0; }
+  .box-title { display: block; font-weight: 800; font-size: 17px; margin-bottom: 8px; color: var(--accent); }
+  .box-medical { background: var(--danger-soft); border: 2px solid var(--danger-border); }
+  .box-medical .box-title { color: #ffb4ab; font-size: 19px; }
+  .box-info { background: var(--info-soft); border: 1px solid var(--info-border); }
+  .box-accent { background: var(--accent-soft); border: 1px solid var(--accent-border); }
+  .box ul { margin-top: 6px; }
+  .emergency { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+  .emergency span {
+    border: 1px solid var(--danger-border); border-radius: 10px; padding: 6px 12px;
+    font-weight: 700; background: rgba(255,138,128,0.08);
+  }
+
+  nav.toc {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px 22px; margin: 22px 0;
+  }
+  nav.toc h2 { font-size: 18px; margin-bottom: 10px; color: var(--accent); }
+  nav.toc ol { padding-right: 24px; columns: 2; column-gap: 28px; }
+  nav.toc li { margin-bottom: 4px; break-inside: avoid; font-size: 15px; }
+  nav.toc a { text-decoration: none; color: var(--text); }
+  nav.toc a:hover, nav.toc a:focus { color: var(--accent); text-decoration: underline; }
+
+  section {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 22px 24px; margin-bottom: 16px; scroll-margin-top: 16px;
+  }
+  section h2 {
+    font-size: 20px; font-weight: 800; color: var(--text);
+    padding-bottom: 10px; margin-bottom: 14px; border-bottom: 1px solid var(--border);
+  }
+  section h2 .num { color: var(--accent); margin-left: 6px; }
+  p { margin-bottom: 12px; }
+  p:last-child { margin-bottom: 0; }
+  .tldr {
+    background: var(--accent-soft); border-right: 3px solid var(--accent-border);
+    border-radius: 8px; padding: 8px 14px; margin: -2px 0 16px;
+    font-size: 15px; color: var(--muted);
+  }
+  .tldr b { color: var(--accent); font-weight: 700; margin-left: 4px; }
+  .cl { display: flex; gap: 10px; margin-bottom: 10px; }
+  .cl > .n { flex: 0 0 auto; min-width: 2.6em; color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .cl > div { flex: 1 1 auto; }
+  ul { padding-right: 22px; margin-bottom: 12px; }
+  li { margin-bottom: 6px; }
+  li::marker { color: var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+  th, td { padding: 9px 12px; text-align: right; vertical-align: top; border-bottom: 1px solid var(--border); }
+  th { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+  .table-wrap { overflow-x: auto; }
+
+  .ph {
+    background: rgba(255,232,168,0.18); color: var(--accent); border: 1px dashed var(--accent-border);
+    border-radius: 6px; padding: 0 5px; font-size: 0.93em;
+  }
+  .muted { color: var(--muted); font-size: 14.5px; }
+  .ltr { direction: ltr; unicode-bidi: embed; display: inline-block; }
+  .top { display: inline-block; margin-top: 10px; font-size: 13.5px; color: var(--muted); text-decoration: none; }
+
+  footer {
+    text-align: center; color: var(--muted); font-size: 13.5px;
+    border-top: 1px solid var(--border); padding: 28px 18px 40px;
+  }
+
+  @media (max-width: 620px) {
+    body { font-size: 16.5px; }
+    header h1 { font-size: 25px; }
+    section { padding: 18px 16px; }
+    nav.toc ol { columns: 1; }
+    .cl { gap: 8px; }
+    .cl > .n { min-width: 2.3em; }
+    th, td { padding: 8px 8px; }
+  }
+  @media print {
+    body { background: #fff; color: #000; }
+    section, nav.toc, .box, .tldr { border-color: #999; background: none; }
+    strong, .box-title, section h2 .num, .tldr b { color: #000; }
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <span class="moon" aria-hidden="true">🌙</span>
+  <h1>תנאי שימוש</h1>
+  <div class="app">סיפורי שינה מרגיעים</div>
+  <div class="meta">עדכון אחרון: 29 בספטמבר 2026 · גרסה 2.0</div>
+  <div class="doclinks">
+    <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html">מדיניות הפרטיות</a> ·
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple Standard EULA</a> ·
+    <a href="https://itziklugassy.github.io/sleep-stories-support/">אתר התמיכה</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== PROMINENT MEDICAL DISCLAIMER ===== -->
+  <div class="box box-medical" role="note" aria-label="הבהרה רפואית חשובה">
+    <span class="box-title">הבהרה רפואית חשובה – נא לקרוא לפני השימוש</span>
+    <ul>
+      <li><strong>ייעוד האפליקציה:</strong> סיפורים ספרותיים בעברית להקראה משפחתית לפני השינה – ותו לא. היא לא נועדה ולא אושרה לאבחון, לטיפול, להקלה, לניטור או למניעה של מצב כלשהו.</li>
+      <li>האפליקציה <strong>אינה מכשיר רפואי</strong>, <strong>אינה טיפול</strong>, <strong>אינה כלי אבחון</strong> ו<strong>אינה תחליף</strong> לייעוץ, אבחון או טיפול רפואי, פסיכולוגי, פסיכיאטרי, התפתחותי או אחר.</li>
+      <li>הסיפורים <strong>נכתבו בסיוע בינה מלאכותית</strong> ונערכו על ידי המפעיל. <strong>הם לא נכתבו ולא נבדקו על ידי רופא, פסיכולוג או איש מקצוע קליני</strong>, ולא נבדקו בשום מחקר.</li>
+      <li>טכניקות ההרגעה בסיפורים הן <strong>"בהשראת" ספרות מחקרית</strong> – ולא "מוכחות קלינית". <strong>איננו מבטיחים תוצאה כלשהי</strong>.</li>
+      <li>שמות הקטגוריות (למשל תסמונת טורט, ADHD, ספקטרום אוטיסטי) הם <strong>נושאים ספרותיים</strong> בלבד. הם אינם אבחנה ואינם מעידים על התאמה טיפולית.</li>
+      <li>אין להסתמך על האפליקציה בשום החלטה טיפולית, ואין להפסיק, לדחות או לשנות טיפול בשל תוכן בה.</li>
+    </ul>
+    <p style="margin-top:10px"><strong>במצב חירום רפואי או נפשי – אל תשתמשו באפליקציה. פנו מיד לגורמי חירום:</strong></p>
+    <div class="emergency">
+      <span>מד"א – 101</span>
+      <span>משטרה – 100</span>
+      <span>ער"ן – עזרה ראשונה נפשית – 1201</span>
+      <span>מחוץ לישראל – מספר החירום המקומי</span>
+    </div>
+    <p class="muted" style="margin-top:10px">הרחבה בסעיפים <a href="#medical">5</a>, <a href="#no-guarantee">6</a>, <a href="#ai">7</a> ו-<a href="#parent">8</a>.</p>
+  </div>
+
+  <div class="box box-info">
+    <span class="box-title">בקצרה (תקציר זה אינו מחליף את התנאים המלאים)</span>
+    <ul>
+      <li>האפליקציה מיועדת להורים ולאפוטרופוסים בני 18 ומעלה, שמקריאים את הסיפורים לילד. הילד אינו המשתמש.</li>
+      <li>אין הרשמה ואין חשבון משתמש. מועדפים ורשימת הסיפורים שנצפו נשמרים על המכשיר שלכם בלבד.</li>
+      <li>2 סיפורים חינם בכל קטגוריה. גישה מלאה – ב"מנוי פרימיום חודשי" המתחדש אוטומטית דרך Apple, עם 7 ימי ניסיון חינם. אם לא תבטלו לפחות 24 שעות לפני תום תקופת הניסיון – תחויבו.</li>
+      <li>ביטול – בהגדרות Apple (הגדרות ← [השם שלכם] ← מינויים). החזרים – דרך Apple. אפשר גם לכתוב לנו, ונסייע (<a href="#cancel">סעיף 10</a>).</li>
+      <li>הזכויות בסיפורים ובאפליקציה שמורות למפעיל. מותר להקריא לילדים שבהשגחתכם; אסור להעתיק, להקליט, להפיץ או להשתמש בסיפורים מסחרית.</li>
+    </ul>
+  </div>
+
+  <!-- ===== TOC ===== -->
+  <nav class="toc" aria-label="תוכן עניינים">
+    <h2>תוכן עניינים</h2>
+    <ol>
+      <li><a href="#intro">מבוא והסכמה לתנאים</a></li>
+      <li><a href="#definitions">הגדרות</a></li>
+      <li><a href="#eligibility">מי רשאי להשתמש; קטינים</a></li>
+      <li><a href="#service">תיאור השירות</a></li>
+      <li><a href="#medical">ייעוד האפליקציה וכתב ויתור רפואי</a></li>
+      <li><a href="#no-guarantee">אין הבטחה לתוצאה</a></li>
+      <li><a href="#ai">גילוי: תוכן שנוצר בסיוע AI ומקורות</a></li>
+      <li><a href="#parent">אחריות ההורה והשגחה</a></li>
+      <li><a href="#subscription">מנוי, ניסיון חינם ותשלום</a></li>
+      <li><a href="#cancel">ביטול מנוי והחזרים</a></li>
+      <li><a href="#apple">Apple ותנאי ה-EULA הסטנדרטיים</a></li>
+      <li><a href="#ip">קניין רוחני ורישיון שימוש</a></li>
+      <li><a href="#prohibited">שימושים אסורים</a></li>
+      <li><a href="#content">מדיניות תוכן ודיווח על תוכן</a></li>
+      <li><a href="#privacy">פרטיות</a></li>
+      <li><a href="#availability">זמינות השירות ותמיכה</a></li>
+      <li><a href="#updates">עדכונים, עדכוני OTA ותוכן מהענן</a></li>
+      <li><a href="#beta">גרסאות בטא, TestFlight ומשוב</a></li>
+      <li><a href="#third-party">שירותי צד שלישי</a></li>
+      <li><a href="#liability">הגבלת אחריות</a></li>
+      <li><a href="#indemnity">שיפוי</a></li>
+      <li><a href="#termination">הפסקת שימוש והפסקת השירות</a></li>
+      <li><a href="#changes">שינויים בתנאים</a></li>
+      <li><a href="#accessibility">נגישות</a></li>
+      <li><a href="#force-majeure">כוח עליון</a></li>
+      <li><a href="#law">דין חל, סמכות שיפוט ויישוב סכסוכים</a></li>
+      <li><a href="#general">הוראות כלליות</a></li>
+      <li><a href="#contact">יצירת קשר</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section id="intro">
+    <h2><span class="num">1.</span>מבוא והסכמה לתנאים</h2>
+    <div class="cl"><span class="n">1.1</span><div>תנאי שימוש אלה ("<strong>התנאים</strong>") מסדירים את השימוש באפליקציה "סיפורי שינה מרגיעים" (<span class="ltr">com.sleepstories.app</span>) ובכל שירות, תוכן ועדכון הנלווים לה. האפליקציה מופעלת על ידי <strong>איציק לוגאסי (Itzik Lugassy)</strong>, עוסק יחיד, ישראל ("<strong>המפעיל</strong>", "<strong>אנחנו</strong>"). פרטי ההתקשרות המלאים – ב<a href="#contact">סעיף 28</a>.</div></div>
+    <div class="cl"><span class="n">1.2</span><div>בהורדת האפליקציה, בהתקנתה, בשימוש בה או ברכישת מנוי, אתם מאשרים שקראתם את התנאים, הבנתם אותם ואתם מסכימים להם, וכן מאשרים שקראתם את <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html">מדיניות הפרטיות</a>. אם אינכם מסכימים – אנא אל תשתמשו באפליקציה ומחקו אותה מהמכשיר.</div></div>
+    <div class="cl"><span class="n">1.3</span><div>התנאים <strong>משלימים</strong> את <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">הסכם רישיון משתמש הקצה הסטנדרטי של Apple</a> (Apple Standard EULA). היחס ביניהם מוסדר ב<a href="#apple">סעיף 11</a>.</div></div>
+    <div class="cl"><span class="n">1.4</span><div>התנאים מנוסחים בלשון רבים ומיועדים לכל המגדרים. הכותרות ושורות "בקצרה" נועדו לנוחות בלבד ואינן משמשות לפרשנות.</div></div>
+  </section>
+
+  <!-- 2 -->
+  <section id="definitions">
+    <h2><span class="num">2.</span>הגדרות</h2>
+    <p class="tldr"><b>בקצרה:</b>"אתם" = ההורה; "הילד" = מי שמקשיב לסיפור; "המנוי" = המנוי החודשי ב-Apple.</p>
+    <div class="table-wrap"><table>
+      <tr><th>מונח</th><th>משמעות</th></tr>
+      <tr><td><strong>האפליקציה</strong> / <strong>השירות</strong></td><td>אפליקציית "סיפורי שינה מרגיעים", לרבות התוכן, העיצוב, הקוד, העדכונים (כולל עדכוני OTA) והתוכן הנטען מהענן.</td></tr>
+      <tr><td><strong>משתמש</strong> / <strong>אתם</strong></td><td>אדם בגיר (18+) – הורה, אפוטרופוס או מבוגר אחראי – המשתמש באפליקציה.</td></tr>
+      <tr><td><strong>ילד</strong></td><td>קטין שלו מקריא המשתמש את הסיפורים. הילד אינו משתמש באפליקציה.</td></tr>
+      <tr><td><strong>סיפורים</strong> / <strong>תוכן</strong></td><td>טקסטים של סיפורי שינה בעברית, לרבות טכניקות ההרגעה, רשימות המקורות, שמות הקטגוריות וכל טקסט אחר באפליקציה.</td></tr>
+      <tr><td><strong>קטגוריה</strong></td><td>אחד משישה נושאים ספרותיים: תסמונת טורט; קשב וריכוז (ADHD); חרדות ופחדים; קשיי הירדמות; רגישות חושית; ספקטרום אוטיסטי.</td></tr>
+      <tr><td><strong>מנוי</strong></td><td>"מנוי פרימיום חודשי" – מנוי חודשי מתחדש אוטומטית (מזהה <span class="ltr">sleep_stories_monthly</span>) הנרכש דרך מערכת הרכישות בתוך האפליקציה של Apple.</td></tr>
+      <tr><td><strong>תקופת ניסיון</strong></td><td>הצעת היכרות של 7 ימים ללא תשלום, כמפורט בסעיף 9.</td></tr>
+      <tr><td><strong>Apple</strong></td><td>Apple Inc. והחברות הקשורות לה, לרבות מפעילת ה-App Store.</td></tr>
+      <tr><td><strong>AI</strong></td><td>כלי בינה מלאכותית יוצרת ששימשו בסיוע לכתיבת הסיפורים.</td></tr>
+      <tr><td><strong>דין</strong></td><td>כל חיקוק, תקנה או הלכה מחייבת, לרבות דין זר שחל עליכם באופן שלא ניתן להתנות עליו.</td></tr>
+    </table></div>
+  </section>
+
+  <!-- 3 -->
+  <section id="eligibility">
+    <h2><span class="num">3.</span>מי רשאי להשתמש; קטינים</h2>
+    <div class="cl"><span class="n">3.1</span><div>האפליקציה מיועדת <strong>לבגירים בני 18 ומעלה בלבד</strong>, המשמשים כהורים, כאפוטרופוסים או כמבוגרים אחראים לילד. בשימוש באפליקציה אתם מצהירים שאתם בני 18 לפחות ובעלי כשרות משפטית להתקשר בתנאים אלה.</div></div>
+    <div class="cl"><span class="n">3.2</span><div><strong>הילד אינו המשתמש.</strong> האפליקציה אינה מיועדת לשימוש עצמאי של ילדים, ואין לאפשר לילד להפעיל אותה, לגלוש בה או לבצע בה רכישות. הסיפורים נועדו להקראה על ידי מבוגר.</div></div>
+    <div class="cl"><span class="n">3.3</span><div>האפליקציה אינה אוספת מידע מילדים או על ילדים (ראו סעיף 13 ל<a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html#s13">מדיניות הפרטיות</a>). אם קטין השתמש באפליקציה או ביצע רכישה ללא ידיעתכם – בקשות להחזר מוגשות ל-Apple. מומלץ להפעיל במכשירי Apple את הגבלות "זמן מסך" ואת "בקשה לקנייה" (Ask to Buy).</div></div>
+    <div class="cl"><span class="n">3.4</span><div>אם אתם משתמשים באפליקציה במסגרת מקצועית או מוסדית (למשל גן, מסגרת חינוכית או מטפל/ת), ראו את התנאים לכך ב<a href="#ip">סעיף 12.3</a>.</div></div>
+  </section>
+
+  <!-- 4 -->
+  <section id="service">
+    <h2><span class="num">4.</span>תיאור השירות</h2>
+    <div class="cl"><span class="n">4.1</span><div>האפליקציה מציגה טקסטים של סיפורי שינה בעברית, המיועדים להקראה לילד לפני השינה, בשש קטגוריות נושא. הסיפורים משלבים טכניקות הרגעה כגון נשימות, סריקת גוף ודמיון מודרך, <strong>בהשראת</strong> ספרות מחקרית, ולצד כל סיפור מוצגת רשימת מקורות לקריאה נוספת.</div></div>
+    <div class="cl"><span class="n">4.2</span><div><strong>ללא הרשמה.</strong> אין באפליקציה יצירת חשבון, הרשמה או התחברות. מועדפים ורשימת הסיפורים שנצפו נשמרים על המכשיר בלבד; <strong>נתוני המנוי מאומתים מול Apple ו-RevenueCat</strong> (ראו <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html#s4">מדיניות הפרטיות</a>).</div></div>
+    <div class="cl"><span class="n">4.3</span><div><strong>תוכן חינמי ותוכן במנוי.</strong> בכל קטגוריה זמינים 2 סיפורים ללא תשלום. גישה לשאר הסיפורים מחייבת מנוי פעיל (ראו <a href="#subscription">סעיף 9</a>).</div></div>
+    <div class="cl"><span class="n">4.4</span><div><strong>שינויים בתוכן.</strong> היקף הסיפורים, הקטגוריות ותכונות האפליקציה עשויים להשתנות מעת לעת. איננו מתחייבים לקצב הוספת תוכן חדש, ואיננו מתחייבים שסיפור מסוים יישאר זמין לצמיתות. עם זאת, <strong>איננו מצמצמים באופן מהותי את היקף הספרייה הזמינה למנויים במהלך תקופת מנוי ששולמה</strong>, למעט הסרה של סיפור בודד בשל טעות, דיווח או דרישה חוקית. צמצום מהותי ייעשה בהודעה של 14 ימים מראש, ותוכלו לבטל את המנוי.</div></div>
+    <div class="cl"><span class="n">4.5</span><div>האפליקציה זמינה כיום למכשירי iOS דרך ה-App Store בלבד. גרסה לפלטפורמות אחרות, אם תפורסם, עשויה להיות כפופה לתנאים משלימים.</div></div>
+    <div class="cl"><span class="n">4.6</span><div>האפליקציה אינה כוללת פרסומות.</div></div>
+  </section>
+
+  <!-- 5 -->
+  <section id="medical">
+    <h2><span class="num">5.</span>ייעוד האפליקציה וכתב ויתור רפואי</h2>
+    <p class="tldr"><b>בקצרה:</b>אלה סיפורים, לא טיפול. לכל שאלה על בריאות הילד – פנו לאיש מקצוע; בחירום – 101, 100 או 1201.</p>
+    <div class="cl"><span class="n">5.0</span><div><strong>ייעוד האפליקציה.</strong> הייעוד היחיד של האפליקציה הוא לספק סיפורים ספרותיים בעברית, להקראה משפחתית לפני השינה. האפליקציה לא נועדה, לא תוכננה, לא נבדקה ולא אושרה על ידי רשות כלשהי לשם אבחון, טיפול, ריפוי, הקלה, ניטור או מניעה של מחלה, הפרעה, תסמונת, מצב נפשי או מצב התפתחותי כלשהו, ואין לייחס לה ייעוד כזה.</div></div>
+    <div class="cl"><span class="n">5.1</span><div><strong>לא מכשיר רפואי ולא טיפול.</strong> האפליקציה אינה מכשיר רפואי (לרבות "תוכנה כמכשיר רפואי"), אינה טיפול, ואינה כלי אבחון, סינון, ניטור או מניעה של מחלה, הפרעה או מצב כלשהו.</div></div>
+    <div class="cl"><span class="n">5.2</span><div><strong>לא תחליף לאנשי מקצוע.</strong> התוכן אינו ייעוץ רפואי, פסיכולוגי, פסיכיאטרי, נוירולוגי, התפתחותי, תזונתי, חינוכי או טיפולי, ואינו תחליף לייעוץ, לאבחון או לטיפול של רופא/ה, פסיכולוג/ית, פסיכיאטר/ית, מרפא/ה בעיסוק או כל איש מקצוע מוסמך אחר.</div></div>
+    <div class="cl"><span class="n">5.3</span><div><strong>אין להסתמך בהחלטות טיפוליות.</strong> אין להסתמך על האפליקציה בקבלת החלטה בנוגע לבריאות הילד, לאבחונו או לטיפול בו. אין להפסיק, לדחות, להפחית או לשנות טיפול, תרופה או מעקב מקצועי בשל תוכן באפליקציה. לכל שאלה על שינה, התנהגות, טיקים, חרדה, קשב, רגישות חושית או התפתחות – פנו לאיש מקצוע מוסמך. אם ילדכם מאובחן, נמצא בטיפול או נוטל תרופות – התייעצו עם הגורם המטפל לפני שילוב טכניקות נשימה, סריקת גוף או דמיון מודרך בשגרת השינה.</div></div>
+    <div class="cl"><span class="n">5.4</span><div><strong>מה פירוש שמות הקטגוריות.</strong> הקטגוריות הן <strong>נושאים ספרותיים</strong>. סיפור בקטגוריה "תסמונת טורט", למשל, הוא סיפור שגיבוריו, עולמו או מצבי ההרגעה בו נכתבו מתוך מחשבה על ילדים שחווים טיקים – כדי שירגישו מיוצגים ומובנים. <strong>זהו אינו סיפור המטפל בתסמונת, ואין בו כדי להשפיע עליה.</strong> כך גם בשאר הקטגוריות. בחירת קטגוריה אינה אבחנה, אינה מרמזת שלילד יש מצב כלשהו, ואינה מעידה שהסיפור מתאים לילד מסוים.</div></div>
+    <div class="cl"><span class="n">5.5</span><div><strong>טכניקות הרגעה.</strong> טכניקות כגון נשימות, סריקת גוף ודמיון מודרך אינן מתאימות בהכרח לכל ילד, ואצל חלק מהילדים עלולות לעורר אי-נוחות, חרדה או תגובה אחרת. אם לילד יש מצב נשימתי, לבבי, נוירולוגי, נפשי או אחר – התייעצו עם הגורם המטפל לפני השימוש.</div></div>
+    <div class="cl"><span class="n">5.6</span><div><strong>מקורות אקדמיים.</strong> רשימות המקורות מובאות לשקיפות ולהעשרה בלבד. הן אינן מעידות שהסיפור עצמו נבדק מחקרית, שמחברי המקורות אישרו אותו או קשורים אליו, או שממצאי המחקר חלים על ילדכם. הסיפורים עצמם <strong>לא נבדקו בשום מחקר</strong>, ולא נערך כל מחקר על השפעתם על ילדים. המקורות מוצגים כקריאה נוספת בלבד.</div></div>
+    <div class="cl"><span class="n">5.7</span><div><strong>חירום.</strong> האפליקציה אינה מיועדת למצבי חירום. בכל מצב של סכנה מיידית, מצוקה נפשית חריפה או בעיה רפואית דחופה – פנו מיד ל<strong>מד"א (101)</strong>, ל<strong>משטרה (100)</strong>, ל<strong>ער"ן (1201)</strong> או לחדר המיון הקרוב; מחוץ לישראל – למספר החירום המקומי.</div></div>
+  </section>
+
+  <!-- 6 -->
+  <section id="no-guarantee">
+    <h2><span class="num">6.</span>אין הבטחה לתוצאה</h2>
+    <div class="cl"><span class="n">6.1</span><div>איננו מבטיחים, מצהירים או מתחייבים שהשימוש באפליקציה יביא לשיפור כלשהו – לרבות בשינה, בזמן ההירדמות, בטיקים, בחרדה, בפחדים, בקשב, ברגישות החושית, בהתנהגות או בכל תסמין או מצב אחר.</div></div>
+    <div class="cl"><span class="n">6.2</span><div>כל ילד שונה, והתוצאות משתנות מילד לילד ומערב לערב. עדויות, דוגמאות או תיאורים (אם יופיעו) אינם מעידים על תוצאה צפויה.</div></div>
+    <div class="cl"><span class="n">6.3</span><div>הביטוי "<strong>בהשראת מחקר</strong>" פירושו שהרעיונות לטכניקות ההרגעה נשאבו מספרות מקצועית. אין פירושו שהסיפורים או האפליקציה "<strong>מוכחים קלינית</strong>", נבדקו בניסוי, אושרו על ידי רשות כלשהי או הומלצו על ידי איש מקצוע.</div></div>
+  </section>
+
+  <!-- 7 -->
+  <section id="ai">
+    <h2><span class="num">7.</span>גילוי: תוכן שנוצר בסיוע AI ומקורות</h2>
+    <div class="cl"><span class="n">7.1</span><div>הסיפורים <strong>נכתבו בסיוע כלי בינה מלאכותית</strong> ונערכו על ידי המפעיל. הם <strong>לא נכתבו ולא נבדקו</strong> על ידי רופא, פסיכולוג או איש מקצוע קליני.</div></div>
+    <div class="cl"><span class="n">7.2</span><div>אף שאנו משקיעים מאמץ בעריכה, ייתכנו בסיפורים <strong>אי-דיוקים</strong>, שגיאות, ניסוחים לא מתאימים, תיאורים שאינם תואמים את גיל הילד או את רגישותו, או טעויות ברשימות המקורות (לרבות מקור שאינו תומך בדיוק בנאמר, פרטי ציטוט שגויים או קישור שאינו פעיל).</div></div>
+    <div class="cl"><span class="n">7.3</span><div><strong>קראו קודם.</strong> באחריותכם לקרוא כל סיפור בעצמכם לפני הקראתו לילד, ולהחליט אם הוא מתאים לו – בהתחשב בגילו, ברגישויותיו, בפחדיו, בערכי המשפחה ובהמלצות הגורמים המטפלים בו. מותר לכם לדלג, לקצר או לשנות ניסוח בעת ההקראה.</div></div>
+    <div class="cl"><span class="n">7.4</span><div>מצאתם טעות או תוכן לא מתאים? נשמח לדיווח – ראו <a href="#content">סעיף 14</a>.</div></div>
+  </section>
+
+  <!-- 8 -->
+  <section id="parent">
+    <h2><span class="num">8.</span>אחריות ההורה והשגחה</h2>
+    <p>השימוש בסיפורים עם הילד נעשה באחריותכם ולפי שיקול דעתכם כהורים או כאפוטרופוסים. בפרט:</p>
+    <div class="cl"><span class="n">8.1</span><div><strong>נוכחות.</strong> הסיפורים מיועדים להקראה על ידי מבוגר הנוכח עם הילד. היו נוכחים לאורך ההקראה ושימו לב לתגובות הילד.</div></div>
+    <div class="cl"><span class="n">8.2</span><div><strong>הפסקה.</strong> אם הילד מגיב בצורה שלילית – למשל מצוקה, פחד, בכי, עוררות-יתר, קוצר נשימה, החמרה בטיקים או אי-נוחות – הפסיקו את ההקראה או את התרגיל מיד, ושקלו להתייעץ עם איש מקצוע.</div></div>
+    <div class="cl"><span class="n">8.3</span><div><strong>ללא השגחה.</strong> אין להשאיר ילד לבד עם המכשיר או עם האפליקציה. שמרו על כללי בטיחות מקובלים בשימוש במכשירים חכמים ליד ילדים ובחדר השינה.</div></div>
+    <div class="cl"><span class="n">8.4</span><div><strong>התאמה.</strong> ההחלטה אם, מתי ואיך להשתמש בסיפור מסוים – ואם לשלב אותו בשגרת השינה – היא שלכם בלבד.</div></div>
+  </section>
+
+  <!-- 9 -->
+  <section id="subscription">
+    <h2><span class="num">9.</span>מנוי, ניסיון חינם ותשלום</h2>
+    <p class="tldr"><b>בקצרה:</b>7 ימים חינם, ואחר כך ₪19.90 לחודש דרך Apple, עד שתבטלו – לפחות 24 שעות לפני החידוש.</p>
+    <div class="box box-accent">
+      <span class="box-title">פרטי המנוי</span>
+      <div class="table-wrap"><table>
+        <tr><th>פרט</th><th>תיאור</th></tr>
+        <tr><td><strong>שם המנוי</strong></td><td>מנוי פרימיום חודשי <span class="muted">(מזהה: <span class="ltr">sleep_stories_monthly</span>)</span></td></tr>
+        <tr><td><strong>משך</strong></td><td>חודש אחד, מתחדש אוטומטית מדי חודש</td></tr>
+        <tr><td><strong>מחיר</strong></td><td>בישראל: <strong>₪19.90 לחודש</strong>. במדינות אחרות המחיר נקבע לפי מדרגות התמחור של Apple ומוצג במטבע המקומי לפני אישור הרכישה.</td></tr>
+        <tr><td><strong>ניסיון חינם</strong></td><td>7 ימים ללא תשלום למשתמשים זכאים (לפי כללי הזכאות של Apple להצעות היכרות). בתום הניסיון – ₪19.90 לחודש, אלא אם ביטלתם.</td></tr>
+        <tr><td><strong>מה כלול</strong></td><td>גישה לכל הסיפורים בכל הקטגוריות כל עוד המנוי פעיל</td></tr>
+        <tr><td><strong>תשלום</strong></td><td>מעובד על ידי Apple בלבד, דרך חשבון ה-Apple ID שלכם</td></tr>
+        <tr><td><strong>ביטול</strong></td><td>בכל עת, בהגדרות ה-Apple ID, לפחות 24 שעות לפני סוף התקופה הנוכחית</td></tr>
+        <tr><td><strong>מסמכים</strong></td><td><a href="https://itziklugassy.github.io/sleep-stories-support/terms-of-service.html">תנאי שימוש</a> · <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html">מדיניות פרטיות</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple Standard EULA</a></td></tr>
+      </table></div>
+    </div>
+    <div class="cl"><span class="n">9.1</span><div><strong>רכישה ותשלום.</strong> המנוי נרכש דרך מערכת הרכישות בתוך האפליקציה (In-App Purchase) של Apple. התשלום יחויב בחשבון ה-Apple ID שלכם עם אישור הרכישה (או, אם הופעלה תקופת ניסיון – בסיומה). המפעיל אינו מקבל, אינו מעבד ואינו שומר פרטי אמצעי תשלום.</div></div>
+    <div class="cl"><span class="n">9.2</span><div><strong>מחיר ומטבע.</strong> המחיר בישראל הוא ₪19.90 לחודש. במדינות אחרות המחיר משתנה ומוצג לכם ב-App Store ובמסך הרכישה במטבע המקומי לפני האישור. <strong>המחיר המוצג במסך הרכישה של Apple הוא הסכום הסופי שבו תחויבו, כולל מסים ככל שחלים.</strong></div></div>
+    <div class="cl"><span class="n">9.3</span><div><strong>חידוש אוטומטי.</strong> המנוי <strong>מתחדש אוטומטית</strong> בסוף כל תקופה חודשית, לתקופה זהה ובמחיר התקף באותה עת, אלא אם החידוש האוטומטי בוטל <strong>לפחות 24 שעות לפני סוף התקופה הנוכחית</strong>. החשבון שלכם יחויב בגין החידוש בתוך 24 השעות שלפני סוף התקופה הנוכחית.</div></div>
+    <div class="cl"><span class="n">9.4</span><div><strong>תקופת ניסיון חינם.</strong> משתמשים זכאים יכולים ליהנות מ-7 ימי ניסיון ללא תשלום. <strong>אם לא תבטלו לפחות 24 שעות לפני תום תקופת הניסיון, המנוי יהפוך אוטומטית למנוי בתשלום</strong> ותחויבו במחיר המנוי החודשי בתום תקופת הניסיון. אם תבטלו לפני תום תקופת הניסיון, לא תחויבו, ובתום התקופה הגישה תוגבל ל-2 הסיפורים החינמיים בכל קטגוריה. אם תרכשו מנוי בתשלום במהלך תקופת הניסיון, יתרת הניסיון שלא נוצלה תפקע, ככל שהדבר חל לפי כללי Apple. הזכאות לתקופת ניסיון נקבעת על ידי Apple (בדרך כלל פעם אחת לכל Apple ID).</div></div>
+    <div class="cl"><span class="n">9.5</span><div><strong>ניהול המנוי.</strong> ניהול המנוי, ביטול החידוש האוטומטי וצפייה בתאריך החידוש הבא – בהגדרות חשבון ה-Apple ID שלכם: <strong>הגדרות ← [השם שלכם] ← מינויים</strong>, או בקישור <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">apps.apple.com/account/subscriptions</a>.</div></div>
+    <div class="cl"><span class="n">9.6</span><div><strong>שינוי מחיר.</strong> אנו רשאים לשנות את מחיר המנוי. הודעה על העלאת מחיר למנויים קיימים תימסר על ידי Apple בהתאם לכללי ה-App Store, ובמקרים שבהם Apple דורשת זאת – העלאת המחיר לא תחול עליכם ללא הסכמתכם. שינוי מחיר לא יחול על תקופה שכבר שולמה. מאחר שאין לנו פרטי קשר שלכם, נפרסם הודעה גם בתוך האפליקציה.</div></div>
+    <div class="cl"><span class="n">9.7</span><div><strong>שחזור רכישות.</strong> ניתן לשחזר מנוי פעיל במכשיר חדש או לאחר התקנה מחדש, באמצעות הכפתור <strong>"שחזר רכישה"</strong> באפליקציה, כשאתם מחוברים לאותו Apple ID.</div></div>
+    <div class="cl"><span class="n">9.8</span><div><strong>שיתוף משפחתי.</strong> המנוי אינו זמין לשיתוף משפחתי (Family Sharing).</div></div>
+    <div class="cl"><span class="n">9.9</span><div><strong>סיפורים חינמיים.</strong> 2 הסיפורים החינמיים בכל קטגוריה ניתנים ללא תשלום וללא התחייבות, והספירה נשמרת על המכשיר. אנו רשאים לשנות את היקף התוכן החינמי בעתיד. היקף הספרייה למנויים מוגן כאמור ב<a href="#service">סעיף 4.4</a>.</div></div>
+  </section>
+
+  <!-- 10 -->
+  <section id="cancel">
+    <h2><span class="num">10.</span>ביטול מנוי והחזרים</h2>
+    <div class="cl"><span class="n">10.1</span><div><strong>איך מבטלים.</strong> באייפון או באייפד: <strong>הגדרות ← [השם שלכם] ← מינויים ← סיפורי שינה מרגיעים ← ביטול מינוי</strong>, או דרך <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">עמוד המינויים של Apple</a>. מחיקת האפליקציה מהמכשיר <strong>אינה</strong> מבטלת את המנוי.</div></div>
+    <div class="cl"><span class="n">10.2</span><div><strong>מתי נכנס הביטול לתוקף.</strong> כדי למנוע את החיוב הבא יש לבטל לפחות 24 שעות לפני סוף התקופה הנוכחית. לאחר הביטול תמשיכו ליהנות מגישה מלאה עד סוף התקופה ששולמה (או עד סוף תקופת הניסיון), ולאחר מכן הגישה תוגבל לסיפורים החינמיים.</div></div>
+    <div class="cl"><span class="n">10.3</span><div><strong>החזרים.</strong> כל התשלומים מעובדים על ידי Apple, ובקשות להחזר כספי מוגשות ל-Apple ומטופלות לפי מדיניותה, בכתובת <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. למפעיל אין גישה לאמצעי התשלום שלכם, ולכן אינו יכול לבטל חיוב דרך Apple בעצמו – אך ראו סעיף 10.5.</div></div>
+    <div class="cl"><span class="n">10.4</span><div><strong>זכויות צרכניות.</strong> אין באמור בסעיף זה כדי לגרוע מזכות שמוקנית לכם לפי חוק הגנת הצרכן, התשמ"א-1981, לרבות לעניין ביטול עסקה מתמשכת וביטול עסקת מכר מרחוק, ככל שהיא חלה. בקשת ביטול או החזר ניתן להגיש ל-Apple בכתובת reportaproblem.apple.com, או אלינו בדוא"ל – ואנו נפעל כאמור בסעיף 10.5.</div></div>
+    <div class="cl"><span class="n">10.5</span><div><strong>הודעת ביטול אלינו.</strong> אם שלחתם לנו הודעת ביטול בדוא"ל (<a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a>), נאשר את קבלתה ונשלח לכם הנחיות לביטול דרך Apple בתוך 3 ימי עסקים. מאחר שהחיוב מתבצע על ידי Apple, איננו יכולים לבטל את המנוי בעצמנו. עם זאת, אם חויבתם לאחר שהודעתם לנו על רצונכם לבטל, ולא עלה בידכם לבטל דרך Apple – נסייע לכם בבקשת החזר מ-Apple, ואם הבקשה תידחה, <strong>נשיב לכם בעצמנו את סכום החיוב שבוצע לאחר מועד הודעתכם</strong>.</div></div>
+  </section>
+
+  <!-- 11 -->
+  <section id="apple">
+    <h2><span class="num">11.</span>Apple ותנאי ה-EULA הסטנדרטיים</h2>
+    <p class="tldr"><b>בקצרה:</b>ההסכם הוא ביניכם לבין המפעיל, לא עם Apple; Apple אינה אחראית לאפליקציה אבל רשאית לאכוף תנאים אלה.</p>
+    <div class="cl"><span class="n">11.1</span><div>השימוש באפליקציה כפוף גם ל<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">הסכם רישיון משתמש הקצה הסטנדרטי של Apple</a> ("<strong>Apple Standard EULA</strong>"). תנאים אלה משלימים אותו. ה-Apple Standard EULA גובר בכל הנוגע להיקף הרישיון לתוכנה ולזכויות Apple. בכל עניין אחר – ובכלל זה המנוי, התוכן, הגבלת האחריות, הדין החל וסמכות השיפוט ביחסים ביניכם לבין המפעיל – יחולו תנאים אלה. <strong>הוראה בתנאים אלה המיטיבה עמכם לעומת ה-Apple Standard EULA – תגבר.</strong></div></div>
+    <div class="cl"><span class="n">11.2</span><div>תנאים אלה נערכים ביניכם לבין המפעיל בלבד, ולא עם Apple. המפעיל, ולא Apple, אחראי לאפליקציה ולתוכנה.</div></div>
+    <div class="cl"><span class="n">11.3</span><div>Apple אינה חייבת לספק שירותי תחזוקה או תמיכה לאפליקציה. פניות תמיכה יש להפנות אלינו (<a href="#contact">סעיף 28</a>).</div></div>
+    <div class="cl"><span class="n">11.4</span><div>במידה שהאפליקציה אינה עומדת באחריות כלשהי החלה לפי דין, אתם רשאים להודיע על כך ל-Apple, ו-Apple רשאית להשיב לכם את מחיר הרכישה (אם שולם) בהתאם למדיניותה. במידה המרבית המותרת בדין, ל-Apple לא תהיה כל חובת אחריות אחרת ביחס לאפליקציה.</div></div>
+    <div class="cl"><span class="n">11.5</span><div>Apple אינה אחראית לטפל בטענות שלכם או של צד שלישי בנוגע לאפליקציה או להחזקתה ולשימוש בה – לרבות טענות לאחריות למוצר, טענות לאי-עמידה בדרישה חוקית או רגולטורית, וטענות לפי דיני הגנת הצרכן. טיפול בטענות כאלה הוא באחריות המפעיל. בנוסף, <strong>המפעיל, ולא Apple, יהיה האחראי הבלעדי לבירור, להתגוננות, לפשרה ולסילוק</strong> של כל טענה כי האפליקציה או החזקתה ושימושכם בה מפרים זכויות קניין רוחני של צד שלישי.</div></div>
+    <div class="cl"><span class="n">11.6</span><div>אתם מצהירים שאינכם נמצאים במדינה הכפופה לאמברגו של ממשלת ארה"ב או שהוגדרה על ידה כ"תומכת טרור", ושאינכם כלולים ברשימת גורמים אסורים או מוגבלים של ממשלת ארה"ב.</div></div>
+    <div class="cl"><span class="n">11.7</span><div>Apple והחברות הבנות שלה הן <strong>מוטבות צד שלישי</strong> של תנאים אלה, ומעת שקיבלתם אותם, Apple רשאית לאכוף אותם כלפיכם כמוטבת.</div></div>
+    <div class="cl"><span class="n">11.8</span><div>בשימוש באפליקציה עליכם לעמוד בתנאי ההסכמים החלים עליכם מול צדדים שלישיים, כגון ספק הסלולר או האינטרנט שלכם.</div></div>
+  </section>
+
+  <!-- 12 -->
+  <section id="ip">
+    <h2><span class="num">12.</span>קניין רוחני ורישיון שימוש</h2>
+    <p class="tldr"><b>בקצרה:</b>מותר להקריא לילדים שלכם בבית (ובתנאים שבסעיף 12.3 גם לילדים שבהשגחתכם במסגרת מקצועית); אסור להעתיק, להקליט, לפרסם או להשתמש בסיפורים מסחרית.</p>
+    <div class="cl"><span class="n">12.1</span><div><strong>בעלות.</strong> האפליקציה, קוד התוכנה, העיצוב, הממשק, הלוגו, שם האפליקציה, וכן הבחירה, העריכה, הסידור והקיבוץ של הסיפורים ושל רשימות המקורות – הם של המפעיל או מורשים לו, ומוגנים בדיני זכויות יוצרים, סימני מסחר וקניין רוחני. הסיפורים נכתבו בסיוע כלי בינה מלאכותית ועברו עריכה ושכתוב על ידי המפעיל; הזכויות בהם, <strong>במידה שהן מוכרות בדין</strong>, שמורות למפעיל. <strong>בכל מקרה</strong>, הגישה לסיפורים ניתנת לכם אך ורק לפי הרישיון שבסעיף 12.2 ובכפוף להגבלות שבסעיף 12.3, ואתם מתחייבים לעמוד בהן. כל הזכויות שלא הוענקו לכם במפורש שמורות למפעיל.</div></div>
+    <div class="cl"><span class="n">12.2</span><div><strong>רישיון.</strong> בכפוף לעמידתכם בתנאים ולכללי ה-Apple Standard EULA, המפעיל מעניק לכם רישיון <strong>אישי, לא-בלעדי, לא-ניתן להעברה, לא-ניתן להמחאה או לרישוי-משנה, ניתן לביטול ולא-מסחרי</strong>, להשתמש באפליקציה במכשירי Apple שבבעלותכם או בשליטתכם, ולהקריא את הסיפורים <strong>לילדיכם או לילדים שבהשגחתכם</strong> – במסגרת ביתית ופרטית, או במסגרת המותרת בסעיף 12.3.</div></div>
+    <div class="cl"><span class="n">12.3</span><div><strong>מה אסור ללא הסכמה מראש ובכתב.</strong></div></div>
+    <ul>
+      <li>להעתיק, לשכפל, לצלם מסך באופן שיטתי, להדפיס לצורך הפצה, לתרגם, לעבד או ליצור יצירות נגזרות מהסיפורים;</li>
+      <li>להפיץ, לפרסם, להעלות לרשת, לשתף ברשתות חברתיות, בקבוצות, באתרים או בערוצים – באופן מלא או חלקי;</li>
+      <li><strong>הקראה מסחרית או פומבית</strong>: הקלטה, פודקאסט, סרטון (לרבות YouTube, TikTok ודומיהם), שידור, סדנה, שיעור, חוג או מפגש בתשלום, או הקראה בפני קהל;</li>
+      <li>שימוש מסחרי במסגרת מקצועית או מוסדית, <strong>למעט</strong> הקראה לילדים שבהשגחתכם בידי בעל מנוי אישי, ללא הקלטה, ללא הפצה וללא גבייה נפרדת עבור ההקראה;</li>
+      <li>שימוש בתוכן כדי לאמן, לכוונן או להזין מערכות בינה מלאכותית או מאגרי נתונים, או לאסוף אותו בכלים אוטומטיים (scraping);</li>
+      <li>הסרה או שינוי של הודעות זכויות יוצרים, סימנים או רשימות מקורות.</li>
+    </ul>
+    <div class="cl"><span class="n">12.4</span><div><strong>סימנים.</strong> אין להשתמש בשם "סיפורי שינה מרגיעים", בלוגו או בסימנים מזהים של האפליקציה באופן שעלול להטעות או לרמוז על קשר עם המפעיל. "Apple", "App Store", "iPhone" ו-"iPad" הם סימני מסחר של Apple Inc.</div></div>
+    <div class="cl"><span class="n">12.5</span><div><strong>מקורות של אחרים.</strong> הזכויות במקורות האקדמיים המוזכרים שמורות לבעליהן. האזכור נעשה לשם הפניה בלבד.</div></div>
+    <div class="cl"><span class="n">12.6</span><div><strong>טענה להפרה.</strong> אם אתם סבורים שתוכן באפליקציה מפר זכויות שלכם, פנו אלינו (<a href="#contact">סעיף 28</a>) עם פרטי היצירה, מיקום התוכן באפליקציה והסבר, ואנו נבחן את הפנייה.</div></div>
+  </section>
+
+  <!-- 13 -->
+  <section id="prohibited">
+    <h2><span class="num">13.</span>שימושים אסורים</h2>
+    <p class="tldr"><b>בקצרה:</b>אל תפרצו, אל תעקפו את המנוי ואל תעתיקו את הקוד.</p>
+    <p>בנוסף לאמור בסעיף 12, אין לבצע, לנסות לבצע או לסייע לאחר לבצע:</p>
+    <div class="cl"><span class="n">13.1</span><div><strong>הנדסה לאחור</strong>: פירוק, הידור לאחור (decompile), הנדסה חוזרת (reverse engineering), או ניסיון לחלץ קוד מקור, מבני נתונים, מפתחות או תוכן מוצפן – אלא במידה שהדבר מותר במפורש בדין שלא ניתן להתנות עליו.</div></div>
+    <div class="cl"><span class="n">13.2</span><div><strong>עקיפת מנגנונים</strong>: עקיפה, השבתה או שיבוש של מנגנוני המנוי, ספירת הסיפורים החינמיים, אימות הרכישות או כל מנגנון הגנה אחר, לרבות שימוש בגרסה מותאמת, פרוצה (jailbreak) או מזויפת של האפליקציה לשם כך.</div></div>
+    <div class="cl"><span class="n">13.3</span><div><strong>גישה למערכות</strong>: ניסיון לגשת ללא הרשאה לשרתים, למסדי הנתונים (לרבות Firebase Firestore) או לממשקים של האפליקציה, שליחת בקשות אוטומטיות בכמות חריגה, או פגיעה בזמינות השירות.</div></div>
+    <div class="cl"><span class="n">13.4</span><div><strong>קוד מזיק</strong>: הפצה או החדרה של וירוס, תוכנה זדונית או כל קוד מזיק.</div></div>
+    <div class="cl"><span class="n">13.5</span><div><strong>שימוש בלתי חוקי או מטעה</strong>: שימוש באפליקציה בניגוד לדין; הצגת האפליקציה או תוכנה כטיפול, כאבחון או כהמלצה מקצועית; או מכירה, השכרה או הלוואה של גישה לאפליקציה.</div></div>
+    <div class="cl"><span class="n">13.6</span><div>הפרת סעיף זה עלולה להביא להגבלת הגישה שלכם לשירות (ראו <a href="#termination">סעיף 22</a>), ואינה גורעת מכל סעד אחר העומד למפעיל לפי דין.</div></div>
+  </section>
+
+  <!-- 14 -->
+  <section id="content">
+    <h2><span class="num">14.</span>מדיניות תוכן ודיווח על תוכן</h2>
+    <div class="cl"><span class="n">14.1</span><div><strong>המטרה שלנו.</strong> אנו שואפים שהסיפורים יהיו רגועים, מכבדים ומתאימים להקראה לילדים: ללא אלימות, ללא תוכן מיני, ללא תוכן מפחיד או מבזה, ללא סטריאוטיפים פוגעניים, ללא תיאור מתייג או משפיל של ילדים עם אבחנה, וללא עצות רפואיות.</div></div>
+    <div class="cl"><span class="n">14.2</span><div><strong>דיווח.</strong> אם נתקלתם בתוכן שנראה לכם בלתי הולם, פוגעני, מפחיד, שגוי עובדתית, לא מדויק מבחינה מקצועית, או במקור אקדמי שגוי – נשמח שתדווחו לנו בדוא"ל <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a>, עם שם הסיפור, הקטגוריה ותיאור קצר.</div></div>
+    <div class="cl"><span class="n">14.3</span><div><strong>טיפול.</strong> נשיב לכל דיווח בתוך <strong>14 ימי עסקים</strong>, ונפעל לפי שיקול דעתנו לתיקון, לעדכון או להסרה של התוכן. בשל אופן הפצת התוכן (ראו <a href="#updates">סעיף 17</a>), תיקון עשוי להגיע אליכם רק לאחר עדכון או חיבור לרשת.</div></div>
+    <div class="cl"><span class="n">14.4</span><div>האפליקציה אינה מאפשרת למשתמשים להעלות או לפרסם תוכן, ולכן אין בה תוכן גולשים.</div></div>
+  </section>
+
+  <!-- 15 -->
+  <section id="privacy">
+    <h2><span class="num">15.</span>פרטיות</h2>
+    <p>אנו אוספים מעט מאוד מידע: אין חשבון, אין הרשמה, ואין איסוף של שם, גיל הילד או מידע רפואי. מועדפים ורשימת הסיפורים שנצפו נשמרים על המכשיר בלבד. לניהול המנוי אנו נעזרים ב-RevenueCat, שמקבלת מזהה אקראי ונתוני רכישה מ-Apple; אם תפנו אלינו בדוא"ל – נשמור את כתובתכם ואת תוכן הפנייה. ספקי השירות שלנו פועלים בעיקר בארה"ב.</p>
+    <p>כל הפרטים – מה נאסף, אצל מי, לכמה זמן, והזכויות שלכם – מופיעים ב<a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html">מדיניות הפרטיות</a>, והיא הקובעת בכל עניין של פרטיות. שינויים בטיפול במידע יחולו כמפורט <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html#s18">בסעיף 18 למדיניות הפרטיות</a>.</p>
+  </section>
+
+  <!-- 16 -->
+  <section id="availability">
+    <h2><span class="num">16.</span>זמינות השירות ותמיכה</h2>
+    <div class="cl"><span class="n">16.1</span><div>אנו שואפים שהאפליקציה תהיה זמינה ותפעל כראוי, אך איננו מתחייבים לזמינות רציפה, ללא תקלות או ללא שגיאות. השירות עשוי להיות מופרע, בין היתר, בשל תחזוקה, עדכונים, תקלות אצל ספקי צד שלישי (ראו <a href="#third-party">סעיף 19</a>), תקלות רשת או תקלות במכשיר.</div></div>
+    <div class="cl"><span class="n">16.2</span><div>חלק מהסיפורים נטענים מהענן ודורשים חיבור לאינטרנט; ייתכן שיהיו זמינים במצב לא מקוון רק סיפורים שנטענו בעבר.</div></div>
+    <div class="cl"><span class="n">16.3</span><div>האפליקציה נתמכת בגרסאות iOS המפורטות בדף האפליקציה ב-App Store. ייתכן שגרסאות ישנות של מערכת ההפעלה או של האפליקציה יפסיקו להיתמך.</div></div>
+    <div class="cl"><span class="n">16.4</span><div><strong>תמיכה.</strong> פניות תמיכה – בדוא"ל <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a> או דרך <a href="https://itziklugassy.github.io/sleep-stories-support/" target="_blank" rel="noopener">אתר התמיכה</a>. <strong>נשיב בתוך 14 ימי עסקים</strong>; לבקשת עיון לפי חוק הגנת הפרטיות – לא יאוחר מ-21 ימים.</div></div>
+  </section>
+
+  <!-- 17 -->
+  <section id="updates">
+    <h2><span class="num">17.</span>עדכונים, עדכוני OTA ותוכן מהענן</h2>
+    <div class="cl"><span class="n">17.1</span><div><strong>עדכוני App Store.</strong> מעת לעת נפרסם גרסאות חדשות דרך ה-App Store. ייתכן שחלק מהתכונות יחייבו התקנת הגרסה העדכנית.</div></div>
+    <div class="cl"><span class="n">17.2</span><div><strong>עדכונים "באוויר" (OTA).</strong> האפליקציה משתמשת בשירות העדכונים של Expo (EAS Update, מבית 650 Industries, Inc.), המאפשר להוריד ולהתקין אוטומטית עדכונים לתוכן, לממשק ולקוד ה-JavaScript של האפליקציה, ללא התקנה מחדש מה-App Store, והכול במסגרת המותרת לפי כללי Apple. בשימוש באפליקציה אתם מסכימים לקבלת עדכונים אלה. עדכונים כאלה לא ישנו את מהות האפליקציה או את תנאי המנוי ללא הודעה.</div></div>
+    <div class="cl"><span class="n">17.3</span><div><strong>תוכן מהענן.</strong> סיפורים נוספים נטענים מ-Firebase Firestore (Google LLC). אנו רשאים להוסיף, לתקן, לעדכן או להסיר סיפורים מהענן, לרבות בעקבות דיווח (סעיף 14), בכפוף לסעיף 4.4.</div></div>
+    <div class="cl"><span class="n">17.4</span><div>עדכונים כפופים לתנאים אלה, אלא אם צורפו אליהם תנאים אחרים.</div></div>
+  </section>
+
+  <!-- 18 -->
+  <section id="beta">
+    <h2><span class="num">18.</span>גרסאות בטא, TestFlight ומשוב</h2>
+    <div class="cl"><span class="n">18.1</span><div>אם תוזמנו להשתמש בגרסת ניסיון (בטא) של האפליקציה, לרבות דרך Apple TestFlight, תנאים אלה יחולו עליה, בנוסף לתנאי TestFlight של Apple.</div></div>
+    <div class="cl"><span class="n">18.2</span><div>גרסת בטא מסופקת לצורכי בדיקה בלבד. היא עלולה לכלול תקלות, תוכן שלא נערך סופית ותכונות שלא יגיעו לגרסה הרשמית, ועלולה להפסיק לפעול בכל עת. אין לשתף תוכן, צילומי מסך או מידע מגרסת בטא ללא אישורנו.</div></div>
+    <div class="cl"><span class="n">18.3</span><div>רכישות בסביבת הבדיקה (Sandbox) של Apple אינן מחויבות ואינן מקנות מנוי בגרסה הרשמית.</div></div>
+    <div class="cl"><span class="n">18.4</span><div><strong>משוב.</strong> אם תשלחו לנו הצעות, רעיונות או משוב, אתם מעניקים לנו רשות חופשית, בלתי חוזרת וללא תמורה להשתמש בהם לשיפור השירות, ללא חובת ייחוס. איננו חייבים ליישם משוב כלשהו. נא לא לשלוח לנו מידע רפואי או מידע מזהה על ילדכם.</div></div>
+  </section>
+
+  <!-- 19 -->
+  <section id="third-party">
+    <h2><span class="num">19.</span>שירותי צד שלישי</h2>
+    <div class="cl"><span class="n">19.1</span><div>האפליקציה ושירותי התמיכה נשענים על ספקי צד שלישי: Apple Inc. (App Store ו-StoreKit), RevenueCat, Inc. (ניהול מנויים), Google LLC (Firebase Firestore ו-Gmail), 650 Industries, Inc. (Expo / EAS) ו-GitHub, Inc. (GitHub Pages – אתר התמיכה), כמפורט <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html#s8">בסעיף 8 למדיניות הפרטיות</a>. השימוש בהם כפוף גם לתנאים ולמדיניות הפרטיות של אותם ספקים. איננו אחראים לפעולתם, לזמינותם או למדיניותם, מעבר לאחריות המוטלת עלינו לפי דין.</div></div>
+    <div class="cl"><span class="n">19.2</span><div>קישורים לאתרים חיצוניים (לרבות מקורות אקדמיים) מובאים לנוחות בלבד. איננו שולטים בתוכנם ואיננו אחראים לו.</div></div>
+  </section>
+
+  <!-- 20 -->
+  <section id="liability">
+    <h2><span class="num">20.</span>הגבלת אחריות</h2>
+    <p class="tldr"><b>בקצרה:</b>אנחנו עושים מאמץ, אבל לא מבטיחים תוצאה, ואחריותנו מוגבלת – אלא אם פעלנו ברשלנות חמורה, בכוונה, או גרמנו לנזק גוף ברשלנות.</p>
+    <div class="cl"><span class="n">20.1</span><div><strong>"כמות שהיא" (AS IS).</strong> במידה המרבית המותרת בדין, האפליקציה והתוכן מסופקים "כמות שהם" ו"כפי שהם זמינים", ללא מצג או התחייבות, מפורשים או משתמעים, לרבות לעניין התאמה למטרה מסוימת, דיוק, שלמות, רצף פעולה או תוצאה. אין באמור כדי לגרוע מאחריותנו לפעול בסבירות ובתום לב בעריכת התוכן ובהפעלת השירות.</div></div>
+    <div class="cl"><span class="n">20.2</span><div><strong>מה אינו באחריותנו.</strong> במידה המרבית המותרת בדין, המפעיל לא יישא באחריות לנזק הנובע מ: (א) הסתמכות על התוכן כייעוץ או כטיפול רפואי או מקצועי, בניגוד לסעיף 5; (ב) אי-השגת תוצאה כלשהי (סעיף 6); (ג) אי-דיוק בתוכן או במקורות, ובלבד שנהגנו בסבירות בעריכתו (סעיף 7); (ד) שימוש שלא בהתאם לסעיף 8, לרבות השארת ילד ללא השגחה או המשך ההקראה לאחר תגובה שלילית; (ה) תקלות, הפסקות או אובדן מידע מקומי; (ו) פעולות או מחדלים של Apple או של ספקי צד שלישי.</div></div>
+    <div class="cl"><span class="n">20.3</span><div><strong>נזק עקיף.</strong> במידה המרבית המותרת בדין, המפעיל לא יישא באחריות לנזק עקיף, מיוחד, תוצאתי או אגבי, לאובדן רווחים או לאובדן מידע.</div></div>
+    <div class="cl"><span class="n">20.4</span><div><strong>תקרה.</strong> במידה המרבית המותרת בדין, האחריות הכוללת של המפעיל כלפיכם בגין כל עילה הקשורה לאפליקציה לא תעלה על <strong>הסכום הגבוה מבין</strong>: (א) הסכום ששילמתם בפועל עבור המנוי ב-12 החודשים שקדמו לאירוע שבגינו נוצרה העילה; או (ב) <strong>500 ₪</strong>.</div></div>
+    <div class="cl"><span class="n">20.5</span><div><strong>סייגים להגבלה.</strong> אין בסעיף זה כדי להגביל או לפטור מאחריות: (א) בגין נזק שנגרם במתכוון או ברשלנות חמורה של המפעיל; (ב) בגין <strong>נזק גוף או נזק נפשי</strong> שנגרם עקב רשלנות של המפעיל; (ג) בגין מרמה או הטעיה; (ד) בגין כל אחריות שלא ניתן להגבילה או לפטור ממנה לפי דין, לרבות לפי חוק הגנת הצרכן, התשמ"א-1981, וחוק החוזים האחידים, התשמ"ג-1982. אם הוראה כלשהי בסעיף זה תיקבע כבלתי אכיפה, היא תוחל במידה המרבית המותרת.</div></div>
+  </section>
+
+  <!-- 21 -->
+  <section id="indemnity">
+    <h2><span class="num">21.</span>שיפוי</h2>
+    <p class="tldr"><b>בקצרה:</b>אם תפרו את זכויות היוצרים שלנו או תשתמשו באפליקציה בניגוד לדין, ויתבעו אותנו בגלל זה – תצטרכו לשאת בנזק.</p>
+    <div class="cl"><span class="n">21.1</span><div>אתם מתחייבים לשפות את המפעיל בגין נזק, הפסד או הוצאה סבירה (לרבות שכר טרחת עורך דין סביר) שייגרמו לו עקב תביעה של צד שלישי הנובעת מהפרה שלכם את סעיפים <a href="#ip">12</a> או <a href="#prohibited">13</a> (קניין רוחני ושימושים אסורים), או משימוש שלכם באפליקציה בניגוד לדין.</div></div>
+    <div class="cl"><span class="n">21.2</span><div>השיפוי מותנה בכך שהמפעיל יודיע לכם על התביעה בתוך זמן סביר, יאפשר לכם להתגונן מפניה, ולא יתפשר בה ללא הסכמתכם (שלא תסורב שלא מטעם סביר). השיפוי לא יחול במידה שהנזק נגרם באשמת המפעיל.</div></div>
+  </section>
+
+  <!-- 22 -->
+  <section id="termination">
+    <h2><span class="num">22.</span>הפסקת שימוש והפסקת השירות</h2>
+    <div class="cl"><span class="n">22.1</span><div><strong>על ידיכם.</strong> אתם רשאים להפסיק להשתמש באפליקציה בכל עת ולמחוק אותה. כדי להפסיק חיובים יש לבטל את המנוי כאמור ב<a href="#cancel">סעיף 10</a> – מחיקת האפליקציה לבדה אינה מבטלת אותו.</div></div>
+    <div class="cl"><span class="n">22.2</span><div><strong>על ידינו.</strong> אם הפרתם הפרה מהותית של התנאים (בפרט סעיפים 12–13), אנו רשאים להגביל או לחסום את גישתכם לשירות או לחלקים ממנו, ככל שהדבר אפשרי טכנית, לאחר התראה סבירה כשהדבר אפשרי ובמידה המתאימה להפרה.</div></div>
+    <div class="cl"><span class="n">22.3</span><div><strong>הפסקת השירות.</strong> אנו רשאים להפסיק את פעילות האפליקציה או להסירה מה-App Store. במקרה כזה נמסור הודעה מוקדמת של <strong>30 יום לפחות</strong>, באפליקציה ובאתר התמיכה, ונפעל להפסקת חידוש המנויים. בקשות להחזר בגין תקופה ששולמה ולא נוצלה יוגשו ל-Apple, ואין בכך כדי לגרוע מזכויותיכם לפי דין או לפי סעיף 10.5.</div></div>
+    <div class="cl"><span class="n">22.4</span><div>סעיפים שמטבעם נועדו לחול גם לאחר סיום השימוש – לרבות סעיפים 5–7, 12, 20, 21, 26 ו-27 – ימשיכו לחול.</div></div>
+  </section>
+
+  <!-- 23 -->
+  <section id="changes">
+    <h2><span class="num">23.</span>שינויים בתנאים</h2>
+    <div class="cl"><span class="n">23.1</span><div>אנו רשאים לעדכן את התנאים מעת לעת, למשל עקב שינוי בשירות, בדין או בכללי Apple. הגרסה העדכנית תפורסם באפליקציה ובאתר התמיכה, עם תאריך עדכון ומספר גרסה.</div></div>
+    <div class="cl"><span class="n">23.2</span><div><strong>שינוי מהותי</strong> לרעתכם ייכנס לתוקף לא לפני <strong>14 ימים</strong> ממועד פרסום הודעה בולטת באפליקציה ובאתר התמיכה, אלא אם השינוי נדרש לפי דין או לפי דרישת Apple, או נועד לתיקון מיידי של סיכון בטיחותי – ואז ייתכן שייכנס לתוקף מוקדם יותר. שינויים שאינם מהותיים או שהם לטובתכם ייכנסו לתוקף עם פרסומם.</div></div>
+    <div class="cl"><span class="n">23.3</span><div>שינוי בתנאים לא יחול למפרע ולא ישנה תנאים של תקופת מנוי ששולמה. אם אינכם מסכימים לשינוי – תוכלו לבטל את המנוי ולהפסיק להשתמש באפליקציה. המשך השימוש לאחר כניסת השינוי לתוקף מהווה הסכמה לו, <strong>למעט שינוי במדיניות הפרטיות הטעון הסכמה לפי דין</strong>.</div></div>
+    <div class="cl"><span class="n">23.4</span><div>שינוי מחיר המנוי מוסדר ב<a href="#subscription">סעיף 9.6</a>.</div></div>
+  </section>
+
+  <!-- 24 -->
+  <section id="accessibility">
+    <h2><span class="num">24.</span>נגישות</h2>
+    <div class="cl"><span class="n">24.1</span><div>אנו פועלים לאפשר שימוש בכלי הנגישות המובנים של iOS, כגון הגדלת טקסט ו-VoiceOver, ככל שהם נתמכים באפליקציה.</div></div>
+    <div class="cl"><span class="n">24.2</span><div>נתקלתם בקושי נגישות? כתבו לנו בדוא"ל <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a>. נשיב בתוך 14 ימי עסקים ונפעל לסייע ולתקן.</div></div>
+  </section>
+
+  <!-- 25 -->
+  <section id="force-majeure">
+    <h2><span class="num">25.</span>כוח עליון</h2>
+    <p>המפעיל לא יהיה אחראי לעיכוב או לאי-ביצוע של התחייבות לפי התנאים, הנובעים מנסיבות שאינן בשליטתו הסבירה – לרבות מלחמה, פעולות איבה או טרור, מצב חירום, אסון טבע, מגפה, הוראות רשויות, השבתה או תקלה של תשתיות תקשורת, חשמל או ענן, או תקלה או שינוי מדיניות אצל Apple או אצל ספקי צד שלישי – ובלבד שלא תחויבו עבור תקופה שבה לא סופק לכם השירות. המפעיל יפעל בסבירות לצמצום ההשפעה ולחידוש השירות. אין בסעיף זה כדי לגרוע מזכותכם לבטל את המנוי.</p>
+  </section>
+
+  <!-- 26 -->
+  <section id="law">
+    <h2><span class="num">26.</span>דין חל, סמכות שיפוט ויישוב סכסוכים</h2>
+    <p class="tldr"><b>בקצרה:</b>חל הדין הישראלי, ובתי המשפט בתל אביב-יפו – אבל תמיד תוכלו לתבוע כצרכנים גם ליד מקום מגוריכם.</p>
+    <div class="cl"><span class="n">26.1</span><div><strong>דין חל.</strong> על תנאים אלה ועל ההתקשרות ביניכם לבין המפעיל יחולו דיני מדינת ישראל, ללא תחולת כללי ברירת הדין. אין בכך כדי לגרוע מהדין החל על ה-Apple Standard EULA ביחסים ביניכם לבין Apple, או מהגנה שמקנה לכם דין מדינת מגוריכם שלא ניתן להתנות עליו.</div></div>
+    <div class="cl"><span class="n">26.2</span><div><strong>סמכות שיפוט.</strong> סמכות השיפוט הייחודית נתונה לבתי המשפט המוסמכים <strong>בתל אביב-יפו</strong>, בכפוף לסעיף 26.3.</div></div>
+    <div class="cl"><span class="n">26.3</span><div><strong>שמירת זכויות צרכן.</strong> אין בסעיף 26.2 כדי לשלול את זכותכם כצרכנים להגיש תביעה בבית המשפט שבאזור שיפוטו אתם מתגוררים, לרבות בבית משפט לתביעות קטנות, ככל שהדבר מותר לפי הדין. משתמשים המתגוררים מחוץ לישראל – אין בתנאים כדי לשלול מכם הגנה שמקנה לכם דין מדינת מגוריכם שלא ניתן להתנות עליו, או את זכותכם לפנות לרשות פיקוח מקומית.</div></div>
+    <div class="cl"><span class="n">26.4</span><div><strong>פנייה ראשונה אלינו.</strong> לפני נקיטת הליך משפטי, אנו מזמינים אתכם לפנות אלינו בדוא"ל ולתאר את הבעיה. ננסה לפתור את העניין בהידברות בתוך 30 יום. אין בכך כדי לפגוע בזכותכם לפנות לערכאות או לגורם מוסמך אחר, או במרוץ ההתיישנות.</div></div>
+    <div class="cl"><span class="n">26.5</span><div>מחלוקות בנוגע לחיוב, לחידוש או להחזר כספי מטופלות ראשית מול Apple, ובכפוף לסעיף 10.5.</div></div>
+  </section>
+
+  <!-- 27 -->
+  <section id="general">
+    <h2><span class="num">27.</span>הוראות כלליות</h2>
+    <p class="tldr"><b>בקצרה:</b>הוראות משפטיות כלליות על אופן פירוש התנאים.</p>
+    <div class="cl"><span class="n">27.1</span><div><strong>שלמות ההסכם.</strong> התנאים וה-Apple Standard EULA (כאמור בסעיף 11.1) מהווים את מלוא ההסכמות בינינו בנוגע לאפליקציה, וגוברים על כל מצג, פרסום או הסכמה קודמים בעניין זה – ובכלל זה על גרסאות קודמות של התנאים. הטיפול במידע מתואר במדיניות הפרטיות.</div></div>
+    <div class="cl"><span class="n">27.2</span><div><strong>הפרדה (Severability).</strong> אם ייקבע שהוראה בתנאים בטלה, מקפחת או בלתי אכיפה, כולה או חלקה, היא תפורש או תוגבל במידה הנדרשת כדי שתהיה אכיפה, ויתר ההוראות יעמדו בתוקפן.</div></div>
+    <div class="cl"><span class="n">27.3</span><div><strong>ויתור.</strong> הימנעות או שיהוי במימוש זכות לפי התנאים לא ייחשבו כוויתור על אותה זכות או על זכות אחרת, אלא אם הוויתור נעשה במפורש ובכתב.</div></div>
+    <div class="cl"><span class="n">27.4</span><div><strong>המחאה.</strong> אינכם רשאים להמחות או להעביר את זכויותיכם או חובותיכם לפי התנאים, אלא כפי שמאפשרים כללי Apple. המפעיל רשאי להמחות את זכויותיו וחובותיו לפי התנאים לגורם שירכוש את האפליקציה או ימשיך להפעילה, ובלבד שזכויותיכם לפי התנאים ולפי מדיניות הפרטיות לא ייפגעו, ותימסר על כך הודעה באפליקציה.</div></div>
+    <div class="cl"><span class="n">27.5</span><div><strong>יחסי הצדדים.</strong> אין בתנאים כדי ליצור יחסי שותפות, סוכנות, העסקה או מיזם משותף. אין בשימוש באפליקציה כדי ליצור יחסי מטפל–מטופל או יחסי ייעוץ מקצועי כלשהם.</div></div>
+    <div class="cl"><span class="n">27.6</span><div><strong>צדדים שלישיים.</strong> למעט Apple (סעיף 11.7), אין בתנאים כדי להקנות זכויות לצד שלישי.</div></div>
+    <div class="cl"><span class="n">27.7</span><div><strong>שפה.</strong> התנאים נכתבו בעברית. אם יתורגמו לשפה אחרת – הנוסח העברי יגבר במקרה של סתירה, בכפוף לדין החל.</div></div>
+    <div class="cl"><span class="n">27.8</span><div><strong>הודעות.</strong> מאחר שאיננו מחזיקים פרטי קשר שלכם, הודעות מאיתנו יימסרו בתוך האפליקציה, באתר התמיכה או דרך Apple. הודעות מכם יישלחו לכתובת הדוא"ל או לכתובת הדואר שבסעיף 28.</div></div>
+    <div class="cl"><span class="n">27.9</span><div><strong>פרשנות.</strong> המילים "לרבות" ו"כגון" באות לדוגמה ואינן ממצות.</div></div>
+  </section>
+
+  <!-- 28 -->
+  <section id="contact">
+    <h2><span class="num">28.</span>יצירת קשר</h2>
+    <div class="table-wrap"><table>
+      <tr><td><strong>המפעיל</strong></td><td>איציק לוגאסי (Itzik Lugassy), עוסק יחיד, ישראל</td></tr>
+      <tr><td><strong>מספר עוסק</strong></td><td><span class="ph">[[מספר עוסק]]</span></td></tr>
+      <tr><td><strong>כתובת למשלוח דואר</strong></td><td><span class="ph">[[כתובת למשלוח דואר]]</span></td></tr>
+      <tr><td><strong>דוא"ל</strong></td><td><a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a> (מענה בתוך 14 ימי עסקים)</td></tr>
+      <tr><td><strong>אתר תמיכה</strong></td><td><a href="https://itziklugassy.github.io/sleep-stories-support/" target="_blank" rel="noopener">itziklugassy.github.io/sleep-stories-support</a></td></tr>
+      <tr><td><strong>ניהול מנוי</strong></td><td><a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">apps.apple.com/account/subscriptions</a></td></tr>
+      <tr><td><strong>החזרים (Apple)</strong></td><td><a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a></td></tr>
+      <tr><td><strong>מסמכים קשורים</strong></td><td><a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html">מדיניות פרטיות</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple Standard EULA</a></td></tr>
+    </table></div>
+    <p class="muted" style="margin-top:12px">תזכורת: האפליקציה אינה ערוץ לפניות רפואיות או לחירום. במצב חירום – מד"א 101, משטרה 100, ער"ן 1201.</p>
+    <a class="top" href="#top">חזרה לראש העמוד ↑</a>
+  </section>
+
+</main>
+
+<footer>
+  סיפורי שינה מרגיעים © 2026 איציק לוגאסי. כל הזכויות שמורות.<br>
+  תנאי שימוש · עדכון אחרון: 29 בספטמבר 2026 · גרסה 2.0<br>
+  <a href="https://itziklugassy.github.io/sleep-stories-support/terms-of-service.html">תנאי שימוש</a> ·
+  <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html">מדיניות פרטיות</a> ·
+  <a href="https://itziklugassy.github.io/sleep-stories-support/">אתר התמיכה</a>
+</footer>
+
+</body>
+</html>
