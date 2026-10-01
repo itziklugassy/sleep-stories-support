@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Terms of Use | Cozy Bedtime Stories</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0f1029;
+    --surface: rgba(253,246,227,0.04);
+    --border: rgba(253,246,227,0.10);
+    --text: #fdf6e3;
+    --muted: rgba(253,246,227,0.68);
+    --accent: #ffe8a8;
+    --accent-soft: rgba(255,232,168,0.10);
+    --accent-border: rgba(255,232,168,0.35);
+    --link: #ffe8a8;
+    --danger-soft: rgba(255,138,128,0.10);
+    --danger-border: rgba(255,138,128,0.45);
+    --info-soft: rgba(147,170,255,0.09);
+    --info-border: rgba(147,170,255,0.30);
+  }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Arial Hebrew", Arial, sans-serif;
+    font-size: 16px; line-height: 1.85; direction: ltr; text-align: left;
+  }
+  a { color: var(--link); text-underline-offset: 3px; word-break: break-word; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  strong { color: var(--accent); font-weight: 700; }
+
+  header {
+    background: linear-gradient(170deg, #1d2156 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--border); padding: 44px 20px 36px; text-align: center;
+  }
+  header .lang { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+  header .lang a { text-decoration: none; }
+  header .lang a[aria-current] { color: var(--text); font-weight: 700; }
+  header .moon { font-size: 44px; line-height: 1; display: block; margin-bottom: 12px; }
+  header h1 { font-size: 30px; font-weight: 800; margin-bottom: 4px; }
+  header .app { color: var(--accent); font-size: 17px; font-weight: 600; }
+  header .meta {
+    display: inline-block; margin-top: 14px; padding: 5px 16px;
+    border: 1px solid var(--accent-border); border-radius: 20px;
+    background: var(--accent-soft); font-size: 14px; color: var(--text);
+  }
+  header .doclinks { margin-top: 12px; font-size: 14px; color: var(--muted); }
+
+  main { max-width: 800px; margin: 0 auto; padding: 24px 18px 60px; }
+
+  .box { border-radius: 14px; padding: 18px 20px; margin: 18px 0; }
+  .box-title { display: block; font-weight: 800; font-size: 17px; margin-bottom: 8px; color: var(--accent); }
+  .box-medical { background: var(--danger-soft); border: 2px solid var(--danger-border); }
+  .box-medical .box-title { color: #ffb4ab; font-size: 19px; }
+  .box-info { background: var(--info-soft); border: 1px solid var(--info-border); }
+  .box-accent { background: var(--accent-soft); border: 1px solid var(--accent-border); }
+  .box ul { margin-top: 6px; }
+  .emergency { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+  .emergency span {
+    border: 1px solid var(--danger-border); border-radius: 10px; padding: 6px 12px;
+    font-weight: 700; background: rgba(255,138,128,0.08);
+  }
+
+  nav.toc {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px 22px; margin: 22px 0;
+  }
+  nav.toc h2 { font-size: 18px; margin-bottom: 10px; color: var(--accent); }
+  nav.toc ol { padding-left: 24px; columns: 2; column-gap: 28px; }
+  nav.toc li { margin-bottom: 4px; break-inside: avoid; font-size: 15px; }
+  nav.toc a { text-decoration: none; color: var(--text); }
+  nav.toc a:hover, nav.toc a:focus { color: var(--accent); text-decoration: underline; }
+
+  section {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 22px 24px; margin-bottom: 16px; scroll-margin-top: 16px;
+  }
+  section h2 {
+    font-size: 20px; font-weight: 800; color: var(--text);
+    padding-bottom: 10px; margin-bottom: 14px; border-bottom: 1px solid var(--border);
+  }
+  section h2 .num { color: var(--accent); margin-right: 6px; }
+  p { margin-bottom: 12px; }
+  p:last-child { margin-bottom: 0; }
+  .tldr {
+    background: var(--accent-soft); border-left: 3px solid var(--accent-border);
+    border-radius: 8px; padding: 8px 14px; margin: -2px 0 16px;
+    font-size: 15px; color: var(--muted);
+  }
+  .tldr b { color: var(--accent); font-weight: 700; margin-right: 4px; }
+  .cl { display: flex; gap: 10px; margin-bottom: 10px; }
+  .cl > .n { flex: 0 0 auto; min-width: 2.6em; color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .cl > div { flex: 1 1 auto; }
+  ul { padding-left: 22px; margin-bottom: 12px; }
+  li { margin-bottom: 6px; }
+  li::marker { color: var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+  th, td { padding: 9px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+  th { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+  .table-wrap { overflow-x: auto; }
+
+  .ph {
+    background: rgba(255,232,168,0.18); color: var(--accent); border: 1px dashed var(--accent-border);
+    border-radius: 6px; padding: 0 5px; font-size: 0.93em;
+  }
+  .muted { color: var(--muted); font-size: 14.5px; }
+  .rtl { direction: rtl; unicode-bidi: embed; display: inline-block; }
+  .top { display: inline-block; margin-top: 10px; font-size: 13.5px; color: var(--muted); text-decoration: none; }
+
+  footer {
+    text-align: center; color: var(--muted); font-size: 13.5px;
+    border-top: 1px solid var(--border); padding: 28px 18px 40px;
+  }
+
+  @media (max-width: 620px) {
+    body { font-size: 16.5px; }
+    header h1 { font-size: 25px; }
+    section { padding: 18px 16px; }
+    nav.toc ol { columns: 1; }
+    .cl { gap: 8px; }
+    .cl > .n { min-width: 2.3em; }
+    th, td { padding: 8px 8px; }
+  }
+  @media print {
+    body { background: #fff; color: #000; }
+    section, nav.toc, .box, .tldr { border-color: #999; background: none; }
+    strong, .box-title, section h2 .num, .tldr b { color: #000; }
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="lang" aria-label="Language"><a href="terms-of-service.html" lang="he" hreflang="he">עברית</a> | <a href="terms-of-service-en.html" hreflang="en" aria-current="page">English</a></div>
+  <span class="moon" aria-hidden="true">🌙</span>
+  <h1>Terms of Use</h1>
+  <div class="app">Cozy Bedtime Stories</div>
+  <div class="meta">Last updated: October 1, 2026 · Version 2.0 (English edition)</div>
+  <div class="doclinks">
+    <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html">Privacy Policy</a> ·
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple Standard EULA</a> ·
+    <a href="https://itziklugassy.github.io/sleep-stories-support/">Support site</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== PROMINENT MEDICAL DISCLAIMER ===== -->
+  <div class="box box-medical" role="note" aria-label="Important medical notice">
+    <span class="box-title">Important medical notice - please read before use</span>
+    <ul>
+      <li><strong>What the App is for:</strong> literary bedtime stories for a parent to read aloud to a child - and nothing more. The App is not intended, designed or approved to diagnose, treat, relieve, monitor or prevent any condition.</li>
+      <li>The App is <strong>not a medical device</strong>, <strong>not treatment or therapy</strong>, <strong>not a diagnostic tool</strong> and <strong>not a substitute</strong> for medical, psychological, psychiatric, developmental or other professional advice, diagnosis or care.</li>
+      <li>The stories were <strong>written with the help of artificial intelligence</strong> and edited by the Operator. <strong>They were not written or reviewed by a physician, psychologist or any clinical professional</strong>, and they have not been tested in any study.</li>
+      <li>The calming techniques in the stories are <strong>"inspired by" published research</strong> - they are not "clinically proven". <strong>We do not promise any result.</strong></li>
+      <li>Category names (for example Tourette syndrome, ADHD, autism spectrum) are <strong>literary themes</strong> only. They are not a diagnosis and do not indicate therapeutic suitability.</li>
+      <li>Do not rely on the App for any treatment decision, and do not stop, delay or change any treatment because of content in the App.</li>
+    </ul>
+    <p style="margin-top:10px"><strong>In a medical or mental-health emergency, do not use the App. Contact emergency services immediately:</strong></p>
+    <div class="emergency">
+      <span>United States - 911 (emergency) · 988 (Suicide and Crisis Lifeline)</span>
+      <span>Israel - 101 (MDA) · 100 (Police) · 1201 (ERAN emotional first aid)</span>
+      <span>Elsewhere - your local emergency number</span>
+    </div>
+    <p class="muted" style="margin-top:10px">More in Sections <a href="#medical">5</a>, <a href="#no-guarantee">6</a>, <a href="#ai">7</a> and <a href="#parent">8</a>.</p>
+  </div>
+
+  <div class="box box-info">
+    <span class="box-title">In short (this summary does not replace the full Terms)</span>
+    <ul>
+      <li>The App is for parents and guardians aged 18 or older who read the stories to a child. The child is not the user.</li>
+      <li>No sign-up and no user account. Favorites and the list of stories you have opened are stored on your device only.</li>
+      <li>2 free stories in each category. Full access requires the "Monthly Premium Subscription", which renews automatically through Apple, with a 7-day free trial. If you do not cancel at least 24 hours before the trial ends, you will be charged.</li>
+      <li>Cancel in your Apple settings (Settings → [your name] → Subscriptions). Refunds are handled by Apple. You can also write to us and we will help (<a href="#cancel">Section 10</a>).</li>
+      <li>The stories and the App belong to the Operator. You may read them to children in your care; you may not copy, record, distribute or use them commercially.</li>
+    </ul>
+  </div>
+
+  <!-- ===== TOC ===== -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Table of contents</h2>
+    <ol>
+      <li><a href="#intro">Introduction and acceptance</a></li>
+      <li><a href="#definitions">Definitions</a></li>
+      <li><a href="#eligibility">Who may use the App; minors</a></li>
+      <li><a href="#service">Description of the Service</a></li>
+      <li><a href="#medical">Intended use and medical disclaimer</a></li>
+      <li><a href="#no-guarantee">No promise of results</a></li>
+      <li><a href="#ai">Disclosure: AI-assisted content and sources</a></li>
+      <li><a href="#parent">Parental responsibility and supervision</a></li>
+      <li><a href="#subscription">Subscription, free trial and payment</a></li>
+      <li><a href="#cancel">Cancellation and refunds</a></li>
+      <li><a href="#apple">Apple and the Apple Standard EULA</a></li>
+      <li><a href="#ip">Intellectual property and license</a></li>
+      <li><a href="#prohibited">Prohibited uses</a></li>
+      <li><a href="#content">Content policy and reporting content</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#availability">Availability and support</a></li>
+      <li><a href="#updates">Updates, OTA updates and cloud content</a></li>
+      <li><a href="#beta">Beta versions, TestFlight and feedback</a></li>
+      <li><a href="#third-party">Third-party services</a></li>
+      <li><a href="#liability">Disclaimers and limitation of liability</a></li>
+      <li><a href="#indemnity">Indemnification</a></li>
+      <li><a href="#termination">Ending use and discontinuing the Service</a></li>
+      <li><a href="#changes">Changes to these Terms</a></li>
+      <li><a href="#accessibility">Accessibility</a></li>
+      <li><a href="#force-majeure">Force majeure</a></li>
+      <li><a href="#law">Governing law, jurisdiction and dispute resolution</a></li>
+      <li><a href="#general">General provisions</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section id="intro">
+    <h2><span class="num">1.</span>Introduction and acceptance</h2>
+    <div class="cl"><span class="n">1.1</span><div>These Terms of Use (the "<strong>Terms</strong>") govern your use of the mobile application "Cozy Bedtime Stories" (Hebrew: <span class="rtl" lang="he">סיפורי שינה מרגיעים</span>; bundle identifier com.sleepstories.app) and of all services, content and updates that come with it. The App is operated by <strong>Itzik Lugassy</strong>, a sole trader registered in Israel (the "<strong>Operator</strong>", "<strong>we</strong>", "<strong>us</strong>"). Full contact details are in <a href="#contact">Section 28</a>.</div></div>
+    <div class="cl"><span class="n">1.2</span><div>By downloading, installing or using the App, or by purchasing a Subscription, you confirm that you have read, understood and agree to these Terms, and that you have read our <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html">Privacy Policy</a>. If you do not agree, please do not use the App and delete it from your device.</div></div>
+    <div class="cl"><span class="n">1.3</span><div>These Terms <strong>supplement</strong> <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple's Licensed Application End User License Agreement</a> (the "Apple Standard EULA"). The relationship between the two is explained in <a href="#apple">Section 11</a>.</div></div>
+    <div class="cl"><span class="n">1.4</span><div>Headings and the "In short" lines are for convenience only and do not affect interpretation. Words like "you" and "your" refer to the adult user described in Section 3.</div></div>
+  </section>
+
+  <!-- 2 -->
+  <section id="definitions">
+    <h2><span class="num">2.</span>Definitions</h2>
+    <p class="tldr"><b>In short:</b>"you" = the parent; "the Child" = the person listening to the story; "the Subscription" = the monthly subscription purchased through Apple.</p>
+    <div class="table-wrap"><table>
+      <tr><th>Term</th><th>Meaning</th></tr>
+      <tr><td><strong>App</strong> / <strong>Service</strong></td><td>The "Cozy Bedtime Stories" application, including its content, design, code, updates (including over-the-air updates) and content loaded from the cloud.</td></tr>
+      <tr><td><strong>User</strong> / <strong>you</strong></td><td>An adult (18 or older) - a parent, legal guardian or other responsible adult - who uses the App.</td></tr>
+      <tr><td><strong>Child</strong></td><td>A minor to whom the User reads the stories. The Child is not a user of the App.</td></tr>
+      <tr><td><strong>Stories</strong> / <strong>Content</strong></td><td>The texts of the bedtime stories, including the calming techniques, the source lists, the category names and any other text in the App.</td></tr>
+      <tr><td><strong>Category</strong></td><td>One of six literary themes: Tourette syndrome; attention and focus (ADHD); worries and fears; trouble falling asleep; sensory sensitivity; autism spectrum.</td></tr>
+      <tr><td><strong>Subscription</strong></td><td>The "Monthly Premium Subscription" - an auto-renewing monthly subscription (product identifier sleep_stories_monthly) purchased through Apple's in-app purchase system.</td></tr>
+      <tr><td><strong>Free Trial</strong></td><td>A 7-day introductory offer at no charge, as described in Section 9.</td></tr>
+      <tr><td><strong>Apple</strong></td><td>Apple Inc. and its affiliates, including the operator of the App Store.</td></tr>
+      <tr><td><strong>AI</strong></td><td>Generative artificial-intelligence tools that were used to help write the Stories.</td></tr>
+      <tr><td><strong>Applicable Law</strong></td><td>Any statute, regulation or binding rule, including the law of the country or state where you live to the extent it applies to you and cannot be excluded by agreement.</td></tr>
+    </table></div>
+  </section>
+
+  <!-- 3 -->
+  <section id="eligibility">
+    <h2><span class="num">3.</span>Who may use the App; minors</h2>
+    <div class="cl"><span class="n">3.1</span><div>The App is intended <strong>only for adults aged 18 or older</strong> who act as parents, legal guardians or responsible adults for a Child. By using the App you represent that you are at least 18 years old and have the legal capacity to enter into these Terms.</div></div>
+    <div class="cl"><span class="n">3.2</span><div><strong>The Child is not the user.</strong> The App is not designed for independent use by children, and you should not let a Child operate it, browse it or make purchases in it. The Stories are meant to be read aloud by an adult.</div></div>
+    <div class="cl"><span class="n">3.3</span><div>The App does not collect information from or about children (see Section 13 of the <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html#s13">Privacy Policy</a>). If a minor used the App or made a purchase without your knowledge, refund requests are submitted to Apple. We recommend enabling Screen Time restrictions and "Ask to Buy" on Apple devices used near children.</div></div>
+    <div class="cl"><span class="n">3.4</span><div>If you use the App in a professional or institutional setting (for example a kindergarten, school or therapy practice), see the conditions in <a href="#ip">Section 12.3</a>.</div></div>
+  </section>
+
+  <!-- 4 -->
+  <section id="service">
+    <h2><span class="num">4.</span>Description of the Service</h2>
+    <div class="cl"><span class="n">4.1</span><div>The App displays texts of bedtime stories, in the languages offered in the App, intended to be read aloud to a Child before sleep, in six themed Categories. The Stories weave in calming techniques such as breathing, body scans and guided imagery, <strong>inspired by</strong> published research, and each story is accompanied by a list of sources for further reading.</div></div>
+    <div class="cl"><span class="n">4.2</span><div><strong>No sign-up.</strong> The App has no account creation, registration or login. Favorites and the list of stories you have opened are stored on your device only; <strong>Subscription status is verified with Apple and RevenueCat</strong> (see the <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html#s4">Privacy Policy</a>).</div></div>
+    <div class="cl"><span class="n">4.3</span><div><strong>Free content and subscription content.</strong> In each Category, 2 stories are available at no charge. Access to the remaining stories requires an active Subscription (see <a href="#subscription">Section 9</a>).</div></div>
+    <div class="cl"><span class="n">4.4</span><div><strong>Changes to content.</strong> The number of Stories, the Categories and the App's features may change from time to time. We do not commit to any pace of adding new content, and we do not promise that a particular story will remain available permanently. However, <strong>we will not materially reduce the library available to subscribers during a subscription period that has already been paid for</strong>, other than removing an individual story because of an error, a report or a legal requirement. Any material reduction will be announced 14 days in advance, and you may cancel your Subscription.</div></div>
+    <div class="cl"><span class="n">4.5</span><div>The App is currently available for iOS devices through the App Store only. A version for other platforms, if released, may be subject to supplementary terms.</div></div>
+    <div class="cl"><span class="n">4.6</span><div>The App contains no advertising.</div></div>
+  </section>
+
+  <!-- 5 -->
+  <section id="medical">
+    <h2><span class="num">5.</span>Intended use and medical disclaimer</h2>
+    <p class="tldr"><b>In short:</b>These are stories, not treatment. For any question about your Child's health, talk to a qualified professional; in an emergency call 911 (US), 101 (Israel) or your local emergency number.</p>
+    <div class="cl"><span class="n">5.0</span><div><strong>Intended use.</strong> The sole purpose of the App is to provide literary bedtime stories for a family to read aloud before sleep. The App was not intended, designed, tested or approved by any authority (including the U.S. Food and Drug Administration or any other regulator) for the diagnosis, treatment, cure, relief, monitoring or prevention of any disease, disorder, syndrome, mental-health condition or developmental condition, and no such purpose should be attributed to it.</div></div>
+    <div class="cl"><span class="n">5.1</span><div><strong>Not a medical device and not treatment.</strong> The App is not a medical device (including "software as a medical device"), is not treatment or therapy, and is not a tool for diagnosing, screening, monitoring or preventing any disease, disorder or condition.</div></div>
+    <div class="cl"><span class="n">5.2</span><div><strong>Not a substitute for professionals.</strong> The Content is not medical, psychological, psychiatric, neurological, developmental, nutritional, educational or therapeutic advice, and is not a substitute for the advice, diagnosis or treatment of a physician, pediatrician, psychologist, psychiatrist, occupational therapist or any other qualified professional.</div></div>
+    <div class="cl"><span class="n">5.3</span><div><strong>Do not rely on the App for care decisions.</strong> Do not rely on the App when making any decision about your Child's health, diagnosis or care. Never stop, delay, reduce or change any treatment, medication or professional follow-up because of content in the App. For any question about sleep, behavior, tics, anxiety, attention, sensory sensitivity or development, consult your pediatrician or another qualified professional. If your Child has been diagnosed with a condition, is in treatment or takes medication, talk to the treating professional before adding breathing, body-scan or guided-imagery techniques to the bedtime routine.</div></div>
+    <div class="cl"><span class="n">5.4</span><div><strong>What the Category names mean.</strong> The Categories are <strong>literary themes</strong>. A story in the "Tourette syndrome" Category, for example, is a story whose characters, world or calming scenes were written with children who experience tics in mind - so that they feel represented and understood. <strong>It is not a story that treats the syndrome, and it has no effect on it.</strong> The same applies to the other Categories. Choosing a Category is not a diagnosis, does not suggest that a Child has any condition, and does not indicate that the story is suitable for a particular Child.</div></div>
+    <div class="cl"><span class="n">5.5</span><div><strong>Calming techniques.</strong> Techniques such as breathing exercises, body scans and guided imagery are not necessarily suitable for every child, and in some children they may cause discomfort, anxiety or another reaction. If your Child has a respiratory, cardiac, neurological, mental-health or other condition, consult the treating professional before use.</div></div>
+    <div class="cl"><span class="n">5.6</span><div><strong>Academic sources.</strong> The source lists are provided for transparency and enrichment only. They do not mean that the story itself was tested in research, that the authors of the sources approved the story or are connected to it, or that the research findings apply to your Child. The Stories themselves <strong>have not been tested in any study</strong>, and no research has been conducted on their effect on children. The sources are offered as further reading only.</div></div>
+    <div class="cl"><span class="n">5.7</span><div><strong>Emergencies.</strong> The App is not intended for emergencies. In any situation of immediate danger, acute mental-health distress or an urgent medical problem, contact emergency services right away: in the United States call <strong>911</strong>, or <strong>988</strong> for the Suicide and Crisis Lifeline; in Israel call <strong>101</strong> (MDA), <strong>100</strong> (Police) or <strong>1201</strong> (ERAN); elsewhere call your local emergency number or go to the nearest emergency room.</div></div>
+  </section>
+
+  <!-- 6 -->
+  <section id="no-guarantee">
+    <h2><span class="num">6.</span>No promise of results</h2>
+    <div class="cl"><span class="n">6.1</span><div>We do not promise, represent or warrant that using the App will bring about any improvement - including in sleep, time to fall asleep, tics, anxiety, fears, attention, sensory sensitivity, behavior or any other symptom or condition.</div></div>
+    <div class="cl"><span class="n">6.2</span><div>Every child is different, and results vary from child to child and from night to night. Testimonials, examples or descriptions (if any appear) do not indicate an expected result.</div></div>
+    <div class="cl"><span class="n">6.3</span><div>The phrase "<strong>inspired by research</strong>" means that the ideas for the calming techniques were drawn from professional literature. It does not mean that the Stories or the App are "<strong>clinically proven</strong>", have been tested in a trial, have been approved by any authority or have been recommended by any professional.</div></div>
+  </section>
+
+  <!-- 7 -->
+  <section id="ai">
+    <h2><span class="num">7.</span>Disclosure: AI-assisted content and sources</h2>
+    <div class="cl"><span class="n">7.1</span><div>The Stories were <strong>written with the help of artificial-intelligence tools</strong> and edited by the Operator. They were <strong>not written or reviewed</strong> by a physician, psychologist or any clinical professional.</div></div>
+    <div class="cl"><span class="n">7.2</span><div>Although we put effort into editing, the Stories may contain <strong>inaccuracies</strong>, errors, unsuitable wording, descriptions that do not match a Child's age or sensitivities, or mistakes in the source lists (including a source that does not exactly support what is said, incorrect citation details or a broken link).</div></div>
+    <div class="cl"><span class="n">7.3</span><div><strong>Read first.</strong> It is your responsibility to read every story yourself before reading it to a Child, and to decide whether it is suitable for that Child - taking into account the Child's age, sensitivities, fears, your family's values and the recommendations of the professionals who care for the Child. You are welcome to skip, shorten or reword passages as you read.</div></div>
+    <div class="cl"><span class="n">7.4</span><div>Found a mistake or unsuitable content? We would be glad to hear about it - see <a href="#content">Section 14</a>.</div></div>
+  </section>
+
+  <!-- 8 -->
+  <section id="parent">
+    <h2><span class="num">8.</span>Parental responsibility and supervision</h2>
+    <p>Using the Stories with a Child is done under your responsibility and at your discretion as a parent or guardian. In particular:</p>
+    <div class="cl"><span class="n">8.1</span><div><strong>Presence.</strong> The Stories are meant to be read aloud by an adult who is present with the Child. Stay present throughout the reading and pay attention to the Child's reactions.</div></div>
+    <div class="cl"><span class="n">8.2</span><div><strong>Stopping.</strong> If the Child reacts negatively - for example distress, fear, crying, over-arousal, shortness of breath, worsening tics or discomfort - stop the reading or the exercise immediately, and consider consulting a professional.</div></div>
+    <div class="cl"><span class="n">8.3</span><div><strong>No unsupervised use.</strong> Do not leave a Child alone with the device or with the App. Follow generally accepted safety practices for using smart devices around children and in the bedroom.</div></div>
+    <div class="cl"><span class="n">8.4</span><div><strong>Suitability.</strong> The decision whether, when and how to use a particular story - and whether to make it part of the bedtime routine - is yours alone.</div></div>
+  </section>
+
+  <!-- 9 -->
+  <section id="subscription">
+    <h2><span class="num">9.</span>Subscription, free trial and payment</h2>
+    <p class="tldr"><b>In short:</b>7 days free, then the monthly price shown in the App Store for your country, billed through Apple until you cancel - at least 24 hours before renewal.</p>
+    <div class="box box-accent">
+      <span class="box-title">Subscription details</span>
+      <div class="table-wrap"><table>
+        <tr><th>Item</th><th>Description</th></tr>
+        <tr><td><strong>Subscription name</strong></td><td>Monthly Premium Subscription <span class="muted">(product identifier: sleep_stories_monthly)</span></td></tr>
+        <tr><td><strong>Length</strong></td><td>One month, renewing automatically every month</td></tr>
+        <tr><td><strong>Price</strong></td><td>In Israel: <strong>ILS 19.90 per month</strong>. In the United States and other countries the price is set according to Apple's price tiers and is shown in your local currency on the purchase screen before you confirm.</td></tr>
+        <tr><td><strong>Free trial</strong></td><td>7 days at no charge for eligible users (under Apple's eligibility rules for introductory offers). When the trial ends you are charged the monthly price, unless you have cancelled.</td></tr>
+        <tr><td><strong>What is included</strong></td><td>Access to all Stories in all Categories for as long as the Subscription is active</td></tr>
+        <tr><td><strong>Payment</strong></td><td>Processed by Apple only, through your Apple ID account</td></tr>
+        <tr><td><strong>Cancellation</strong></td><td>At any time, in your Apple ID settings, at least 24 hours before the end of the current period</td></tr>
+        <tr><td><strong>Documents</strong></td><td><a href="https://itziklugassy.github.io/sleep-stories-support/terms-of-service-en.html">Terms of Use</a> · <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html">Privacy Policy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple Standard EULA</a></td></tr>
+      </table></div>
+    </div>
+    <div class="cl"><span class="n">9.1</span><div><strong>Purchase and payment.</strong> The Subscription is purchased through Apple's in-app purchase system. Payment is charged to your Apple ID account when you confirm the purchase (or, if a Free Trial applies, when the trial ends). The Operator does not receive, process or store any payment details.</div></div>
+    <div class="cl"><span class="n">9.2</span><div><strong>Price and currency.</strong> The price in Israel is ILS 19.90 per month. In other countries the price varies and is shown to you in the App Store and on the purchase screen in your local currency before you confirm. <strong>The price shown on Apple's purchase screen is the final amount you will be charged, including taxes where they apply.</strong></div></div>
+    <div class="cl"><span class="n">9.3</span><div><strong>Automatic renewal.</strong> The Subscription <strong>renews automatically</strong> at the end of each monthly period, for the same length and at the price in effect at that time, unless automatic renewal is turned off <strong>at least 24 hours before the end of the current period</strong>. Your account is charged for the renewal within the 24 hours before the end of the current period.</div></div>
+    <div class="cl"><span class="n">9.4</span><div><strong>Free Trial.</strong> Eligible users can enjoy a 7-day trial at no charge. <strong>If you do not cancel at least 24 hours before the trial ends, the Subscription automatically converts to a paid subscription</strong> and you will be charged the monthly price at the end of the trial. If you cancel before the trial ends you will not be charged, and when the trial ends your access will be limited to the 2 free stories in each Category. If you purchase a paid subscription during the Free Trial, any unused portion of the trial is forfeited, to the extent this applies under Apple's rules. Trial eligibility is determined by Apple (generally once per Apple ID).</div></div>
+    <div class="cl"><span class="n">9.5</span><div><strong>Managing the Subscription.</strong> You manage the Subscription, turn off automatic renewal and see the next renewal date in your Apple ID account settings: <strong>Settings → [your name] → Subscriptions</strong>, or at <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">apps.apple.com/account/subscriptions</a>.</div></div>
+    <div class="cl"><span class="n">9.6</span><div><strong>Price changes.</strong> We may change the Subscription price. Notice of a price increase for existing subscribers is given by Apple in accordance with App Store rules, and where Apple requires it, the increase will not apply to you without your consent. A price change never applies to a period that has already been paid for. Because we do not hold your contact details, we will also post a notice inside the App.</div></div>
+    <div class="cl"><span class="n">9.7</span><div><strong>Restoring purchases.</strong> You can restore an active Subscription on a new device or after reinstalling by using the <strong>"Restore purchase"</strong> button in the App while signed in to the same Apple ID.</div></div>
+    <div class="cl"><span class="n">9.8</span><div><strong>Family Sharing.</strong> The Subscription is not available for Family Sharing.</div></div>
+    <div class="cl"><span class="n">9.9</span><div><strong>Free stories.</strong> The 2 free stories in each Category are provided at no charge and with no commitment, and the count is kept on your device. We may change the scope of free content in the future. The library available to subscribers is protected as described in <a href="#service">Section 4.4</a>.</div></div>
+  </section>
+
+  <!-- 10 -->
+  <section id="cancel">
+    <h2><span class="num">10.</span>Cancellation and refunds</h2>
+    <div class="cl"><span class="n">10.1</span><div><strong>How to cancel.</strong> On an iPhone or iPad: <strong>Settings → [your name] → Subscriptions → Cozy Bedtime Stories → Cancel Subscription</strong>, or through <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Apple's subscriptions page</a>. Deleting the App from your device <strong>does not</strong> cancel the Subscription.</div></div>
+    <div class="cl"><span class="n">10.2</span><div><strong>When cancellation takes effect.</strong> To avoid the next charge, cancel at least 24 hours before the end of the current period. After cancelling you keep full access until the end of the period you have paid for (or until the end of the Free Trial), after which access is limited to the free stories.</div></div>
+    <div class="cl"><span class="n">10.3</span><div><strong>Refunds.</strong> All payments are processed by Apple. Refund requests are submitted to Apple and handled under Apple's policies at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. The Operator has no access to your payment method and therefore cannot reverse a charge made through Apple on its own - but see Section 10.5.</div></div>
+    <div class="cl"><span class="n">10.4</span><div><strong>Consumer rights.</strong> Nothing in this Section limits any right you have under Applicable Law that cannot be excluded by agreement. For users in Israel this includes rights under the Consumer Protection Law, 5741-1981, concerning cancellation of continuing transactions and distance sales. For users in the United States this includes any automatic-renewal, cancellation or refund rights under the law of your state. For users in the European Union, the European Economic Area or the United Kingdom this includes statutory rights for digital content and any right of withdrawal, which you exercise through Apple as the seller of record. A cancellation or refund request can be submitted to Apple at reportaproblem.apple.com, or to us by email - and we will act as described in Section 10.5.</div></div>
+    <div class="cl"><span class="n">10.5</span><div><strong>Cancellation notice sent to us.</strong> If you send us a cancellation notice by email (<a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a>), we will confirm receipt and send you instructions for cancelling through Apple within 3 business days. Because billing is done by Apple, we cannot cancel the Subscription ourselves. However, if you were charged after you notified us that you wished to cancel, and you were unable to cancel through Apple, we will help you request a refund from Apple, and if that request is denied, <strong>we will refund you ourselves the amount charged after the date of your notice</strong>.</div></div>
+  </section>
+
+  <!-- 11 -->
+  <section id="apple">
+    <h2><span class="num">11.</span>Apple and the Apple Standard EULA</h2>
+    <p class="tldr"><b>In short:</b>This agreement is between you and the Operator, not Apple; Apple is not responsible for the App but may enforce these Terms.</p>
+    <div class="cl"><span class="n">11.1</span><div>Your use of the App is also subject to <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple's Licensed Application End User License Agreement</a> (the "<strong>Apple Standard EULA</strong>"). These Terms supplement it. The Apple Standard EULA prevails on the scope of the software license and on Apple's rights. On every other matter - including the Subscription, the Content, limitation of liability, governing law and jurisdiction as between you and the Operator - these Terms apply. <strong>Where a provision of these Terms is more favorable to you than the Apple Standard EULA, that provision prevails.</strong></div></div>
+    <div class="cl"><span class="n">11.2</span><div>These Terms are concluded between you and the Operator only, and not with Apple. The Operator, not Apple, is solely responsible for the App and its content.</div></div>
+    <div class="cl"><span class="n">11.3</span><div>Apple has no obligation to provide maintenance or support services for the App. Support requests should be directed to us (<a href="#contact">Section 28</a>).</div></div>
+    <div class="cl"><span class="n">11.4</span><div>If the App fails to conform to any applicable warranty, you may notify Apple, and Apple may refund the purchase price (if paid) in accordance with its policies. To the maximum extent permitted by Applicable Law, Apple has no other warranty obligation whatsoever with respect to the App.</div></div>
+    <div class="cl"><span class="n">11.5</span><div>Apple is not responsible for addressing any claim by you or by any third party relating to the App or your possession or use of it - including product-liability claims, claims that the App fails to conform to any legal or regulatory requirement, and claims under consumer-protection or similar laws. Those claims are the responsibility of the Operator. In addition, <strong>the Operator, not Apple, is solely responsible for the investigation, defense, settlement and discharge</strong> of any claim that the App or your possession and use of it infringes a third party's intellectual-property rights.</div></div>
+    <div class="cl"><span class="n">11.6</span><div>You represent that you are not located in a country that is subject to a U.S. Government embargo or that has been designated by the U.S. Government as a "terrorist supporting" country, and that you are not listed on any U.S. Government list of prohibited or restricted parties.</div></div>
+    <div class="cl"><span class="n">11.7</span><div>Apple and its subsidiaries are <strong>third-party beneficiaries</strong> of these Terms, and once you accept them, Apple has the right to enforce them against you as a third-party beneficiary.</div></div>
+    <div class="cl"><span class="n">11.8</span><div>When using the App you must comply with the terms of any third-party agreements that apply to you, such as your wireless or internet service agreement.</div></div>
+  </section>
+
+  <!-- 12 -->
+  <section id="ip">
+    <h2><span class="num">12.</span>Intellectual property and license</h2>
+    <p class="tldr"><b>In short:</b>You may read the stories to your own children at home (and, under Section 12.3, to children in your care in a professional setting); you may not copy, record, publish or use the stories commercially.</p>
+    <div class="cl"><span class="n">12.1</span><div><strong>Ownership.</strong> The App, its software code, design, interface, logo and name, and the selection, editing, arrangement and grouping of the Stories and the source lists, belong to the Operator or are licensed to it, and are protected by copyright, trademark and other intellectual-property laws. The Stories were written with the help of AI tools and were edited and rewritten by the Operator; the rights in them, <strong>to the extent recognized by Applicable Law</strong>, are reserved to the Operator. <strong>In any event</strong>, access to the Stories is granted to you solely under the license in Section 12.2 and subject to the restrictions in Section 12.3, and you agree to comply with them. All rights not expressly granted to you are reserved to the Operator.</div></div>
+    <div class="cl"><span class="n">12.2</span><div><strong>License.</strong> Subject to your compliance with these Terms and with the Apple Standard EULA, the Operator grants you a <strong>personal, non-exclusive, non-transferable, non-assignable, non-sublicensable, revocable and non-commercial</strong> license to use the App on Apple devices that you own or control, and to read the Stories aloud <strong>to your children or to children in your care</strong> - in a private, household setting, or in the setting permitted by Section 12.3.</div></div>
+    <div class="cl"><span class="n">12.3</span><div><strong>What is not allowed without our prior written consent.</strong></div></div>
+    <ul>
+      <li>Copying, reproducing, systematically screenshotting, printing for distribution, translating, adapting or creating derivative works from the Stories;</li>
+      <li>Distributing, publishing, uploading, or sharing the Stories on social networks, in groups, on websites or in channels - in whole or in part;</li>
+      <li><strong>Commercial or public reading</strong>: recording, podcasting, video (including YouTube, TikTok and the like), broadcasting, workshops, lessons, paid classes or sessions, or reading before an audience;</li>
+      <li>Commercial use in a professional or institutional setting, <strong>except</strong> reading to children in your care by the holder of a personal Subscription, without recording, without distribution and without a separate charge for the reading;</li>
+      <li>Using the Content to train, fine-tune or feed artificial-intelligence systems or datasets, or collecting it with automated tools (scraping);</li>
+      <li>Removing or altering copyright notices, marks or source lists.</li>
+    </ul>
+    <div class="cl"><span class="n">12.4</span><div><strong>Marks.</strong> You may not use the name "Cozy Bedtime Stories" (or its Hebrew name), the logo or other identifying marks of the App in a way that could mislead or suggest a connection with the Operator. "Apple", "App Store", "iPhone" and "iPad" are trademarks of Apple Inc.</div></div>
+    <div class="cl"><span class="n">12.5</span><div><strong>Others' sources.</strong> The rights in the academic sources cited belong to their respective owners. They are mentioned for reference only.</div></div>
+    <div class="cl"><span class="n">12.6</span><div><strong>Infringement claims.</strong> If you believe that content in the App infringes your rights, contact us (<a href="#contact">Section 28</a>) with details of the work, the location of the content in the App and an explanation, and we will review your notice. Notices from the United States may follow the format of a notification under the Digital Millennium Copyright Act (17 U.S.C. § 512(c)(3)).</div></div>
+  </section>
+
+  <!-- 13 -->
+  <section id="prohibited">
+    <h2><span class="num">13.</span>Prohibited uses</h2>
+    <p class="tldr"><b>In short:</b>Do not hack, do not bypass the Subscription and do not copy the code.</p>
+    <p>In addition to Section 12, you may not do, attempt to do, or help anyone else do any of the following:</p>
+    <div class="cl"><span class="n">13.1</span><div><strong>Reverse engineering</strong>: disassembling, decompiling, reverse engineering, or attempting to extract source code, data structures, keys or encrypted content - except to the extent expressly permitted by Applicable Law that cannot be excluded by agreement.</div></div>
+    <div class="cl"><span class="n">13.2</span><div><strong>Circumventing mechanisms</strong>: bypassing, disabling or interfering with the Subscription mechanism, the free-story counter, purchase verification or any other protection mechanism, including by using a modified, jailbroken or counterfeit version of the App for that purpose.</div></div>
+    <div class="cl"><span class="n">13.3</span><div><strong>System access</strong>: attempting to access without authorization the servers, databases (including Firebase Firestore) or interfaces of the App, sending automated requests in unusual volume, or harming the availability of the Service.</div></div>
+    <div class="cl"><span class="n">13.4</span><div><strong>Malicious code</strong>: distributing or introducing a virus, malware or any other harmful code.</div></div>
+    <div class="cl"><span class="n">13.5</span><div><strong>Unlawful or misleading use</strong>: using the App in violation of Applicable Law; presenting the App or its content as treatment, diagnosis or professional advice; or selling, renting or lending access to the App.</div></div>
+    <div class="cl"><span class="n">13.6</span><div>A breach of this Section may lead to restriction of your access to the Service (see <a href="#termination">Section 22</a>), without limiting any other remedy available to the Operator under Applicable Law.</div></div>
+  </section>
+
+  <!-- 14 -->
+  <section id="content">
+    <h2><span class="num">14.</span>Content policy and reporting content</h2>
+    <div class="cl"><span class="n">14.1</span><div><strong>Our goal.</strong> We aim for the Stories to be calm, respectful and suitable for reading to children: no violence, no sexual content, no frightening or demeaning content, no harmful stereotypes, no labeling or humiliating portrayal of children with a diagnosis, and no medical advice.</div></div>
+    <div class="cl"><span class="n">14.2</span><div><strong>Reporting.</strong> If you come across content that seems inappropriate, offensive, frightening, factually wrong, professionally inaccurate, or an incorrect academic source, please report it to us by email at <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a>, with the story name, the Category and a short description.</div></div>
+    <div class="cl"><span class="n">14.3</span><div><strong>Handling.</strong> We will respond to every report within <strong>14 business days</strong>, and will act at our discretion to correct, update or remove the content. Because of the way content is distributed (see <a href="#updates">Section 17</a>), a correction may reach you only after an update or the next time you are online.</div></div>
+    <div class="cl"><span class="n">14.4</span><div>The App does not allow users to upload or publish content, so it contains no user-generated content.</div></div>
+  </section>
+
+  <!-- 15 -->
+  <section id="privacy">
+    <h2><span class="num">15.</span>Privacy</h2>
+    <p>We collect very little information: there is no account, no registration, and no collection of names, the Child's age or any health information. Favorites and the list of stories you have opened are stored on your device only. To manage the Subscription we use RevenueCat, which receives a random anonymous identifier and purchase data from Apple; if you email us, we keep your email address and the content of your message. Our service providers operate mainly in the United States.</p>
+    <p>All the details - what is collected, by whom, for how long, and your rights (including under COPPA, the CCPA/CPRA and the GDPR) - are in our <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html">Privacy Policy</a>, which governs every privacy matter. Changes to how we handle information take effect as described in <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html#s18">Section 18 of the Privacy Policy</a>.</p>
+  </section>
+
+  <!-- 16 -->
+  <section id="availability">
+    <h2><span class="num">16.</span>Availability and support</h2>
+    <div class="cl"><span class="n">16.1</span><div>We aim for the App to be available and to work properly, but we do not promise uninterrupted, fault-free or error-free availability. The Service may be interrupted, among other reasons, by maintenance, updates, failures at third-party providers (see <a href="#third-party">Section 19</a>), network failures or device failures.</div></div>
+    <div class="cl"><span class="n">16.2</span><div>Some Stories are loaded from the cloud and require an internet connection; only Stories that were loaded previously may be available offline.</div></div>
+    <div class="cl"><span class="n">16.3</span><div>The App is supported on the iOS versions listed on its App Store page. Older versions of the operating system or of the App may stop being supported.</div></div>
+    <div class="cl"><span class="n">16.4</span><div><strong>Support.</strong> Support requests: by email at <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a> or through the <a href="https://itziklugassy.github.io/sleep-stories-support/" target="_blank" rel="noopener">support site</a>. <strong>We respond within 14 business days</strong>; to an access request under the Israeli Privacy Protection Law, no later than 21 days.</div></div>
+  </section>
+
+  <!-- 17 -->
+  <section id="updates">
+    <h2><span class="num">17.</span>Updates, OTA updates and cloud content</h2>
+    <div class="cl"><span class="n">17.1</span><div><strong>App Store updates.</strong> From time to time we release new versions through the App Store. Some features may require installing the latest version.</div></div>
+    <div class="cl"><span class="n">17.2</span><div><strong>Over-the-air (OTA) updates.</strong> The App uses the Expo update service (EAS Update, by 650 Industries, Inc.), which allows updates to the App's content, interface and JavaScript code to be downloaded and installed automatically, without reinstalling from the App Store, all within what Apple's rules permit. By using the App you agree to receive these updates. Such updates will not change the nature of the App or the Subscription terms without notice.</div></div>
+    <div class="cl"><span class="n">17.3</span><div><strong>Cloud content.</strong> Additional Stories are loaded from Firebase Firestore (Google LLC). We may add, correct, update or remove Stories in the cloud, including following a report (Section 14), subject to Section 4.4.</div></div>
+    <div class="cl"><span class="n">17.4</span><div>Updates are subject to these Terms unless other terms accompany them.</div></div>
+  </section>
+
+  <!-- 18 -->
+  <section id="beta">
+    <h2><span class="num">18.</span>Beta versions, TestFlight and feedback</h2>
+    <div class="cl"><span class="n">18.1</span><div>If you are invited to use a pre-release (beta) version of the App, including through Apple TestFlight, these Terms apply to it in addition to Apple's TestFlight terms.</div></div>
+    <div class="cl"><span class="n">18.2</span><div>A beta version is provided for testing only. It may contain bugs, content that has not been finalized and features that will not reach the official release, and it may stop working at any time. Do not share content, screenshots or information from a beta version without our approval.</div></div>
+    <div class="cl"><span class="n">18.3</span><div>Purchases in Apple's Sandbox testing environment are not charged and do not grant a Subscription in the official release.</div></div>
+    <div class="cl"><span class="n">18.4</span><div><strong>Feedback.</strong> If you send us suggestions, ideas or feedback, you grant us a free, irrevocable, royalty-free permission to use them to improve the Service, without any obligation to credit you. We are not obliged to implement any feedback. Please do not send us medical information or identifying information about your Child.</div></div>
+  </section>
+
+  <!-- 19 -->
+  <section id="third-party">
+    <h2><span class="num">19.</span>Third-party services</h2>
+    <div class="cl"><span class="n">19.1</span><div>The App and the support services rely on third-party providers: Apple Inc. (App Store and StoreKit), RevenueCat, Inc. (subscription management), Google LLC (Firebase Firestore and Gmail), 650 Industries, Inc. (Expo / EAS) and GitHub, Inc. (GitHub Pages - the support site), as described in <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html#s8">Section 8 of the Privacy Policy</a>. Your use of them is also subject to those providers' terms and privacy policies. We are not responsible for their operation, availability or policies beyond the responsibility imposed on us by Applicable Law.</div></div>
+    <div class="cl"><span class="n">19.2</span><div>Links to external websites (including academic sources) are provided for convenience only. We do not control their content and are not responsible for it.</div></div>
+  </section>
+
+  <!-- 20 -->
+  <section id="liability">
+    <h2><span class="num">20.</span>Disclaimers and limitation of liability</h2>
+    <p class="tldr"><b>In short:</b>We make a real effort, but we do not promise results, and our liability is limited - unless we acted with gross negligence or intent, or caused personal injury through negligence.</p>
+    <div class="cl"><span class="n">20.1</span><div><strong>"AS IS".</strong> To the maximum extent permitted by Applicable Law, the App and the Content are provided "as is" and "as available", without any representation or warranty, express or implied, including any implied warranty of merchantability, fitness for a particular purpose, accuracy, completeness, uninterrupted operation or results. This does not limit our duty to act reasonably and in good faith in editing the Content and operating the Service.</div></div>
+    <div class="cl"><span class="n">20.2</span><div><strong>What we are not responsible for.</strong> To the maximum extent permitted by Applicable Law, the Operator is not liable for loss or damage arising from: (a) reliance on the Content as medical or professional advice or treatment, contrary to Section 5; (b) failure to achieve any result (Section 6); (c) inaccuracy in the Content or the sources, provided we acted reasonably in editing it (Section 7); (d) use not in accordance with Section 8, including leaving a Child unsupervised or continuing a reading after a negative reaction; (e) faults, interruptions or loss of local data; (f) acts or omissions of Apple or of third-party providers.</div></div>
+    <div class="cl"><span class="n">20.3</span><div><strong>Indirect damages.</strong> To the maximum extent permitted by Applicable Law, the Operator is not liable for indirect, special, consequential, incidental or punitive damages, loss of profits or loss of data.</div></div>
+    <div class="cl"><span class="n">20.4</span><div><strong>Cap.</strong> To the maximum extent permitted by Applicable Law, the Operator's total liability to you for all claims relating to the App will not exceed <strong>the greater of</strong>: (a) the amount you actually paid for the Subscription in the 12 months before the event giving rise to the claim; or (b) <strong>ILS 500</strong> (or the equivalent in your local currency).</div></div>
+    <div class="cl"><span class="n">20.5</span><div><strong>Exceptions to the limitation.</strong> Nothing in this Section limits or excludes liability: (a) for damage caused intentionally or by the gross negligence of the Operator; (b) for <strong>personal injury, including death or mental harm</strong>, caused by the negligence of the Operator; (c) for fraud or fraudulent misrepresentation; (d) for any liability that cannot be limited or excluded under Applicable Law, including under the Israeli Consumer Protection Law, 5741-1981, and the Standard Contracts Law, 5743-1982. <strong>Some jurisdictions (including some U.S. states and countries in the EU and UK) do not allow the exclusion of implied warranties or the limitation of certain damages; in those jurisdictions the exclusions and limitations above apply only to the extent permitted, and you may have additional rights.</strong> If any provision of this Section is found unenforceable, it will apply to the maximum extent permitted.</div></div>
+  </section>
+
+  <!-- 21 -->
+  <section id="indemnity">
+    <h2><span class="num">21.</span>Indemnification</h2>
+    <p class="tldr"><b>In short:</b>If you infringe our copyright or use the App unlawfully, and we are sued because of it, you will have to bear the loss.</p>
+    <div class="cl"><span class="n">21.1</span><div>You agree to indemnify the Operator for loss, damage or reasonable expense (including reasonable attorneys' fees) incurred as a result of a third-party claim arising from your breach of Sections <a href="#ip">12</a> or <a href="#prohibited">13</a> (intellectual property and prohibited uses), or from your use of the App in violation of Applicable Law.</div></div>
+    <div class="cl"><span class="n">21.2</span><div>This indemnity is conditional on the Operator notifying you of the claim within a reasonable time, allowing you to defend it, and not settling it without your consent (which may not be unreasonably withheld). The indemnity does not apply to the extent the loss was caused by the Operator's own fault.</div></div>
+  </section>
+
+  <!-- 22 -->
+  <section id="termination">
+    <h2><span class="num">22.</span>Ending use and discontinuing the Service</h2>
+    <div class="cl"><span class="n">22.1</span><div><strong>By you.</strong> You may stop using the App at any time and delete it. To stop charges you must cancel the Subscription as described in <a href="#cancel">Section 10</a> - deleting the App alone does not cancel it.</div></div>
+    <div class="cl"><span class="n">22.2</span><div><strong>By us.</strong> If you materially breach these Terms (in particular Sections 12 and 13), we may restrict or block your access to the Service or parts of it, where technically possible, after reasonable notice where possible and in proportion to the breach.</div></div>
+    <div class="cl"><span class="n">22.3</span><div><strong>Discontinuing the Service.</strong> We may discontinue the App or remove it from the App Store. In that case we will give at least <strong>30 days' advance notice</strong> in the App and on the support site, and will act to stop Subscription renewals. Refund requests for a paid period that was not used are submitted to Apple, without limiting your rights under Applicable Law or under Section 10.5.</div></div>
+    <div class="cl"><span class="n">22.4</span><div>Provisions that by their nature are meant to survive the end of your use - including Sections 5 to 7, 12, 20, 21, 26 and 27 - continue to apply.</div></div>
+  </section>
+
+  <!-- 23 -->
+  <section id="changes">
+    <h2><span class="num">23.</span>Changes to these Terms</h2>
+    <div class="cl"><span class="n">23.1</span><div>We may update these Terms from time to time, for example because of a change in the Service, in the law or in Apple's rules. The current version is published in the App and on the support site, with an update date and a version number.</div></div>
+    <div class="cl"><span class="n">23.2</span><div>A <strong>material change</strong> to your detriment will take effect no earlier than <strong>14 days</strong> after a prominent notice is posted in the App and on the support site, unless the change is required by law or by Apple, or is needed to fix a safety risk immediately - in which case it may take effect sooner. Changes that are not material or that are in your favor take effect when published.</div></div>
+    <div class="cl"><span class="n">23.3</span><div>A change to these Terms does not apply retroactively and does not change the terms of a subscription period that has already been paid for. If you do not agree to a change, you may cancel the Subscription and stop using the App. Continued use after a change takes effect constitutes acceptance of it, <strong>except for a change to the Privacy Policy that requires consent under Applicable Law</strong>.</div></div>
+    <div class="cl"><span class="n">23.4</span><div>Changes to the Subscription price are governed by <a href="#subscription">Section 9.6</a>.</div></div>
+  </section>
+
+  <!-- 24 -->
+  <section id="accessibility">
+    <h2><span class="num">24.</span>Accessibility</h2>
+    <div class="cl"><span class="n">24.1</span><div>We work to support the built-in accessibility tools of iOS, such as larger text and VoiceOver, to the extent the App supports them.</div></div>
+    <div class="cl"><span class="n">24.2</span><div>Having an accessibility difficulty? Email us at <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a>. We will respond within 14 business days and work to help and fix the problem.</div></div>
+  </section>
+
+  <!-- 25 -->
+  <section id="force-majeure">
+    <h2><span class="num">25.</span>Force majeure</h2>
+    <p>The Operator is not liable for any delay or failure to perform an obligation under these Terms that results from circumstances beyond its reasonable control - including war, hostilities or terrorism, a state of emergency, natural disaster, epidemic, government orders, outage or failure of communications, power or cloud infrastructure, or a failure or policy change at Apple or at a third-party provider - provided that you will not be charged for a period in which the Service was not provided to you. The Operator will act reasonably to reduce the impact and restore the Service. Nothing in this Section limits your right to cancel the Subscription.</p>
+  </section>
+
+  <!-- 26 -->
+  <section id="law">
+    <h2><span class="num">26.</span>Governing law, jurisdiction and dispute resolution</h2>
+    <p class="tldr"><b>In short:</b>Israeli law applies and the courts of Tel Aviv-Yafo have jurisdiction - but as a consumer you can always rely on the mandatory protections of your own country, and sue where you live where the law allows.</p>
+    <div class="cl"><span class="n">26.1</span><div><strong>Governing law.</strong> These Terms and the relationship between you and the Operator are governed by the laws of the State of Israel, without regard to its conflict-of-laws rules. This does not affect the law governing the Apple Standard EULA as between you and Apple, and it does not deprive you of any protection granted by the mandatory law of the country or state where you live that cannot be excluded by agreement.</div></div>
+    <div class="cl"><span class="n">26.2</span><div><strong>Jurisdiction.</strong> The competent courts of <strong>Tel Aviv-Yafo, Israel</strong>, have exclusive jurisdiction, subject to Section 26.3.</div></div>
+    <div class="cl"><span class="n">26.3</span><div><strong>Preserving consumer rights.</strong> Section 26.2 does not take away your right as a consumer to bring a claim in the courts of the place where you live, including a small-claims court, where Applicable Law allows this. If you live outside Israel, nothing in these Terms deprives you of any protection granted by the mandatory consumer-protection law of your country or state (for example, the law of your U.S. state, or EU and UK consumer law), or of your right to contact your local consumer-protection or supervisory authority. <strong>These Terms contain no mandatory arbitration clause and no class-action waiver.</strong></div></div>
+    <div class="cl"><span class="n">26.4</span><div><strong>Talk to us first.</strong> Before starting legal proceedings, we invite you to email us and describe the problem. We will try to resolve the matter informally within 30 days. This does not affect your right to go to court or to another competent body, and does not suspend any limitation period.</div></div>
+    <div class="cl"><span class="n">26.5</span><div>Disputes about billing, renewal or refunds are handled first with Apple, subject to Section 10.5.</div></div>
+  </section>
+
+  <!-- 27 -->
+  <section id="general">
+    <h2><span class="num">27.</span>General provisions</h2>
+    <p class="tldr"><b>In short:</b>General legal provisions on how these Terms are interpreted.</p>
+    <div class="cl"><span class="n">27.1</span><div><strong>Entire agreement.</strong> These Terms and the Apple Standard EULA (as described in Section 11.1) constitute the entire agreement between us concerning the App, and supersede any prior representation, advertisement or agreement on the subject - including earlier versions of these Terms. The handling of information is described in the Privacy Policy.</div></div>
+    <div class="cl"><span class="n">27.2</span><div><strong>Severability.</strong> If any provision of these Terms is found void, unfair or unenforceable, in whole or in part, it will be interpreted or limited to the extent needed to make it enforceable, and the remaining provisions will remain in full force.</div></div>
+    <div class="cl"><span class="n">27.3</span><div><strong>Waiver.</strong> A failure or delay in exercising a right under these Terms is not a waiver of that right or of any other right, unless the waiver is made expressly and in writing.</div></div>
+    <div class="cl"><span class="n">27.4</span><div><strong>Assignment.</strong> You may not assign or transfer your rights or obligations under these Terms, except as Apple's rules allow. The Operator may assign its rights and obligations under these Terms to a party that acquires the App or continues to operate it, provided that your rights under these Terms and the Privacy Policy are not reduced, and notice is given in the App.</div></div>
+    <div class="cl"><span class="n">27.5</span><div><strong>Relationship of the parties.</strong> Nothing in these Terms creates a partnership, agency, employment or joint venture. Using the App does not create a therapist-patient relationship or any professional-advisory relationship.</div></div>
+    <div class="cl"><span class="n">27.6</span><div><strong>Third parties.</strong> Except for Apple (Section 11.7), these Terms grant no rights to any third party.</div></div>
+    <div class="cl"><span class="n">27.7</span><div><strong>Language.</strong> These Terms were written in Hebrew, and this English edition is provided for your convenience. In the event of a conflict between the Hebrew version and a translation, the Hebrew version prevails, subject to Applicable Law. Where Applicable Law requires that the version you were given in your language governs, that version governs on that point.</div></div>
+    <div class="cl"><span class="n">27.8</span><div><strong>Notices.</strong> Because we do not hold your contact details, notices from us are given inside the App, on the support site or through Apple. Notices from you are sent to the email or postal address in Section 28.</div></div>
+    <div class="cl"><span class="n">27.9</span><div><strong>Interpretation.</strong> The words "including" and "such as" introduce examples and are not exhaustive.</div></div>
+  </section>
+
+  <!-- 28 -->
+  <section id="contact">
+    <h2><span class="num">28.</span>Contact</h2>
+    <div class="table-wrap"><table>
+      <tr><td><strong>Operator</strong></td><td>Itzik Lugassy (<span class="rtl" lang="he">איציק לוגאסי</span>), sole trader, Israel</td></tr>
+      <tr><td><strong>Business ID</strong></td><td><span class="ph">[[Business ID]]</span></td></tr>
+      <tr><td><strong>Mailing address</strong></td><td><span class="ph">[[Mailing address]]</span></td></tr>
+      <tr><td><strong>Email</strong></td><td><a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a> (response within 14 business days)</td></tr>
+      <tr><td><strong>Support site</strong></td><td><a href="https://itziklugassy.github.io/sleep-stories-support/" target="_blank" rel="noopener">itziklugassy.github.io/sleep-stories-support</a></td></tr>
+      <tr><td><strong>Manage subscription</strong></td><td><a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">apps.apple.com/account/subscriptions</a></td></tr>
+      <tr><td><strong>Refunds (Apple)</strong></td><td><a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a></td></tr>
+      <tr><td><strong>Related documents</strong></td><td><a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html">Privacy Policy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple Standard EULA</a> · <a href="https://itziklugassy.github.io/sleep-stories-support/terms-of-service.html" lang="he">תנאי שימוש (Hebrew)</a></td></tr>
+    </table></div>
+    <p class="muted" style="margin-top:12px">Reminder: the App is not a channel for medical questions or emergencies. In an emergency call 911 or 988 (US), 101 / 100 / 1201 (Israel), or your local emergency number.</p>
+    <a class="top" href="#top">Back to top ↑</a>
+  </section>
+
+</main>
+
+<footer>
+  Cozy Bedtime Stories © 2026 Itzik Lugassy. All rights reserved.<br>
+  Terms of Use · Last updated: October 1, 2026 · Version 2.0 (English edition)<br>
+  <a href="https://itziklugassy.github.io/sleep-stories-support/terms-of-service-en.html">Terms of Use</a> ·
+  <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html">Privacy Policy</a> ·
+  <a href="https://itziklugassy.github.io/sleep-stories-support/">Support site</a> ·
+  <a href="https://itziklugassy.github.io/sleep-stories-support/terms-of-service.html" lang="he">עברית</a>
+</footer>
+
+</body>
+</html>

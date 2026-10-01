@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Privacy Policy | Cozy Bedtime Stories</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0f1029;
+    --surface: rgba(253,246,227,0.04);
+    --border: rgba(253,246,227,0.10);
+    --text: #fdf6e3;
+    --muted: rgba(253,246,227,0.68);
+    --accent: #ffe8a8;
+    --accent-soft: rgba(255,232,168,0.08);
+    --accent-border: rgba(255,232,168,0.30);
+    --link: #ffe8a8;
+    --ok: rgba(52,211,153,0.09);
+    --ok-border: rgba(52,211,153,0.30);
+    --warn: rgba(251,146,60,0.09);
+    --warn-border: rgba(251,146,60,0.32);
+  }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Arial Hebrew", Arial, sans-serif;
+    font-size: 16px; line-height: 1.85; direction: ltr; text-align: left;
+  }
+  header {
+    background: linear-gradient(170deg, #1b1c4f 0%, #0f1029 100%);
+    border-bottom: 1px solid var(--border); padding: 40px 20px 32px; text-align: center;
+  }
+  header .lang { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+  header .lang a { text-decoration: none; }
+  header .lang a[aria-current] { color: var(--text); font-weight: 700; }
+  header .moon { font-size: 46px; display: block; margin-bottom: 6px; }
+  header h1 { font-size: 28px; font-weight: 800; color: var(--text); }
+  header .app { color: var(--accent); font-size: 17px; font-weight: 600; margin-top: 4px; }
+  header .ver {
+    display: inline-block; margin-top: 12px; padding: 4px 16px;
+    border: 1px solid var(--accent-border); border-radius: 20px;
+    background: var(--accent-soft); color: var(--text); font-size: 14px;
+  }
+  header .doclinks { margin-top: 12px; font-size: 14px; color: var(--muted); }
+  .container { max-width: 820px; margin: 0 auto; padding: 24px 18px 64px; }
+  .card, .section {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 24px 26px; margin-bottom: 18px;
+  }
+  .section { scroll-margin-top: 16px; }
+  .summary { background: var(--accent-soft); border: 1px solid var(--accent-border); }
+  .summary h2 { color: var(--accent); font-size: 19px; margin-bottom: 12px; }
+  h2 { font-size: 19px; font-weight: 700; color: var(--text); margin-bottom: 14px;
+       padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  h2 .num { color: var(--accent); margin-right: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: var(--accent); margin: 18px 0 8px; }
+  p { margin-bottom: 12px; }
+  p:last-child { margin-bottom: 0; }
+  ul, ol { padding-left: 22px; margin-bottom: 12px; }
+  li { margin-bottom: 7px; }
+  li::marker { color: var(--accent); }
+  strong { color: var(--accent); font-weight: 700; }
+  a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; word-break: break-word; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .rtl { direction: rtl; unicode-bidi: embed; display: inline-block; }
+  .muted { color: var(--muted); font-size: 14px; }
+  .tldr {
+    background: var(--accent-soft); border-left: 3px solid var(--accent-border);
+    border-radius: 8px; padding: 8px 14px; margin: -2px 0 16px;
+    font-size: 15px; color: var(--muted);
+  }
+  .tldr b { color: var(--accent); font-weight: 700; margin-right: 4px; }
+  .toc h2 { border: none; padding: 0; margin-bottom: 8px; color: var(--accent); }
+  .toc ol { columns: 2; column-gap: 28px; }
+  .toc li { break-inside: avoid; font-size: 15px; }
+  .toc a { text-decoration: none; color: var(--text); }
+  .toc a:hover, .toc a:focus { color: var(--accent); text-decoration: underline; }
+  .box { border-radius: 12px; padding: 14px 18px; margin: 14px 0; font-size: 15px; }
+  .box-ok { background: var(--ok); border: 1px solid var(--ok-border); }
+  .box-warn { background: var(--warn); border: 1px solid var(--warn-border); }
+  .box-title { display: block; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+  .ph { background: rgba(255,232,168,0.18); color: var(--accent); border: 1px dashed var(--accent-border);
+        border-radius: 6px; padding: 0 5px; font-size: 0.93em; }
+  .table-wrap { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th { background: rgba(255,232,168,0.10); color: var(--accent); text-align: left;
+       font-weight: 700; padding: 10px 12px; border-bottom: 1px solid var(--accent-border); vertical-align: bottom; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  dl dt { font-weight: 700; color: var(--accent); margin-top: 10px; }
+  dl dd { margin-left: 0; margin-bottom: 6px; }
+  footer { text-align: center; color: var(--muted); font-size: 13.5px; padding: 28px 18px 40px;
+           border-top: 1px solid var(--border); }
+  @media (max-width: 620px) {
+    body { font-size: 16px; }
+    header h1 { font-size: 23px; }
+    .card, .section { padding: 18px 16px; }
+    .toc ol { columns: 1; }
+    table { font-size: 14px; }
+    /* Stacked cards for wide tables on narrow screens */
+    table.stack, table.stack tbody, table.stack tr, table.stack td { display: block; width: 100%; }
+    table.stack tr:first-child { display: none; }
+    table.stack tr { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; padding: 6px 4px; background: rgba(253,246,227,0.02); }
+    table.stack td { border-bottom: none; padding: 5px 10px; }
+    table.stack td::before { content: attr(data-label); display: block; font-size: 12.5px; font-weight: 700; color: var(--accent); }
+  }
+  @media print {
+    body { background: #fff; color: #000; }
+    .card, .section, .box, .tldr { border-color: #999; background: none; }
+    strong, h3, h2 .num, .tldr b { color: #000; }
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="lang" aria-label="Language"><a href="privacy-policy.html" lang="he" hreflang="he">עברית</a> | <a href="privacy-policy-en.html" hreflang="en" aria-current="page">English</a></div>
+  <span class="moon" aria-hidden="true">🌙</span>
+  <h1>Privacy Policy</h1>
+  <div class="app">Cozy Bedtime Stories</div>
+  <div class="ver">Last updated: October 1, 2026 · Version 2.0 (English edition)</div>
+  <div class="doclinks">
+    <a href="https://itziklugassy.github.io/sleep-stories-support/terms-of-service-en.html">Terms of Use</a> ·
+    <a href="https://itziklugassy.github.io/sleep-stories-support/">Support site</a>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- SUMMARY -->
+  <section class="card summary" aria-labelledby="summary-h">
+    <h2 id="summary-h">In short</h2>
+    <ul>
+      <li><strong>No account and no sign-up.</strong> We do not ask for a name, phone number or password, and there is no Sign in with Apple or Google. Your email address reaches us only if you choose to write to us.</li>
+      <li><strong>The child is not the user.</strong> The App is for adult parents and guardians (18+) who read the stories to a child. We do not collect information about the child - no name, no age, no diagnosis.</li>
+      <li><strong>Choosing a category (for example "attention and focus") is not linked to your identity by us, and we keep no record of it.</strong> It is used only to load the matching stories.</li>
+      <li><strong>Favorites and the list of stories you have opened are stored on your device only.</strong></li>
+      <li><strong>Payment goes through Apple only.</strong> We never see your payment details. To manage the subscription we use RevenueCat, which receives a random, anonymous identifier and purchase data from Apple.</li>
+      <li><strong>No ads, no analytics or crash-reporting tools, no tracking, and no selling or sharing of personal information.</strong> The App requests no iOS permissions.</li>
+      <li>For any question or request: <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a> - we respond within 14 business days.</li>
+    </ul>
+    <p class="muted">This summary is for convenience only. The full text below is the binding version.</p>
+  </section>
+
+  <!-- TOC -->
+  <nav class="card toc" aria-labelledby="toc-h">
+    <h2 id="toc-h">Table of contents</h2>
+    <ol>
+      <li><a href="#s1">Definitions</a></li>
+      <li><a href="#s2">Who we are</a></li>
+      <li><a href="#s3">Scope of this Policy</a></li>
+      <li><a href="#s4">Information we process</a></li>
+      <li><a href="#s5">Information we do not collect</a></li>
+      <li><a href="#s6">Sensitive information and category selection</a></li>
+      <li><a href="#s7">Purposes and legal bases</a></li>
+      <li><a href="#s8">Third parties</a></li>
+      <li><a href="#s9">International transfers</a></li>
+      <li><a href="#s10">Data retention and deletion</a></li>
+      <li><a href="#s11">Data security</a></li>
+      <li><a href="#s12">Security incidents</a></li>
+      <li><a href="#s13">Children's privacy (COPPA)</a></li>
+      <li><a href="#s14">Your rights</a></li>
+      <li><a href="#s15">California (CCPA/CPRA) and other U.S. states</a></li>
+      <li><a href="#s16">Cookies, tracking and advertising</a></li>
+      <li><a href="#s17">App Store privacy label</a></li>
+      <li><a href="#s18">Changes to this Policy</a></li>
+      <li><a href="#s19">Contact and governing law</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section class="section" id="s1">
+    <h2><span class="num">1.</span>Definitions</h2>
+    <p class="tldr"><b>In short:</b>"we" = Itzik Lugassy; "the information" = the little the App needs in order to work.</p>
+    <p>In this Policy the following terms have the meaning next to them. Terms not defined here are interpreted according to the Israeli Protection of Privacy Law, 5741-1981, as amended (including Amendment 13), and, where they apply, the GDPR, the UK GDPR, the U.S. Children's Online Privacy Protection Act (COPPA) and the California Consumer Privacy Act as amended by the California Privacy Rights Act (CCPA/CPRA).</p>
+    <dl>
+      <dt>"App"</dt>
+      <dd>The "Cozy Bedtime Stories" application (Hebrew: <span class="rtl" lang="he">סיפורי שינה מרגיעים</span>; bundle identifier com.sleepstories.app), currently distributed on the Apple App Store for iOS devices.</dd>
+      <dt>"Operator", "we", "us", "our"</dt>
+      <dd>Itzik Lugassy, sole trader, as described in Section 2.</dd>
+      <dt>"User", "you"</dt>
+      <dd>A parent, legal guardian or other adult aged 18 or older who installed the App and uses it, including to read stories to a child.</dd>
+      <dt>"Child"</dt>
+      <dd>The child to whom the stories are read. The Child does not use the App and does not provide any information to it.</dd>
+      <dt>"Personal information" / "personal data"</dt>
+      <dd>Data relating to an identified person or to a person who can reasonably be identified, directly or indirectly.</dd>
+      <dt>"Specially sensitive information"</dt>
+      <dd>As defined in the Israeli Protection of Privacy Law, including information about a person's physical or mental health; in GDPR terms, "special categories of personal data" (Article 9), including health data; and in CCPA/CPRA terms, "sensitive personal information".</dd>
+      <dt>"Processing"</dt>
+      <dd>Any operation on information, including collecting, receiving, storing, transferring, accessing, using, disclosing and deleting.</dd>
+      <dt>"Service provider" / "processor"</dt>
+      <dd>An external party that processes information on our behalf in order to operate the App, as described in Section 8.</dd>
+      <dt>"Anonymous ID"</dt>
+      <dd>A random string generated on the device to manage the subscription (see Section 4), shown to you in the App on the "Our Story" screen under the heading "Anonymous device ID". It contains no name, email, phone number or advertising identifier, and it does not let us know who you are.</dd>
+      <dt>"Device"</dt>
+      <dd>The phone or tablet on which the App is installed.</dd>
+    </dl>
+  </section>
+
+  <!-- 2 -->
+  <section class="section" id="s2">
+    <h2><span class="num">2.</span>Who we are</h2>
+    <p>The App is operated by <strong>Itzik Lugassy</strong> (<span class="rtl" lang="he">איציק לוגאסי</span>), a sole trader registered in Israel. The Operator decides the purposes and means of processing - the "database owner" under Israeli law, the "controller" under the GDPR and UK GDPR, and the "business" under the CCPA/CPRA - with respect to the limited information described in this Policy.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Item</th><th>Details</th></tr>
+        <tr><td>Operator name</td><td>Itzik Lugassy (sole trader)</td></tr>
+        <tr><td>Business ID</td><td><span class="ph">[[Business ID]]</span></td></tr>
+        <tr><td>Mailing address</td><td><span class="ph">[[Mailing address]]</span></td></tr>
+        <tr><td>Privacy email</td><td><a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a></td></tr>
+        <tr><td>Support site</td><td><a href="https://itziklugassy.github.io/sleep-stories-support/">itziklugassy.github.io/sleep-stories-support</a></td></tr>
+        <tr><td>Privacy contact</td><td>The Operator himself, Itzik Lugassy, is the contact for every privacy and data-protection matter. Given the current scale of activity and the nature of the information processed, the Operator is not required to appoint a "privacy protection officer" under Israeli law or a DPO under the GDPR, and is not required to appoint a representative in the European Union or the United Kingdom. If such an obligation arises, we will appoint an officer or representative and update this Policy.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="section" id="s3">
+    <h2><span class="num">3.</span>Scope of this Policy</h2>
+    <p>This Policy applies to your use of the App, to the support site, and to messages you send us. It serves as the notice required by Section 11 of the Israeli Protection of Privacy Law, as the information to be provided under Articles 13 and 14 of the GDPR, and as the "notice at collection" and privacy policy required by the CCPA/CPRA, in each case to the extent those laws apply.</p>
+    <p>You are not legally required to provide us with any information. Using the App does not require providing any identifying details. The technical information described in Section 4 is needed for the App to work (for example to load stories and verify the subscription); without it, parts of the Service cannot be provided.</p>
+    <p>This Policy does not apply to processing that Apple performs itself, as an independent controller, in the App Store, your Apple ID and payment. That processing is governed by Apple's privacy policy (see Section 8). This Policy supplements the App's <a href="https://itziklugassy.github.io/sleep-stories-support/terms-of-service-en.html">Terms of Use</a> and <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple's Licensed Application End User License Agreement</a> (Apple Standard EULA).</p>
+  </section>
+
+  <!-- 4 -->
+  <section class="section" id="s4">
+    <h2><span class="num">4.</span>Information we process</h2>
+    <p class="tldr"><b>In short:</b>Favorites and opened stories - only on your device; subscription data - at Apple and RevenueCat; emails - with us.</p>
+    <p>The table below lists every category of information the App processes, the purpose, where the information is stored and for how long.</p>
+    <div class="table-wrap">
+      <table class="stack">
+        <tr>
+          <th>Information category</th>
+          <th>What exactly</th>
+          <th>Why</th>
+          <th>Where it is stored</th>
+          <th>For how long</th>
+        </tr>
+        <tr>
+          <td data-label="Information category"><strong>Favorites</strong></td>
+          <td data-label="What exactly">The list of stories you marked as favorites.</td>
+          <td data-label="Why">So you can return to stories you liked.</td>
+          <td data-label="Where it is stored">On the device only (local storage). Not sent to us or to any third party.</td>
+          <td data-label="For how long">Until you unmark them or delete the App.</td>
+        </tr>
+        <tr>
+          <td data-label="Information category"><strong>Opened stories</strong></td>
+          <td data-label="What exactly">Which stories were opened.</td>
+          <td data-label="Why">To count the free stories (2 per category).</td>
+          <td data-label="Where it is stored">On the device only.</td>
+          <td data-label="For how long">Until the App is deleted.</td>
+        </tr>
+        <tr>
+          <td data-label="Information category"><strong>Subscription status (local copy)</strong></td>
+          <td data-label="What exactly">Whether there is an active subscription.</td>
+          <td data-label="Why">To unlock subscriber content even when the connection is unstable.</td>
+          <td data-label="Where it is stored">A copy on the device; the subscription itself is verified with Apple and RevenueCat (see the next rows).</td>
+          <td data-label="For how long">Until the App is deleted or the status is updated.</td>
+        </tr>
+        <tr>
+          <td data-label="Information category"><strong>RevenueCat Anonymous ID</strong></td>
+          <td data-label="What exactly">A random string generated on the device at first launch, shown on the "Our Story" screen as "Anonymous device ID". It contains no name, email or advertising identifier.</td>
+          <td data-label="Why">To link the purchase to the device, verify the subscription and restore purchases.</td>
+          <td data-label="Where it is stored">On the device and on RevenueCat's servers (United States).</td>
+          <td data-label="For how long">For as long as needed to manage the subscription and restore purchases, and until you ask us to delete it (see Section 10).</td>
+        </tr>
+        <tr>
+          <td data-label="Information category"><strong>Purchase data (Apple receipt)</strong></td>
+          <td data-label="What exactly">The receipt Apple generates: product identifier (sleep_stories_monthly), transaction identifiers, purchase, renewal and expiry dates, free trial, price and currency, and the country storefront.</td>
+          <td data-label="Why">Verifying the subscription, managing renewals and cancellations, and aggregate revenue reports.</td>
+          <td data-label="Where it is stored">Apple; RevenueCat (United States).</td>
+          <td data-label="For how long">At RevenueCat - for as long as needed to manage the subscription and restore purchases, and until you ask us to delete it (see Section 10). Aggregate transaction reports (with no identifying details) are kept for up to 7 years under bookkeeping and tax-law obligations.</td>
+        </tr>
+        <tr>
+          <td data-label="Information category"><strong>Story-loading request (Firebase Firestore)</strong></td>
+          <td data-label="What exactly">A query by category name to download stories. The query contains no user identifier, and the App does not sign in to Firebase with any identity.</td>
+          <td data-label="Why">To show you the current stories in the category you chose.</td>
+          <td data-label="Where it is stored">Google servers (Firebase). The stories themselves may be cached temporarily on the device.</td>
+          <td data-label="For how long">We do not store the queries, and we do not enable Data Access logs in the project. Google may keep technical request logs under its own policy.</td>
+        </tr>
+        <tr>
+          <td data-label="Information category"><strong>Software-update request (Expo / EAS Update)</strong></td>
+          <td data-label="What exactly">App version, runtime version, platform, update channel, a random installation identifier and IP address.</td>
+          <td data-label="Why">To check whether a software (OTA) update exists and download it.</td>
+          <td data-label="Where it is stored">Expo servers (United States).</td>
+          <td data-label="For how long">Under Expo's policy.</td>
+        </tr>
+        <tr>
+          <td data-label="Information category"><strong>Technical information that accompanies any network communication</strong></td>
+          <td data-label="What exactly">IP address, operating-system type and version, device language and basic request data. This information is exposed to every server the App contacts.</td>
+          <td data-label="Why">Actual delivery of content, security and abuse prevention at the service providers.</td>
+          <td data-label="Where it is stored">RevenueCat, Google, Expo, Apple.</td>
+          <td data-label="For how long">We do not collect or keep this information ourselves. The providers keep it under their own policies.</td>
+        </tr>
+        <tr>
+          <td data-label="Information category"><strong>Messages to us</strong></td>
+          <td data-label="What exactly">If you write to us: your email address, the content of your message and anything you choose to attach.</td>
+          <td data-label="Why">Replying, support, handling requests under Sections 14 and 15, and record-keeping for legal defense.</td>
+          <td data-label="Where it is stored">The Operator's mailbox (Gmail, Google).</td>
+          <td data-label="For how long">24 months after the matter is closed, then deleted (see Section 10).</td>
+        </tr>
+      </table>
+    </div>
+    <div class="box box-warn">
+      <span class="box-title">Important: please do not send us medical information</span>
+      When you contact us, please do not include a child's name, a diagnosis, medical information or other sensitive information. It is not needed to handle your request. If such information is sent to us, we will use it only to reply and will delete it as soon as possible.
+    </div>
+    <p><strong>No crash-reporting or analytics tools.</strong> The App contains no crash-reporting or analytics component (such as Sentry, Crashlytics or Firebase Analytics). If we start using such a tool, we will update this Policy in advance. Crash reports that you choose to share with developers through iOS settings are collected by Apple and passed to us without identifying details.</p>
+  </section>
+
+  <!-- 5 -->
+  <section class="section" id="s5">
+    <h2><span class="num">5.</span>Information we do not collect</h2>
+    <div class="box box-ok">
+      <span class="box-title">The App does not collect, request or access:</span>
+      <ul style="margin-top:6px">
+        <li>Your name, phone number or address. There is no account and no sign-up. (An email address reaches us only if you choose to write to us - see Section 4.)</li>
+        <li>The Child's name, age, date of birth, photo or any other identifying detail about the Child.</li>
+        <li>Any diagnosis, medical condition, or health, mental-health or developmental information about the Child or about you.</li>
+        <li>Location (GPS or approximate location for profiling).</li>
+        <li>Contacts, photos, camera, microphone or voice recordings.</li>
+        <li>Credit-card or payment details. Payment is processed by Apple only.</li>
+        <li>Advertising identifier (IDFA), browsing history or information from other apps.</li>
+        <li>Your Apple ID details. Apple does not give us your name or email address.</li>
+      </ul>
+    </div>
+    <p><strong>The App requests no iOS permissions</strong> - not location, camera, microphone, photos, contacts or notifications.</p>
+  </section>
+
+  <!-- 6 -->
+  <section class="section" id="s6">
+    <h2><span class="num">6.</span>Sensitive information and category selection</h2>
+    <p>The stories are organized in 6 categories: Tourette syndrome, attention and focus (ADHD), worries and fears, trouble falling asleep, sensory sensitivity, and autism spectrum. We are aware that some category names refer to health or developmental conditions. Therefore:</p>
+    <ul>
+      <li><strong>Choosing a category is not a collection of health information about the Child.</strong> It is a content choice, like choosing a shelf in a library. It does not indicate that the Child has any diagnosis, and we draw no such inference from it.</li>
+      <li><strong>The choice is not linked to your identity by us, and we keep no record of it.</strong> When you open a category, the App sends Firebase a query by category name only, with no user identifier, without the RevenueCat Anonymous ID and without authentication. The hosting provider (Google) receives, as with any network request, technical data such as an IP address.</li>
+      <li><strong>The choice is not sent to RevenueCat, is not used for advertising or profiling, and is not sold or shared.</strong></li>
+      <li>The list of opened stories (used to count the free stories) is stored on the device only.</li>
+    </ul>
+    <p>Because we do not process health information about an identified or identifiable person, we do not process "specially sensitive information" under Israeli law, "health data" under Article 9 of the GDPR, or "sensitive personal information" under the CCPA/CPRA, and we do not ask for consent to do so. If this changes, we will update this Policy and act in accordance with the law, including obtaining explicit consent where required.</p>
+  </section>
+
+  <!-- 7 -->
+  <section class="section" id="s7">
+    <h2><span class="num">7.</span>Purposes and legal bases</h2>
+    <p class="tldr"><b>In short:</b>We use information only so that the App and the subscription work, and never for advertising or profiling.</p>
+    <p>We process information only for the purposes listed here. Under Israeli law, processing is carried out to provide the service you requested and in accordance with this notice. Under the GDPR and UK GDPR (where they apply), the legal bases are:</p>
+    <div class="table-wrap">
+      <table class="stack">
+        <tr><th>Purpose</th><th>Relevant information</th><th>Legal basis (GDPR / UK GDPR)</th></tr>
+        <tr><td data-label="Purpose">Displaying stories and loading them from the cloud</td><td data-label="Relevant information">Firestore request, technical information</td><td data-label="Legal basis (GDPR / UK GDPR)">Performance of a contract, Article 6(1)(b)</td></tr>
+        <tr><td data-label="Purpose">Counting free stories and saving favorites</td><td data-label="Relevant information">Local data on the device</td><td data-label="Legal basis (GDPR / UK GDPR)">Performance of a contract, 6(1)(b). The data never leaves the device.</td></tr>
+        <tr><td data-label="Purpose">Verifying the subscription, renewal, cancellation and restoring purchases</td><td data-label="Relevant information">Anonymous ID, purchase data</td><td data-label="Legal basis (GDPR / UK GDPR)">Performance of a contract, 6(1)(b)</td></tr>
+        <tr><td data-label="Purpose">Software updates and bug fixes (OTA)</td><td data-label="Relevant information">Update-request data</td><td data-label="Legal basis (GDPR / UK GDPR)">Legitimate interest in maintaining and securing the App, 6(1)(f)</td></tr>
+        <tr><td data-label="Purpose">Security and preventing fraud or abuse</td><td data-label="Relevant information">Technical information, purchase data</td><td data-label="Legal basis (GDPR / UK GDPR)">Legitimate interest, 6(1)(f)</td></tr>
+        <tr><td data-label="Purpose">Replying to messages and handling rights requests</td><td data-label="Relevant information">Email address and message content</td><td data-label="Legal basis (GDPR / UK GDPR)">Legitimate interest, 6(1)(f); legal obligation, 6(1)(c)</td></tr>
+        <tr><td data-label="Purpose">Bookkeeping, tax and legal compliance</td><td data-label="Relevant information">Aggregate transaction data</td><td data-label="Legal basis (GDPR / UK GDPR)">Legal obligation, 6(1)(c)</td></tr>
+      </table>
+    </div>
+    <p>We do not use information for advertising, targeted marketing, profiling, automated decisions with legal effect, or training artificial-intelligence models.</p>
+  </section>
+
+  <!-- 8 -->
+  <section class="section" id="s8">
+    <h2><span class="num">8.</span>Third parties</h2>
+    <p>We do not sell, rent or trade information. We use only the following providers, and each receives only the information needed for its role:</p>
+    <div class="table-wrap">
+      <table class="stack">
+        <tr><th>Provider</th><th>Role</th><th>Information received</th><th>Location</th><th>Privacy policy</th></tr>
+        <tr>
+          <td data-label="Provider"><strong>Apple Inc.</strong></td>
+          <td data-label="Role">Distributing the App, processing payments and subscriptions (StoreKit / In-App Purchase), crash reports (if you chose to share them)</td>
+          <td data-label="Information received">Apple acts as an independent controller with respect to your Apple ID and payment. We receive from Apple purchase receipts and aggregate reports only.</td>
+          <td data-label="Location">United States and other countries</td>
+          <td data-label="Privacy policy"><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td>
+        </tr>
+        <tr>
+          <td data-label="Provider"><strong>RevenueCat, Inc.</strong></td>
+          <td data-label="Role">Managing and verifying subscriptions</td>
+          <td data-label="Information received">Anonymous ID, Apple purchase receipt, technical information</td>
+          <td data-label="Location">United States</td>
+          <td data-label="Privacy policy"><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td data-label="Provider"><strong>Google LLC (Firebase Firestore)</strong></td>
+          <td data-label="Role">Hosting stories in the cloud and serving them to the App, without user authentication</td>
+          <td data-label="Information received">Query by category, technical information</td>
+          <td data-label="Location">United States and/or other Google regions</td>
+          <td data-label="Privacy policy"><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td>
+        </tr>
+        <tr>
+          <td data-label="Provider"><strong>650 Industries, Inc. (Expo / EAS)</strong></td>
+          <td data-label="Role">Building the App and distributing software (OTA) updates</td>
+          <td data-label="Information received">Update-request data, technical information</td>
+          <td data-label="Location">United States</td>
+          <td data-label="Privacy policy"><a href="https://expo.dev/privacy">expo.dev/privacy</a></td>
+        </tr>
+        <tr>
+          <td data-label="Provider"><strong>Google LLC (Gmail)</strong></td>
+          <td data-label="Role">The mailbox where messages are received</td>
+          <td data-label="Information received">Only what you send us by email</td>
+          <td data-label="Location">United States and other countries</td>
+          <td data-label="Privacy policy"><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td data-label="Provider"><strong>GitHub, Inc. (GitHub Pages)</strong></td>
+          <td data-label="Role">Hosting the support site, the Terms of Use and this Policy</td>
+          <td data-label="Information received">Technical browsing data for the site (such as IP address)</td>
+          <td data-label="Location">United States</td>
+          <td data-label="Privacy policy"><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a></td>
+        </tr>
+      </table>
+    </div>
+    <p>Our service providers are bound, under their terms with us and their data-processing agreements (DPAs), to process the information only to provide the service and to protect it. For CCPA/CPRA purposes they act as our "service providers" and are contractually prohibited from selling or sharing the information or using it for their own purposes.</p>
+    <p><strong>Disclosure required by law:</strong> We may disclose information if required to do so by law, a court order or a demand from a competent authority, or if needed to protect our rights. Because we hold so little information, any such disclosure is limited by nature.</p>
+    <p><strong>Business transfer:</strong> If the App is transferred to another party (for example in a sale or merger), the limited information described here may be transferred to that party, subject to this Policy and to the law.</p>
+  </section>
+
+  <!-- 9 -->
+  <section class="section" id="s9">
+    <h2><span class="num">9.</span>International transfers</h2>
+    <p class="tldr"><b>In short:</b>Our providers are mainly in the United States, and they are contractually bound to protect the information.</p>
+    <p>The service providers listed in Section 8 operate mainly in the United States. The Operator is located in Israel. The information described in Section 4 (other than information stored on the device only) is therefore processed in the United States and in Israel, and may be transferred between those countries and the country where you live.</p>
+    <p><strong>Transfers from Israel</strong> are made in accordance with the Protection of Privacy Regulations (Transfer of Data to Databases Abroad), 5761-2001, on the basis of the providers' written commitments in their data-processing agreements (DPAs), which include standard contractual clauses and/or reliance on the EU-U.S. Data Privacy Framework, as applicable.</p>
+    <p><strong>If you are in the EU, the EEA or the United Kingdom</strong>, your data may be transferred to the United States and to Israel. Israel benefits from an adequacy decision of the European Commission and from UK adequacy regulations. Transfers to U.S. providers rely on the EU-U.S. Data Privacy Framework (and its UK Extension) where the provider is certified, and otherwise on the European Commission's Standard Contractual Clauses (and the UK International Data Transfer Addendum) included in the providers' DPAs. You may contact us for more information about the safeguards that apply to these transfers.</p>
+    <p><strong>If you are in the United States</strong>, note that the Operator is located in Israel and that information you send us by email is processed there. The anonymous subscription data stays with U.S. providers (Apple and RevenueCat).</p>
+  </section>
+
+  <!-- 10 -->
+  <section class="section" id="s10">
+    <h2><span class="num">10.</span>Data retention and deletion</h2>
+    <p>We keep information only for as long as it is needed for the purpose for which it was collected, or as required by law. The retention period for each type of information is listed in the table in Section 4.</p>
+    <h3>Data on the device</h3>
+    <p><strong>Deleting the App from your device deletes the local data:</strong> favorites, opened stories, the local subscription status and the local Anonymous ID. We have no copy of them and no way to restore them. Note: a backup of your device (for example iCloud) may include this data, depending on your backup settings.</p>
+    <h3>Deleting the App does not cancel the subscription</h3>
+    <p>The subscription is managed by Apple and renews automatically until cancelled. To cancel: <strong>Settings → [your name] → Subscriptions</strong>, at least 24 hours before the renewal date. After reinstalling, you can restore the subscription with the "Restore purchase" button.</p>
+    <h3>Deleting data at RevenueCat</h3>
+    <p>RevenueCat stores the Anonymous ID and purchase data on our behalf. To delete them, send a request to <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a>. Because we do not know who you are, include a detail that lets us locate the record: <strong>the Anonymous ID</strong>, shown in the App on the "Our Story" screen under "Anonymous device ID" (you can copy it before deleting the App), or the Order ID from the purchase receipt Apple emailed you. We will delete the record through the RevenueCat dashboard and confirm the deletion to you.</p>
+    <p>After deletion, purchase records may be re-created if you tap "Restore purchase". Apple continues to keep your purchase history under its own policy, over which we have no control. Aggregate transaction reports (with no identifying details) are kept for up to 7 years as required by tax law.</p>
+    <h3>Messages</h3>
+    <p>Correspondence with us is kept for 24 months after the matter is closed and then deleted, unless we need to keep it for legal defense or as required by law. You may request earlier deletion.</p>
+  </section>
+
+  <!-- 11 -->
+  <section class="section" id="s11">
+    <h2><span class="num">11.</span>Data security</h2>
+    <p>The best way to protect information is not to collect it, so the App is built on data minimization. In addition:</p>
+    <ul>
+      <li>All communication between the App and the service providers is encrypted with HTTPS/TLS.</li>
+      <li>Local data is kept in the App's private storage on the device and protected by iOS security mechanisms (sandbox).</li>
+      <li>Access to the Apple, RevenueCat, Firebase, Expo, Gmail and GitHub dashboards is limited to the Operator and protected by two-factor authentication.</li>
+      <li>The Firestore database is configured as read-only for the App: story content can be read from it, not written to it.</li>
+      <li>We take reasonable measures in line with the Israeli Protection of Privacy Regulations (Data Security), 5777-2017, to the extent they apply, and at a security level appropriate to the nature of the information.</li>
+    </ul>
+    <p>No security method is completely immune, so we cannot guarantee absolute security. However, because of the very limited scope of the information, the risk to your privacy is low.</p>
+  </section>
+
+  <!-- 12 -->
+  <section class="section" id="s12">
+    <h2><span class="num">12.</span>Security incidents</h2>
+    <p>If a security incident occurs that could affect personal information, at our end or at one of our service providers:</p>
+    <ul>
+      <li>We will act immediately to contain the incident and assess its consequences.</li>
+      <li>We will report to the Israeli Privacy Protection Authority where the law requires it (including a serious security incident under the Data Security Regulations), to a European supervisory authority within 72 hours where the GDPR applies and requires it, and to affected individuals and authorities in the United States where a state data-breach notification law applies and requires it.</li>
+      <li>We will notify users who may be affected, where the law requires it or an authority directs it, through the App, the support site or any other reasonable means. Because we do not hold contact details, the notice will usually be published generally.</li>
+      <li>We will document the incident and the steps taken.</li>
+    </ul>
+    <p>If you discover a security vulnerability in the App, please report it to us: <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a>.</p>
+  </section>
+
+  <!-- 13 -->
+  <section class="section" id="s13">
+    <h2><span class="num">13.</span>Children's privacy (COPPA)</h2>
+    <p class="tldr"><b>In short:</b>The App is for parents, not for children. We do not knowingly collect personal information from anyone under 13, and there is no way for a child to enter information in the App.</p>
+    <p>The App is directed to adult parents and guardians (18+) who read the stories to a Child. <strong>The Child does not use the App</strong>, is not required to operate it and does not provide any information to it. The App has no chat, no content upload, no child profile, no account, no data-entry fields and no means by which a child could provide personal information. The App is not listed in the Kids category of the App Store and is not directed to children.</p>
+    <h3>COPPA (United States)</h3>
+    <ul>
+      <li><strong>We do not knowingly collect, use or disclose personal information from children under 13.</strong> The App does not ask for a name, age, date of birth, photo, voice, location or any other personal information, from anyone.</li>
+      <li>The only persistent identifier the App uses - the RevenueCat Anonymous ID - is generated on the device, is tied to the adult's Apple ID purchase, and is used solely for internal operations (verifying the subscription and restoring purchases), as permitted by COPPA's "support for internal operations" exception. It is never used for behavioral advertising, profiling, or contacting anyone. The Expo update-request identifier is likewise used only to deliver software updates.</li>
+      <li>We do not use any third-party advertising, analytics or social-media SDK.</li>
+      <li><strong>What a parent can do:</strong> if you believe a child under 13 has provided us with personal information (for example by emailing us from a child's account), contact us at <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a> and we will delete it promptly. You can also delete all local data at any time by deleting the App, and ask us to delete the Anonymous ID record at RevenueCat (Section 10). We will not condition any part of the service on a child providing information.</li>
+    </ul>
+    <h3>GDPR and UK GDPR (Article 8)</h3>
+    <p>The Service is not offered directly to children and we do not rely on a child's consent. The User is the parent.</p>
+    <h3>Israeli law</h3>
+    <p>We do not collect information about minors.</p>
+    <p>We recommend that the parent operate the App personally and not leave the device in the Child's hands unsupervised. We also recommend enabling Screen Time and "Ask to Buy" on Apple devices used near children.</p>
+  </section>
+
+  <!-- 14 -->
+  <section class="section" id="s14">
+    <h2><span class="num">14.</span>Your rights</h2>
+    <p class="tldr"><b>In short:</b>You can ask to see, correct or delete your information - write to us and we will reply within 14 business days.</p>
+    <p>Under the Israeli Protection of Privacy Law, and under the GDPR and UK GDPR to the extent they apply to you, you have the following rights (rights of U.S. residents are described in Section 15):</p>
+    <div class="table-wrap">
+      <table class="stack">
+        <tr><th>Right</th><th>Meaning</th><th>Source</th></tr>
+        <tr><td data-label="Right"><strong>Access</strong></td><td data-label="Meaning">To know whether we hold information about you and to receive a copy of it.</td><td data-label="Source">Section 13 of the Israeli law; Article 15 GDPR</td></tr>
+        <tr><td data-label="Right"><strong>Rectification</strong></td><td data-label="Meaning">To ask us to correct information that is inaccurate, incomplete, unclear or out of date.</td><td data-label="Source">Section 14 of the Israeli law; Article 16 GDPR</td></tr>
+        <tr><td data-label="Right"><strong>Erasure</strong></td><td data-label="Meaning">To ask us to delete information, including at RevenueCat (see Section 10), subject to legal retention obligations.</td><td data-label="Source">Section 14 of the Israeli law (inaccurate or outdated information); beyond that, we allow voluntary deletion; Article 17 GDPR</td></tr>
+        <tr><td data-label="Right"><strong>Restriction</strong></td><td data-label="Meaning">To ask us to limit the use of information in certain circumstances.</td><td data-label="Source">Article 18 GDPR</td></tr>
+        <tr><td data-label="Right"><strong>Portability</strong></td><td data-label="Meaning">To receive information you provided in a structured, commonly used format.</td><td data-label="Source">Article 20 GDPR</td></tr>
+        <tr><td data-label="Right"><strong>Objection</strong></td><td data-label="Meaning">To object to processing based on legitimate interest.</td><td data-label="Source">Article 21 GDPR</td></tr>
+        <tr><td data-label="Right"><strong>Complaint</strong></td><td data-label="Meaning">To lodge a complaint with a supervisory authority.</td><td data-label="Source">See below</td></tr>
+      </table>
+    </div>
+    <h3>How to exercise your rights</h3>
+    <ul>
+      <li>Local data is entirely under your control. You can view it in the App and delete it at any time by deleting the App.</li>
+      <li>For any other request, write to <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a> and include the "Anonymous device ID" from the "Our Story" screen or the Order ID from your Apple receipt (see Section 10). We will not ask for more than is needed.</li>
+      <li><strong>We reply within 14 business days; to an access request under the Israeli Protection of Privacy Law, no later than 21 days.</strong> Under the GDPR, within one month at most, with the possibility of extension where the law allows.</li>
+      <li>Exercising your rights is free of charge, unless a request is manifestly unfounded or excessively repetitive, to the extent the law allows.</li>
+    </ul>
+    <h3>Complaint to an authority</h3>
+    <p>If you are not satisfied with how we handled your request, you may contact the <a href="https://www.gov.il/en/departments/the_privacy_protection_authority">Israeli Privacy Protection Authority</a> at the Ministry of Justice. Residents of the European Union, the European Economic Area or the United Kingdom may also contact the data-protection supervisory authority in their country (in the UK, the Information Commissioner's Office). We would appreciate the chance to resolve the matter with you first.</p>
+  </section>
+
+  <!-- 15 -->
+  <section class="section" id="s15">
+    <h2><span class="num">15.</span>California (CCPA/CPRA) and other U.S. states</h2>
+    <p class="tldr"><b>In short:</b>We do not sell personal information, to anyone, and we never have.</p>
+    <div class="box box-ok">
+      <span class="box-title">We do not sell or share your personal information.</span>
+      <strong>We do not sell personal information and we do not "share" it</strong> (in the sense of cross-context behavioral advertising), and we have not done so in the preceding 12 months. We do not knowingly sell or share the personal information of consumers under 16. For that reason no "Do Not Sell or Share My Personal Information" link is required, and we offer none. We do not use or disclose sensitive personal information for any purpose that would require a "Limit the Use of My Sensitive Personal Information" link.
+    </div>
+    <h3>Categories of personal information collected (preceding 12 months)</h3>
+    <div class="table-wrap">
+      <table class="stack">
+        <tr><th>CCPA category</th><th>Collected?</th><th>Examples</th><th>Source</th><th>Purpose</th><th>Disclosed to (service providers)</th></tr>
+        <tr><td data-label="CCPA category"><strong>Identifiers</strong></td><td data-label="Collected?">Yes</td><td data-label="Examples">Anonymous ID; installation identifier; IP address; email address (only if you write to us)</td><td data-label="Source">Your device; you</td><td data-label="Purpose">Subscription verification, software updates, replying to you (Section 7)</td><td data-label="Disclosed to (service providers)">RevenueCat, Expo, Google, Apple (Section 8)</td></tr>
+        <tr><td data-label="CCPA category"><strong>Commercial information</strong></td><td data-label="Collected?">Yes</td><td data-label="Examples">Subscription and purchase history (Apple receipt)</td><td data-label="Source">Apple</td><td data-label="Purpose">Subscription verification, renewals, bookkeeping</td><td data-label="Disclosed to (service providers)">RevenueCat</td></tr>
+        <tr><td data-label="CCPA category"><strong>Internet or network activity</strong></td><td data-label="Collected?">Limited</td><td data-label="Examples">Technical request data that accompanies any network call</td><td data-label="Source">Your device</td><td data-label="Purpose">Delivering content, security</td><td data-label="Disclosed to (service providers)">RevenueCat, Google, Expo, Apple</td></tr>
+        <tr><td data-label="CCPA category"><strong>Sensitive personal information</strong></td><td data-label="Collected?">No</td><td data-label="Examples">We collect no health, precise-location, account-credential, financial or other sensitive personal information. Choosing a category is not health information (Section 6).</td><td data-label="Source">-</td><td data-label="Purpose">-</td><td data-label="Disclosed to (service providers)">-</td></tr>
+        <tr><td data-label="CCPA category"><strong>All other categories</strong> (personal records, protected classifications, biometrics, geolocation, audio/visual, professional, education, inferences)</td><td data-label="Collected?">No</td><td data-label="Examples">-</td><td data-label="Source">-</td><td data-label="Purpose">-</td><td data-label="Disclosed to (service providers)">-</td></tr>
+      </table>
+    </div>
+    <p>Sources, purposes and recipients are described in detail in Sections 4, 7 and 8. We retain each category for the period stated in Section 4. We do not use personal information for any purpose that is incompatible with those stated here.</p>
+    <h3>Your rights as a California resident</h3>
+    <ul>
+      <li><strong>Right to know</strong> - to request the categories and specific pieces of personal information we have collected about you, the sources, the purposes, and the categories of third parties to whom it was disclosed.</li>
+      <li><strong>Right to delete</strong> - to request deletion of personal information we collected from you, subject to legal exceptions (for example, aggregate tax records).</li>
+      <li><strong>Right to correct</strong> - to request correction of inaccurate personal information.</li>
+      <li><strong>Right to opt out of sale or sharing</strong> - not applicable, because we do not sell or share personal information.</li>
+      <li><strong>Right to limit use of sensitive personal information</strong> - not applicable, because we do not collect it.</li>
+      <li><strong>Right to non-discrimination</strong> - we will not deny you the service, charge a different price or provide a different level of service because you exercised your rights.</li>
+    </ul>
+    <h3>How to exercise these rights</h3>
+    <ul>
+      <li>Email <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a> with the subject line "Privacy request" and include your "Anonymous device ID" (from the "Our Story" screen) or the Order ID from your Apple receipt. Because we hold no account or contact information, these are the only ways we can locate a record, and we will use them solely to verify and fulfil your request.</li>
+      <li>You may also write to the mailing address in Section 19. We do not operate a toll-free number; given the nature of the service (an app with no account), email and mail are our designated request methods.</li>
+      <li>We will confirm receipt within 10 business days and respond within 45 days, which we may extend once by a further 45 days where reasonably necessary, with notice to you.</li>
+      <li><strong>Authorized agent:</strong> you may designate an authorized agent to make a request on your behalf. We may ask for written proof of the authorization and may ask you to confirm your identity directly.</li>
+      <li>Local data (favorites, opened stories) never leaves your device; you can view and delete it yourself at any time.</li>
+    </ul>
+    <h3>Other U.S. states</h3>
+    <p>Residents of other U.S. states with comprehensive privacy laws (including Virginia, Colorado, Connecticut, Utah, Texas, Oregon, Montana and others) have similar rights to access, correct, delete and obtain a copy of their personal data, and to opt out of targeted advertising, sales and profiling. We do not engage in targeted advertising, sales or profiling. You may exercise your rights using the methods above. If we decline a request, you may appeal by replying to our response with the word "Appeal"; we will answer the appeal within 45 days, and if it is denied you may contact your state attorney general.</p>
+    <p>The App does not respond to "Do Not Track" or Global Privacy Control signals, because it performs no tracking and there is nothing to opt out of.</p>
+  </section>
+
+  <!-- 16 -->
+  <section class="section" id="s16">
+    <h2><span class="num">16.</span>Cookies, tracking and advertising</h2>
+    <ul>
+      <li>The App <strong>does not use cookies</strong>, pixels or similar tracking technologies.</li>
+      <li><strong>No advertising</strong> and no SDKs of ad networks or social networks.</li>
+      <li><strong>No analytics or crash-reporting tools</strong> (such as Google Analytics, Firebase Analytics, Crashlytics or Sentry).</li>
+      <li><strong>No "tracking"</strong> as Apple defines it: we do not link information from the App with information from third-party apps or websites, and we do not access the IDFA. For that reason the App does not display an App Tracking Transparency prompt.</li>
+      <li>The support site sets no cookies of our own. The hosting provider (GitHub Pages) may process technical browsing data under its own policy.</li>
+    </ul>
+  </section>
+
+  <!-- 17 -->
+  <section class="section" id="s17">
+    <h2><span class="num">17.</span>App Store privacy label</h2>
+    <p class="tldr"><b>In short:</b>This is what is declared on the App's App Store page, and it matches this Policy.</p>
+    <p>The App's App Store page shows a privacy label (App Privacy). Here is the declaration, so you can compare it with this Policy:</p>
+    <div class="table-wrap">
+      <table class="stack">
+        <tr><th>Category (Apple)</th><th>Collected?</th><th>Linked to identity?</th><th>Used for tracking?</th><th>Purpose</th></tr>
+        <tr><td data-label="Category (Apple)">Purchases - Purchase History</td><td data-label="Collected?">Yes, through RevenueCat</td><td data-label="Linked to identity?">No (linked to the Anonymous ID only)</td><td data-label="Used for tracking?">No</td><td data-label="Purpose">App Functionality; Analytics (aggregate subscription reports in the RevenueCat dashboard, with no identifying details)</td></tr>
+        <tr><td data-label="Category (Apple)">Identifiers - User ID</td><td data-label="Collected?">Yes, the RevenueCat Anonymous ID</td><td data-label="Linked to identity?">No</td><td data-label="Used for tracking?">No</td><td data-label="Purpose">App Functionality</td></tr>
+        <tr><td data-label="Category (Apple)">Identifiers - Device ID</td><td data-label="Collected?">No</td><td data-label="Linked to identity?">-</td><td data-label="Used for tracking?">-</td><td data-label="Purpose">-</td></tr>
+        <tr><td data-label="Category (Apple)">Diagnostics (Crash / Performance)</td><td data-label="Collected?">No</td><td data-label="Linked to identity?">-</td><td data-label="Used for tracking?">-</td><td data-label="Purpose">-</td></tr>
+        <tr><td data-label="Category (Apple)">Health &amp; Fitness / Sensitive Info</td><td data-label="Collected?">No</td><td data-label="Linked to identity?">-</td><td data-label="Used for tracking?">-</td><td data-label="Purpose">-</td></tr>
+        <tr><td data-label="Category (Apple)">Contact Info, Location, Contacts, User Content, Browsing/Search History, Usage Data, Financial Info</td><td data-label="Collected?">No</td><td data-label="Linked to identity?">-</td><td data-label="Used for tracking?">-</td><td data-label="Purpose">-</td></tr>
+      </table>
+    </div>
+    <p>Favorites and opened stories are not considered "collected" under Apple's definitions, because they never leave the device. If you find a discrepancy between the label and this Policy, please let us know - and this Policy governs.</p>
+  </section>
+
+  <!-- 18 -->
+  <section class="section" id="s18">
+    <h2><span class="num">18.</span>Changes to this Policy</h2>
+    <p>We may update this Policy, for example when we add a feature, a provider or a platform (such as Android). The current version is always published on the support site and at the link inside the App, with an update date and a version number.</p>
+    <ul>
+      <li>A <strong>material change</strong> (for example collecting a new type of information, or using information for a new purpose) will be published <strong>14 days before it takes effect, with a prominent notice in the App and on the support site</strong>.</li>
+      <li>Where the law requires consent to a change (for example processing sensitive information), we will not apply it to you without first obtaining your consent. Continued use of the App on its own will not be treated as such consent.</li>
+      <li>Previous versions of this Policy are kept and provided on request.</li>
+    </ul>
+    <p><strong>Version 2.0 (September 29, 2026):</strong> Sign in with Apple and Google, email-address collection and the user account were removed. The provider list, the retention and deletion mechanism and the privacy label were updated.</p>
+    <p><strong>Version 2.0, English edition (October 1, 2026):</strong> English edition published for the U.S. and worldwide launch. Added an expanded COPPA section (13), a full CCPA/CPRA notice with other U.S. state rights (15), GDPR/UK transfer details (9) and U.S. breach-notification wording (12). No change to what is collected or how it is used.</p>
+  </section>
+
+  <!-- 19 -->
+  <section class="section" id="s19">
+    <h2><span class="num">19.</span>Contact and governing law</h2>
+    <p>For any privacy question, request or complaint:</p>
+    <div class="table-wrap">
+      <table>
+        <tr><td>Operator</td><td>Itzik Lugassy (<span class="rtl" lang="he">איציק לוגאסי</span>), sole trader, Israel · Business ID: <span class="ph">[[Business ID]]</span></td></tr>
+        <tr><td>Email</td><td><a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a> (response within 14 business days)</td></tr>
+        <tr><td>Support site</td><td><a href="https://itziklugassy.github.io/sleep-stories-support/">itziklugassy.github.io/sleep-stories-support</a></td></tr>
+        <tr><td>Mail</td><td><span class="ph">[[Mailing address]]</span></td></tr>
+        <tr><td>Response languages</td><td>English, Hebrew</td></tr>
+        <tr><td>Related documents</td><td><a href="https://itziklugassy.github.io/sleep-stories-support/terms-of-service-en.html">Terms of Use</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a> · <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html" lang="he">מדיניות פרטיות (Hebrew)</a></td></tr>
+      </table>
+    </div>
+    <p>This Policy is governed by Israeli law, as set out in Section 26 of the <a href="https://itziklugassy.github.io/sleep-stories-support/terms-of-service-en.html#law">Terms of Use</a> (the competent courts of Tel Aviv-Yafo, subject to your rights as a consumer and to the protections granted by the mandatory law of the country or state where you live, including your data-protection rights under the GDPR, the UK GDPR, COPPA and U.S. state privacy laws, which apply regardless of this choice of law).</p>
+    <p class="muted">This Policy was written in Hebrew. In the event of a conflict between this English edition and the Hebrew version, the Hebrew version prevails, subject to applicable law.</p>
+    <a href="#top" class="muted" style="text-decoration:none">Back to top ↑</a>
+  </section>
+
+</main>
+
+<footer>
+  Cozy Bedtime Stories · © 2026 Itzik Lugassy<br>
+  Privacy Policy · Last updated: October 1, 2026 · Version 2.0 (English edition)<br>
+  <a href="https://itziklugassy.github.io/sleep-stories-support/terms-of-service-en.html">Terms of Use</a> ·
+  <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html">Privacy Policy</a> ·
+  <a href="https://itziklugassy.github.io/sleep-stories-support/">Support site</a> ·
+  <a href="https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html" lang="he">עברית</a>
+</footer>
+
+</body>
+</html>
