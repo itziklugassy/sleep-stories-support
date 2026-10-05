@@ -1,0 +1,38 @@
+# Cozy Bedtime Stories for Kids (סיפורי שינה מרגיעים לילדים)
+
+> iPhone app with 830+ original read-aloud bedtime stories in English and 830+ in Hebrew, for a parent to read to children ages 4-10. Stories are organized into six categories (trouble falling asleep, ADHD and focus, worries and fears, sensory sensitivity, autism spectrum, Tourette syndrome) and each one weaves in a calming technique inspired by research. Storytelling app, not a medical product.
+
+## Key facts
+- English name: Cozy Bedtime Stories for Kids
+- Hebrew name: סיפורי שינה מרגיעים לילדים
+- Platform: iOS (iPhone). App Store: https://apps.apple.com/app/id6765727456
+- Made by parents Itzik and Moran Lugassy for their son Reef Hayim. Publisher: Itzik Lugassy.
+- Content: 830+ original bedtime stories in each language (English and Hebrew), new stories added weekly, a storybook cover illustration for every story.
+- Format: text stories for a parent to read aloud. Not audio.
+- Ages: 4-10.
+- Categories (EN / HE): Trouble Falling Asleep / קשיי הירדמות; ADHD & Focus / קשב וריכוז ADHD; Worries & Fears / חרדות ופחדים; Sensory Sensitivity / רגישות חושית; Autism Spectrum / ספקטרום האוטיסטי; Tourette Syndrome / תסמונת טורט. No diagnosis needed to use any category.
+- Story structure: familiar opening, a calming technique inside the plot (slow counted breathing, body scan or guided imagery, inspired by research), gradual slowdown, an ending that leads gently to sleep.
+- Features: favorites, search, filters, sort.
+- Privacy: no ads, no account, no sign-up, no tracking.
+- Pricing: free download with 2 free stories per category; full access via in-app subscription with a 7-day free trial. Price is shown in the app.
+- Languages: English and Hebrew. The app follows the device language and can be switched in the app's Settings.
+- Cancel a subscription: iPhone Settings > Apple Account > Subscriptions > Cozy Bedtime Stories for Kids.
+- Support: bestoftbest.service@gmail.com, reply usually within 48 hours.
+- Disclaimer: a storytelling app, not a medical product; it does not diagnose and does not replace professional advice. Consult a pediatrician with questions about sleep or development.
+
+## עברית בקצרה
+- סיפורי שינה מרגיעים לילדים: אפליקציית אייפון עם יותר מ-830 סיפורי שינה מקוריים בעברית (ועוד יותר מ-830 באנגלית), להקראה בקול על ידי הורה לילדים בגילאי 4-10.
+- שש קטגוריות: קשיי הירדמות, קשב וריכוז ADHD, חרדות ופחדים, רגישות חושית, ספקטרום האוטיסטי, תסמונת טורט.
+- כל סיפור משלב טכניקת הרגעה בהשראת מחקר: נשימה איטית בספירה, סריקת גוף או דמיון מודרך.
+- סיפורי טקסט ולא אודיו. בלי פרסומות, בלי חשבון, בלי הרשמה ובלי מעקב.
+- הורדה חינמית עם 2 סיפורים חינם בכל קטגוריה, ומנוי עם 7 ימי ניסיון חינם. המחיר מוצג באפליקציה.
+- אפליקציית סיפורים ולא מוצר רפואי. בשאלות על שינה או התפתחות, פנו לרופא/ת הילדים.
+- תמיכה: bestoftbest.service@gmail.com, מענה בדרך כלל תוך 48 שעות.
+
+## Pages
+- [English home and support](https://itziklugassy.github.io/sleep-stories-support/en/): app overview, categories, how a story works, FAQ, support.
+- [Hebrew home and support](https://itziklugassy.github.io/sleep-stories-support/): עמוד הבית והתמיכה בעברית.
+- [Privacy Policy (English)](https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html)
+- [Terms of Service (English)](https://itziklugassy.github.io/sleep-stories-support/terms-of-service-en.html)
+- [מדיניות פרטיות](https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html)
+- [תנאי שימוש](https://itziklugassy.github.io/sleep-stories-support/terms-of-service.html)

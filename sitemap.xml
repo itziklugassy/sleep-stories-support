@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://itziklugassy.github.io/sleep-stories-support/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://itziklugassy.github.io/sleep-stories-support/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itziklugassy.github.io/sleep-stories-support/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itziklugassy.github.io/sleep-stories-support/en/"/>
+  </url>
+  <url>
+    <loc>https://itziklugassy.github.io/sleep-stories-support/en/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://itziklugassy.github.io/sleep-stories-support/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itziklugassy.github.io/sleep-stories-support/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itziklugassy.github.io/sleep-stories-support/en/"/>
+  </url>
+  <url>
+    <loc>https://itziklugassy.github.io/sleep-stories-support/privacy-policy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://itziklugassy.github.io/sleep-stories-support/terms-of-service.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://itziklugassy.github.io/sleep-stories-support/privacy-policy-en.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://itziklugassy.github.io/sleep-stories-support/terms-of-service-en.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

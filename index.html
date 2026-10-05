@@ -1,38 +1,393 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>תמיכה – סיפורי שינה מרגיעים</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>סיפורי שינה לילדים להקראה לפני השינה | סיפורי שינה מרגיעים לילדים</title>
+<meta name="description" content="אפליקציית אייפון עם 830+ סיפורי שינה מקוריים להקראה לילדים בגילאי 4-10, כולל סיפורים לילדים עם ADHD, חרדות, רגישות חושית, ספקטרום האוטיסטי וטורט. בלי פרסומות ובלי הרשמה.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://itziklugassy.github.io/sleep-stories-support/">
+<link rel="alternate" hreflang="he" href="https://itziklugassy.github.io/sleep-stories-support/">
+<link rel="alternate" hreflang="en" href="https://itziklugassy.github.io/sleep-stories-support/en/">
+<link rel="alternate" hreflang="x-default" href="https://itziklugassy.github.io/sleep-stories-support/en/">
+<meta name="apple-itunes-app" content="app-id=6765727456">
+<meta name="theme-color" content="#0f1029">
+<meta name="color-scheme" content="dark">
+<meta name="author" content="Itzik Lugassy">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="סיפורי שינה מרגיעים לילדים">
+<meta property="og:title" content="סיפורי שינה לילדים להקראה לפני השינה | סיפורי שינה מרגיעים לילדים">
+<meta property="og:description" content="אפליקציית אייפון עם 830+ סיפורי שינה מקוריים להקראה לילדים בגילאי 4-10, כולל סיפורים לילדים עם ADHD, חרדות, רגישות חושית, ספקטרום האוטיסטי וטורט. בלי פרסומות ובלי הרשמה.">
+<meta property="og:url" content="https://itziklugassy.github.io/sleep-stories-support/">
+<meta property="og:locale" content="he_IL">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://itziklugassy.github.io/sleep-stories-support/assets/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="אייקון האפליקציה: ינשוף ישנוני על ענף ליד ירח וכוכבים">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="סיפורי שינה לילדים להקראה לפני השינה | סיפורי שינה מרגיעים לילדים">
+<meta name="twitter:description" content="אפליקציית אייפון עם 830+ סיפורי שינה מקוריים להקראה לילדים בגילאי 4-10, כולל סיפורים לילדים עם ADHD, חרדות, רגישות חושית, ספקטרום האוטיסטי וטורט. בלי פרסומות ובלי הרשמה.">
+<meta name="twitter:image" content="https://itziklugassy.github.io/sleep-stories-support/assets/icon-512.png">
+<meta name="twitter:image:alt" content="אייקון האפליקציה: ינשוף ישנוני על ענף ליד ירח וכוכבים">
 <style>
-  body { font-family: -apple-system, sans-serif; background: #0f1029; color: #fdf6e3; max-width: 600px; margin: 60px auto; padding: 24px; line-height: 1.7; }
-  h1 { font-size: 24px; margin-bottom: 4px; }
-  p { color: rgba(253,246,227,0.75); }
-  a { color: #93c5fd; }
-  .card { background: rgba(255,255,255,0.06); border-radius: 16px; padding: 24px; margin-top: 24px; }
+:root{--bg:#0f1029;--card:#1e1b4b;--card2:#26215e;--accent:#8b5cf6;--accent2:#a78bfa;--gold:#ffe8a8;--text:#eef0ff;--muted:#c7c9e8;--line:#3b3580}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);background-image:radial-gradient(1px 1px at 10% 8%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 30% 22%,#fff6 50%,transparent 51%),radial-gradient(1.5px 1.5px at 72% 12%,#ffe8a8aa 50%,transparent 51%),radial-gradient(1px 1px at 88% 30%,#fff7 50%,transparent 51%),radial-gradient(1px 1px at 52% 5%,#fff5 50%,transparent 51%),radial-gradient(1.5px 1.5px at 18% 40%,#ffe8a888 50%,transparent 51%),linear-gradient(180deg,#0f1029 0%,#15133a 60%,#0f1029 100%);background-repeat:no-repeat;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans Hebrew","Arial Hebrew",sans-serif;font-size:17px;line-height:1.7;-webkit-text-size-adjust:100%}
+a{color:var(--gold)}
+a:hover{color:#fff}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;inset-inline-start:-9999px;top:0;background:var(--gold);color:#0f1029;padding:8px 14px;z-index:10;border-radius:0 0 8px 8px}
+.skip:focus{inset-inline-start:12px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-weight:700;font-size:16px;line-height:1.3}
+.brand img{border-radius:10px}
+.lang{color:var(--gold);text-decoration:none;border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:15px;white-space:nowrap}
+.lang:hover{background:var(--card)}
+nav.toc{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px 0;overflow-x:auto;white-space:nowrap}
+nav.toc ul{list-style:none;margin:0;padding:0;display:flex;gap:18px}
+nav.toc a{color:var(--muted);text-decoration:none;font-size:15px}
+nav.toc a:hover{color:var(--gold)}
+.hero{padding:44px 0 28px;text-align:center}
+.hero img{border-radius:28px;box-shadow:0 10px 40px #8b5cf655}
+h1{font-size:clamp(28px,6vw,44px);line-height:1.2;margin:22px 0 14px;color:#fff}
+.answer{font-size:clamp(17px,2.4vw,19px);color:var(--text);max-width:760px;margin:0 auto 22px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;text-align:start}
+.store{display:inline-flex;align-items:center;gap:10px;background:#000;color:#fff;text-decoration:none;border:1.5px solid #a6a6a6;border-radius:12px;padding:9px 20px 10px;line-height:1.15;text-align:start}
+.store:hover{color:#fff;border-color:var(--gold)}
+.store small{display:block;font-size:12px;letter-spacing:.2px}
+.store strong{display:block;font-size:21px;font-weight:600}
+.store .glyph{font-size:24px;color:var(--gold)}
+.note{color:var(--muted);font-size:15px;margin-top:10px}
+section{padding:30px 0}
+h2{font-size:clamp(23px,4vw,30px);line-height:1.3;color:var(--gold);margin:0 0 14px}
+h3{font-size:20px;line-height:1.4;color:#fff;margin:0 0 8px}
+p{margin:0 0 12px}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:720px){.grid.two{grid-template-columns:1fr 1fr}.grid.three{grid-template-columns:1fr 1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.card .tag{display:inline-block;font-size:13px;color:#0f1029;background:var(--gold);border-radius:999px;padding:1px 10px;margin-bottom:8px;font-weight:600}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+ol.steps li{counter-increment:s;position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;padding-inline-start:58px;margin-bottom:10px}
+ol.steps li::before{content:counter(s);position:absolute;inset-inline-start:16px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px}
+blockquote.sample{margin:0;background:linear-gradient(160deg,#26215e,#1e1b4b);border:1px solid var(--line);border-inline-start:4px solid var(--gold);border-radius:16px;padding:20px 22px;font-size:18px;line-height:1.9}
+ul.feat{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:720px){ul.feat{grid-template-columns:1fr 1fr}}
+ul.feat li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+ul.feat li::before{content:"\2726";color:var(--gold);margin-inline-end:8px}
+.disclaimer{background:#2a1f4f;border:1px solid #6d5bd0;border-radius:16px;padding:18px 20px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:inline-end;color:var(--gold);font-size:20px;line-height:1}
+details[open] summary::after{content:"\2212"}
+details h3{display:inline;font-size:17px;color:#fff}
+details .a{padding:0 18px 16px;color:var(--text)}
+.support .card a.mail{font-size:19px;word-break:break-all}
+ol.path{margin:0;padding-inline-start:22px}
+ol.path li{margin-bottom:4px}
+footer{border-top:1px solid var(--line);margin-top:30px;padding:26px 0 40px;color:var(--muted);font-size:15px}
+footer ul{list-style:none;padding:0;margin:0 0 12px;display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--gold)}
+.ltr{direction:ltr;unicode-bidi:isolate}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://itziklugassy.github.io/sleep-stories-support/#website",
+   "url": "https://itziklugassy.github.io/sleep-stories-support/",
+   "name": "סיפורי שינה מרגיעים לילדים",
+   "inLanguage": [
+    "he",
+    "en"
+   ],
+   "publisher": {
+    "@id": "https://itziklugassy.github.io/sleep-stories-support/#itzik-lugassy"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://itziklugassy.github.io/sleep-stories-support/#itzik-lugassy",
+   "name": "Itzik Lugassy",
+   "alternateName": "איציק לוגסי",
+   "email": "mailto:bestoftbest.service@gmail.com",
+   "url": "https://itziklugassy.github.io/sleep-stories-support/"
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://itziklugassy.github.io/sleep-stories-support/#brand",
+   "name": "סיפורי שינה מרגיעים לילדים",
+   "alternateName": "Cozy Bedtime Stories for Kids",
+   "url": "https://itziklugassy.github.io/sleep-stories-support/",
+   "logo": "https://itziklugassy.github.io/sleep-stories-support/assets/icon-512.png",
+   "founder": {
+    "@id": "https://itziklugassy.github.io/sleep-stories-support/#itzik-lugassy"
+   },
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "bestoftbest.service@gmail.com",
+    "availableLanguage": [
+     "Hebrew",
+     "English"
+    ]
+   }
+  },
+  {
+   "@type": "MobileApplication",
+   "@id": "https://itziklugassy.github.io/sleep-stories-support/#app",
+   "name": "סיפורי שינה מרגיעים לילדים",
+   "alternateName": "Cozy Bedtime Stories for Kids",
+   "description": "אפליקציית אייפון עם 830+ סיפורי שינה מקוריים להקראה לילדים בגילאי 4-10, כולל סיפורים לילדים עם ADHD, חרדות, רגישות חושית, ספקטרום האוטיסטי וטורט. בלי פרסומות ובלי הרשמה.",
+   "operatingSystem": "iOS",
+   "applicationCategory": "HealthApplication",
+   "inLanguage": [
+    "he",
+    "en"
+   ],
+   "url": "https://itziklugassy.github.io/sleep-stories-support/",
+   "downloadUrl": "https://apps.apple.com/app/id6765727456",
+   "installUrl": "https://apps.apple.com/app/id6765727456",
+   "image": "https://itziklugassy.github.io/sleep-stories-support/assets/icon-512.png",
+   "audience": {
+    "@type": "PeopleAudience",
+    "audienceType": "הורים לילדים בגילאי 4-10"
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "ILS",
+    "availability": "https://schema.org/InStock",
+    "url": "https://apps.apple.com/app/id6765727456",
+    "description": "הורדה חינמית עם 2 סיפורים חינם בכל קטגוריה. גישה מלאה במנוי בתוך האפליקציה עם 7 ימי ניסיון חינם; המחיר מוצג באפליקציה."
+   },
+   "publisher": {
+    "@id": "https://itziklugassy.github.io/sleep-stories-support/#itzik-lugassy"
+   },
+   "author": {
+    "@id": "https://itziklugassy.github.io/sleep-stories-support/#itzik-lugassy"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://itziklugassy.github.io/sleep-stories-support/#webpage",
+   "url": "https://itziklugassy.github.io/sleep-stories-support/",
+   "name": "סיפורי שינה לילדים להקראה לפני השינה | סיפורי שינה מרגיעים לילדים",
+   "description": "אפליקציית אייפון עם 830+ סיפורי שינה מקוריים להקראה לילדים בגילאי 4-10, כולל סיפורים לילדים עם ADHD, חרדות, רגישות חושית, ספקטרום האוטיסטי וטורט. בלי פרסומות ובלי הרשמה.",
+   "inLanguage": "he",
+   "isPartOf": {
+    "@id": "https://itziklugassy.github.io/sleep-stories-support/#website"
+   },
+   "about": {
+    "@id": "https://itziklugassy.github.io/sleep-stories-support/#app"
+   },
+   "primaryImageOfPage": "https://itziklugassy.github.io/sleep-stories-support/assets/icon-512.png",
+   "breadcrumb": {
+    "@id": "https://itziklugassy.github.io/sleep-stories-support/#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://itziklugassy.github.io/sleep-stories-support/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "סיפורי שינה מרגיעים לילדים",
+     "item": "https://itziklugassy.github.io/sleep-stories-support/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://itziklugassy.github.io/sleep-stories-support/#faq",
+   "inLanguage": "he",
+   "isPartOf": {
+    "@id": "https://itziklugassy.github.io/sleep-stories-support/#webpage"
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "לאילו גילאים מתאימים הסיפורים?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "הסיפורים נכתבו לילדים בגילאי 4-10, להקראה בקול על ידי הורה לפני השינה. השפה פשוטה מספיק לקטנים, והעלילות מעניינות מספיק גם לגדולים יותר."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "האם אלה סיפורים מוקלטים (אודיו)?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "לא. אלה סיפורי טקסט שההורה מקריא לילד. ההקראה בקול של הורה היא חלק חשוב מטקס השינה, ולכן אין באפליקציה הקלטות."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "האם האפליקציה היא טיפול?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "לא. זו אפליקציית סיפורים ולא מוצר רפואי, והיא לא מאבחנת ולא מחליפה ייעוץ מקצועי. טכניקות ההרגעה בסיפורים, כמו נשימה בספירה, סריקת גוף ודמיון מודרך, נבחרו בהשראת מחקר. אם יש לכם שאלה לגבי השינה או ההתפתחות של הילד, פנו לרופא/ת הילדים."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "צריך אבחנה כדי להשתמש בקטגוריות?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ממש לא. הקטגוריות הן פשוט דרך נוחה למצוא סיפור שמתאים לערב מסוים. כל ילד יכול ליהנות מכל סיפור, עם אבחנה או בלי."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "אילו נתונים האפליקציה אוספת?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "אין באפליקציה חשבון, הרשמה, פרסומות או מעקב. לא צריך למסור שם, אימייל או פרטים על הילד כדי להשתמש בה. כל הפרטים נמצאים במדיניות הפרטיות."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "כמה סיפורים יש באפליקציה?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "יותר מ-830 סיפורי שינה מקוריים בעברית, ועוד יותר מ-830 באנגלית. סיפורים חדשים נוספים בכל שבוע, ולכל סיפור יש איור כריכה משלו."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "כמה זה עולה? יש תקופת ניסיון?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ההורדה חינמית וכוללת 2 סיפורים חינם בכל קטגוריה. לגישה לכל הסיפורים יש מנוי עם 7 ימי ניסיון חינם. המחיר המעודכן מוצג באפליקציה לפני האישור."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "באילו שפות האפליקציה זמינה?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "בעברית ובאנגלית. האפליקציה נפתחת לפי שפת המכשיר, ואפשר להחליף שפה בכל רגע בהגדרות של האפליקציה."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "איך מבטלים את המנוי?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "המנוי מנוהל דרך Apple. באייפון פותחים את הגדרות, נכנסים ל-Apple Account (השם שלכם בראש המסך), בוחרים מינויים, בוחרים את סיפורי שינה מרגיעים לילדים ומבטלים."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "איך יוצרים קשר?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "כותבים לנו לכתובת bestoftbest.service@gmail.com. אנחנו עונים בדרך כלל תוך 48 שעות."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
-  <h1>💗 סיפורי שינה מרגיעים</h1>
-  <p>דף תמיכה רשמי</p>
+<a class="skip" href="#main">דלגו לתוכן</a>
+<div class="wrap">
+<header class="top">
+<a class="brand" href="./"><img src="assets/icon-512.png" width="40" height="40" alt="" decoding="async">סיפורי שינה מרגיעים לילדים</a>
+<a class="lang" href="en/" hreflang="en" lang="en" aria-label="Switch to English">English</a>
+</header>
+<nav class="toc" aria-label="ניווט בעמוד"><ul><li><a href="#categories">קטגוריות</a></li><li><a href="#how">איך זה עובד</a></li><li><a href="#sample">דוגמה</a></li><li><a href="#features">מה באפליקציה</a></li><li><a href="#faq">שאלות נפוצות</a></li><li><a href="#support">תמיכה</a></li></ul></nav>
+</div>
+<main id="main" class="wrap">
+<section class="hero" aria-labelledby="h1">
+<img src="assets/icon-512.png" width="132" height="132" alt="אייקון האפליקציה: ינשוף ישנוני על ענף ליד ירח וכוכבים" fetchpriority="high">
+<h1 id="h1">סיפורי שינה לילדים - להקראה לפני השינה</h1>
+<p class="answer"><strong>סיפורי שינה מרגיעים לילדים</strong> היא אפליקציית אייפון עם יותר מ-830 סיפורי שינה מקוריים בעברית, שהורה מקריא בקול לילדים בגילאי 4-10. הסיפורים מחולקים לשש קטגוריות, בהן קשיי הירדמות, קשב וריכוז ADHD, חרדות ופחדים, רגישות חושית, הספקטרום האוטיסטי ותסמונת טורט, וכל סיפור משלב טכניקת הרגעה עדינה כמו נשימה איטית בספירה. ההורדה חינמית, בלי פרסומות, בלי חשבון ובלי מעקב.</p>
+<a class="store" href="https://apps.apple.com/app/id6765727456" aria-label="הורדת סיפורי שינה מרגיעים לילדים ב-App Store" rel="noopener"><span class="glyph" aria-hidden="true">&#9790;</span><span><small>להורדה ב-</small><strong>App Store</strong></span></a>
+<p class="note">לאייפון. הורדה חינמית, 2 סיפורים חינם בכל קטגוריה, ומנוי עם 7 ימי ניסיון חינם.</p>
+</section>
 
-  <div class="card">
-    <h2>יצירת קשר</h2>
-    <p>לכל שאלה, בעיה טכנית או פנייה כללית:</p>
-    <p>📧 <a href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a></p>
-    <p>נשתדל לחזור תוך 48 שעות.</p>
-  </div>
+<section id="categories" aria-labelledby="h-cat">
+<h2 id="h-cat">סיפורי שינה לפי צורך: שש קטגוריות</h2>
+<p>כל ילד נרדם אחרת. לכן הסיפורים מסודרים לפי מה שקורה אצלכם בערב, ובכל קטגוריה יש מאות סיפורים לבחירה. אין צורך באבחנה כדי להשתמש באף אחת מהן.</p>
+<div class="grid two"><article class="card" id="cat-sleep"><span class="tag">קשיי הירדמות</span><h3>קשיי הירדמות - סיפור לפני השינה לילד שמתקשה להירדם</h3><p>לילדים שמתהפכים במיטה הרבה אחרי כיבוי האור. הסיפורים בקטגוריה הזו איטיים במכוון: הקצב יורד מעמוד לעמוד, המשפטים מתקצרים, והגיבור עצמו מתכונן לשינה - מתכסה, מאט את הנשימה ונותן לגוף להיות כבד. הסיפור עושה חלק מהעבודה של המעבר מהיום אל הלילה.</p></article><article class="card" id="cat-adhd"><span class="tag">קשב וריכוז ADHD</span><h3>סיפור לפני השינה לילדים עם ADHD</h3><p>ילדים עם קשב וריכוז מגיעים לא פעם לסוף היום עם המון אנרגיה ומחשבות שקופצות ממקום למקום. הסיפורים כאן מתחילים בתנועה ובהרפתקה, כדי לפגוש את הילד איפה שהוא נמצא, ורק אחר כך מאטים בהדרגה. הגיבורים סקרנים ונמרצים, והם לומדים לזהות את הרגע שבו הגוף מוכן לנוח, בלי ביקורת ובלי מוסר השכל.</p></article><article class="card" id="cat-worries"><span class="tag">חרדות ופחדים</span><h3>סיפורים לילדים עם חרדות ופחדים</h3><p>פחד מהחושך, דאגה לקראת יום חדש בגן או בבית הספר, מחשבות של &quot;ומה אם...&quot;. בסיפורים האלה הגיבורים פוגשים פחדים מוכרים ומגלים דרכים קטנות להרגיש ביטחון: לנשום לאט, לדמיין מקום בטוח, להיזכר במי שאוהב אותם. הדאגה לא נעלמת בקסם, היא פשוט נעשית קטנה ושקטה מספיק כדי להירדם.</p></article><article class="card" id="cat-sensory"><span class="tag">רגישות חושית</span><h3>סיפורי שינה עדינים לילדים עם רגישות חושית</h3><p>לילדים שהתווית בחולצה מגרדת להם, שהרעשים חזקים מדי והאור מציק. הסיפורים כתובים בשפה רכה ובתיאורים חושיים נעימים: שמיכה חמימה וכבדה, צלילים עמומים, אור שהולך ומתעמעם. סריקת גוף עדינה עוזרת לילד לשים לב לגוף בלי להציף אותו.</p></article><article class="card" id="cat-autism"><span class="tag">ספקטרום האוטיסטי</span><h3>סיפור שינה לילד על הספקטרום האוטיסטי</h3><p>לילדים על הספקטרום, שגרה צפויה יכולה לעשות את כל ההבדל. הסיפורים בנויים במבנה ברור וקבוע, בשפה ישירה ובלי הפתעות מיותרות, ורבים מהם עוסקים בשגרת הערב עצמה: מקלחת, פיג&#x27;מה, צחצוח שיניים ומיטה. אפשר לחזור על אותו סיפור ערב אחרי ערב ולהפוך אותו לחלק קבוע מהטקס.</p></article><article class="card" id="cat-tourette"><span class="tag">תסמונת טורט</span><h3>סיפור לפני השינה לילדים עם תסמונת טורט</h3><p>סיפורים עם גיבורים שיש להם טיקים, שמוצגים בחום ובקבלה, בלי שהטיקים יהפכו ל&quot;בעיה&quot; של העלילה. סוף הסיפור מזמין שחרור עדין של הגוף אחרי יום ארוך, בלי לבקש מהילד לעצור או להסתיר שום דבר.</p></article></div>
+</section>
 
-  <div class="card">
-    <h2>שאלות נפוצות</h2>
-    <p><strong>האפליקציה לא נפתחת?</strong><br>נסו לסגור ולפתוח מחדש. אם הבעיה נמשכת, כתבו אלינו.</p>
-    <p><strong>שכחתי סיסמה?</strong><br>השתמשו באפשרות "שכחתי סיסמה" במסך הכניסה.</p>
-    <p><strong>בעיה עם מנוי?</strong><br>ניתן לנהל מנויים דרך הגדרות iPhone ← App Store ← מנויים.</p>
-  </div>
+<section id="how" aria-labelledby="h-how">
+<h2 id="h-how">איך בנוי סיפור שינה באפליקציה</h2>
+<p>כל סיפור נכתב כך שיוביל את הילד בהדרגה מערנות לרוגע. זה המבנה הקבוע:</p>
+<ol class="steps"><li><h3>פתיחה מוכרת</h3><p>גיבור, מקום ובעיה קטנה שהילד יכול להזדהות איתה.</p></li><li><h3>טכניקת הרגעה בתוך העלילה</h3><p>נשימה איטית בספירה, סריקת גוף או דמיון מודרך, בהשראת מחקר. הטכניקה היא חלק מהסיפור ולא תרגיל נפרד, כך שהילד פשוט עושה מה שהגיבור עושה.</p></li><li><h3>האטה הדרגתית</h3><p>הקצב, המשפטים והאירועים נעשים שקטים יותר ככל שמתקדמים.</p></li><li><h3>סיום שמוביל לשינה</h3><p>הסיפור נגמר כשהגיבור, ובתקווה גם הילד, מוכנים לעצום עיניים.</p></li></ol>
+<p>לכל סיפור יש איור כריכה בסגנון ספר ילדים. הסיפורים הם טקסט להקראה בקול על ידי הורה, ואין באפליקציה הקלטות קוליות: הקול המוכר שלכם הוא חלק מהקסם.</p>
+</section>
 
-  <div class="card">
-    <h2>מדיניות פרטיות</h2>
-    <p>האפליקציה אינה אוספת מידע אישי מילדים. לפרטים נוספים כתבו אלינו.</p>
-  </div>
+<section id="sample" aria-labelledby="h-sample">
+<h2 id="h-sample">דוגמה: כך נשמע סיפור עם נשימה בספירה</h2>
+<p class="note">קטע קצר שנכתב במיוחד לעמוד הזה, כדי להמחיש את הסגנון. נסו להקריא אותו לאט, ולעצור רגע אחרי כל ספירה.</p>
+<blockquote class="sample"><p>נועה שכבה מתחת לשמיכה הכחולה והקשיבה לגשם שמטפטף על החלון. &quot;בואי ננשום כמו הדובה הגדולה,&quot; לחשה אמא. &quot;לאט, לאט מאוד.&quot; נועה מילאה את הבטן באוויר: אחת, שתיים, שלוש, ארבע. החזיקה רגע קטן. ואז נשפה החוצה, כמו רוח חמימה: אחת, שתיים, שלוש, ארבע, חמש. הכתפיים שלה נעשו רכות. עוד פעם: אחת, שתיים, שלוש, ארבע. הגשם המשיך לטפטף, והעיניים של נועה נעשו כבדות, כבדות, עד שהכול סביבה היה שקט.</p></blockquote>
+</section>
+
+<section id="features" aria-labelledby="h-feat">
+<h2 id="h-feat">מה יש באפליקציה</h2>
+<ul class="feat"><li>יותר מ-830 סיפורים מקוריים בעברית, ועוד יותר מ-830 באנגלית</li><li>סיפורים חדשים נוספים בכל שבוע</li><li>איור כריכה בסגנון ספר ילדים לכל סיפור</li><li>מועדפים, חיפוש, סינון ומיון</li><li>בלי פרסומות, בלי חשבון, בלי הרשמה ובלי מעקב</li><li>עברית ואנגלית: לפי שפת המכשיר, וניתן להחליף בהגדרות</li><li>הורדה חינמית עם 2 סיפורים חינם בכל קטגוריה</li><li>מנוי עם 7 ימי ניסיון חינם (המחיר מוצג באפליקציה)</li></ul>
+</section>
+
+<section id="about" aria-labelledby="h-about">
+<h2 id="h-about">מי עומד מאחורי האפליקציה</h2>
+<p>את סיפורי שינה מרגיעים לילדים יצרו איציק ומורן לוגסי, הורים לריף חיים. חיפשנו סיפורים שיעזרו לנו בטקס השינה בבית, סיפורים שמתאימים לילדים שונים ולערבים שונים, ולא מצאנו את מה שרצינו. אז התחלנו לכתוב. היום יש באפליקציה מאות סיפורים, ואנחנו ממשיכים להוסיף בכל שבוע.</p>
+</section>
+
+<section aria-labelledby="h-disc">
+<div class="disclaimer" role="note">
+<h2 id="h-disc">חשוב לדעת</h2>
+<p>סיפורי שינה מרגיעים לילדים היא אפליקציית סיפורים ולא מוצר רפואי. היא לא מאבחנת ולא מחליפה ייעוץ של איש מקצוע. אם יש לכם שאלות לגבי השינה, ההתנהגות או ההתפתחות של הילד, פנו לרופא/ת הילדים.</p>
+</div>
+</section>
+
+<section id="faq" aria-labelledby="h-faq">
+<h2 id="h-faq">שאלות נפוצות</h2>
+<details><summary><h3>לאילו גילאים מתאימים הסיפורים?</h3></summary><div class="a"><p>הסיפורים נכתבו לילדים בגילאי 4-10, להקראה בקול על ידי הורה לפני השינה. השפה פשוטה מספיק לקטנים, והעלילות מעניינות מספיק גם לגדולים יותר.</p></div></details><details><summary><h3>האם אלה סיפורים מוקלטים (אודיו)?</h3></summary><div class="a"><p>לא. אלה סיפורי טקסט שההורה מקריא לילד. ההקראה בקול של הורה היא חלק חשוב מטקס השינה, ולכן אין באפליקציה הקלטות.</p></div></details><details><summary><h3>האם האפליקציה היא טיפול?</h3></summary><div class="a"><p>לא. זו אפליקציית סיפורים ולא מוצר רפואי, והיא לא מאבחנת ולא מחליפה ייעוץ מקצועי. טכניקות ההרגעה בסיפורים, כמו נשימה בספירה, סריקת גוף ודמיון מודרך, נבחרו בהשראת מחקר. אם יש לכם שאלה לגבי השינה או ההתפתחות של הילד, פנו לרופא/ת הילדים.</p></div></details><details><summary><h3>צריך אבחנה כדי להשתמש בקטגוריות?</h3></summary><div class="a"><p>ממש לא. הקטגוריות הן פשוט דרך נוחה למצוא סיפור שמתאים לערב מסוים. כל ילד יכול ליהנות מכל סיפור, עם אבחנה או בלי.</p></div></details><details><summary><h3>אילו נתונים האפליקציה אוספת?</h3></summary><div class="a"><p>אין באפליקציה חשבון, הרשמה, פרסומות או מעקב. לא צריך למסור שם, אימייל או פרטים על הילד כדי להשתמש בה. כל הפרטים נמצאים במדיניות הפרטיות.</p></div></details><details><summary><h3>כמה סיפורים יש באפליקציה?</h3></summary><div class="a"><p>יותר מ-830 סיפורי שינה מקוריים בעברית, ועוד יותר מ-830 באנגלית. סיפורים חדשים נוספים בכל שבוע, ולכל סיפור יש איור כריכה משלו.</p></div></details><details><summary><h3>כמה זה עולה? יש תקופת ניסיון?</h3></summary><div class="a"><p>ההורדה חינמית וכוללת 2 סיפורים חינם בכל קטגוריה. לגישה לכל הסיפורים יש מנוי עם 7 ימי ניסיון חינם. המחיר המעודכן מוצג באפליקציה לפני האישור.</p></div></details><details><summary><h3>באילו שפות האפליקציה זמינה?</h3></summary><div class="a"><p>בעברית ובאנגלית. האפליקציה נפתחת לפי שפת המכשיר, ואפשר להחליף שפה בכל רגע בהגדרות של האפליקציה.</p></div></details><details><summary><h3>איך מבטלים את המנוי?</h3></summary><div class="a"><p>המנוי מנוהל דרך Apple. באייפון פותחים את הגדרות, נכנסים ל-Apple Account (השם שלכם בראש המסך), בוחרים מינויים, בוחרים את סיפורי שינה מרגיעים לילדים ומבטלים.</p></div></details><details><summary><h3>איך יוצרים קשר?</h3></summary><div class="a"><p>כותבים לנו לכתובת bestoftbest.service@gmail.com. אנחנו עונים בדרך כלל תוך 48 שעות.</p></div></details>
+</section>
+
+<section id="support" class="support" aria-labelledby="h-sup">
+<h2 id="h-sup">תמיכה ויצירת קשר</h2>
+<p>שאלה, תקלה, רעיון לסיפור או סתם מילה טובה? נשמח לשמוע.</p>
+<div class="grid three">
+<div class="card">
+<h3>כתבו לנו</h3>
+<p><a class="mail ltr" href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a></p>
+<p>אנחנו עונים בדרך כלל תוך 48 שעות.</p>
+<p class="note">כדי שנוכל לעזור מהר, ציינו את דגם האייפון, גרסת iOS ותיאור קצר של מה שקרה.</p>
+</div>
+<div class="card">
+<h3>ניהול או ביטול מנוי</h3>
+<p>המנויים מנוהלים ישירות דרך Apple:</p>
+<ol class="path"><li>פתחו את אפליקציית הגדרות באייפון</li><li>הקישו על Apple Account (השם שלכם בראש המסך)</li><li>בחרו מינויים</li><li>בחרו את סיפורי שינה מרגיעים לילדים, ושם אפשר לשנות או לבטל</li></ol>
+<p class="note">אין באפליקציה חשבון או סיסמה, כך שאין צורך להתחבר לשום דבר.</p>
+</div>
+<div class="card">
+<h3>החלפת שפה</h3>
+<p>האפליקציה נפתחת לפי שפת המכשיר. אפשר לעבור בין עברית לאנגלית בכל רגע במסך ההגדרות של האפליקציה.</p>
+</div>
+</div>
+<p style="text-align:center;margin-top:24px"><a class="store" href="https://apps.apple.com/app/id6765727456" aria-label="הורדת סיפורי שינה מרגיעים לילדים ב-App Store" rel="noopener"><span class="glyph" aria-hidden="true">&#9790;</span><span><small>להורדה ב-</small><strong>App Store</strong></span></a></p>
+</section>
+</main>
+
+<footer class="wrap">
+<nav aria-label="מסמכים משפטיים"><ul><li><a href="terms-of-service.html">תנאי שימוש</a></li><li><a href="privacy-policy.html">מדיניות פרטיות</a></li><li><a href="terms-of-service-en.html" lang="en">Terms of Service (English)</a></li><li><a href="privacy-policy-en.html" lang="en">Privacy Policy (English)</a></li></ul></nav>
+<p>תמיכה: <a class="ltr" href="mailto:bestoftbest.service@gmail.com">bestoftbest.service@gmail.com</a></p>
+<p>נוצר באהבה על ידי איציק ומורן לוגסי</p>
+<p>© 2026 איציק לוגסי. כל הזכויות שמורות.</p>
+</footer>
 </body>
 </html>
